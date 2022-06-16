@@ -4,13 +4,13 @@ import { getDatabase, ref, set, update, onChildAdded, onChildChanged, onValue, q
 // import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB5v504RKmqaLi3lG2R8nD1x_8BCKmv4wo",
-    authDomain: "jayeonnuri-a1413.firebaseapp.com",
-    databaseURL: "https://jayeonnuri-a1413-default-rtdb.firebaseio.com",
-    projectId: "jayeonnuri-a1413",
-    storageBucket: "jayeonnuri-a1413.appspot.com",
-    messagingSenderId: "29237233696",
-    appId: "1:29237233696:web:6bb0b1262e943ab3695445"
+    apiKey: "AIzaSyCTXvvdEz5ErLZb37lZg3FlJX9sKsTfYKk",
+    authDomain: "jayeon-nuri.firebaseapp.com",
+    projectId: "jayeon-nuri",
+    storageBucket: "jayeon-nuri.appspot.com",
+    messagingSenderId: "323667698923",
+    appId: "1:323667698923:web:187293e3df761a07d38aae",
+    measurementId: "G-CZ6YWXRFV0"
 };
 
 // Initialize Firebase
