@@ -1,0 +1,6 @@
+.main_img {
+    position: relative;
+    top: -122px;
+    width: 100%;
+    z-index: -1;
+}

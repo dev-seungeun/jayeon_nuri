@@ -1,133 +1,259 @@
-import React, {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
+import React, {useState, useEffect} from "react";
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faApple } from "@fortawesome/free-brands-svg-icons";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { BiChevronDown } from "react-icons/bi";
+import { VscChevronDown, VscChevronUp } from "react-icons/vsc";
 
 import "../css/header.css";
 
-function Header(props) {
+const HeaderStyle = styled.div`
+    @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+        .menuwrap {
+            left: ${(props) => props.isToggled ? "0" : "-300px"}; 
+         }     
+    }
+`;
 
+function Header() {
+
+    const navigate = useNavigate();
+    const [openedMenu, setOpenedMenu] = useState();
     const [isToggled, setIsToggled] = useState(false);
-    const [showInroduceChild, setShowIntroduceChild] = useState(false);
-    const [showAroundGuideChild, setShowAroundGuideChild] = useState(false);
-    const [showReservationGuide, setShowReservationGuideChild] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+    const [showAboutChild, setShowAboutChild] = useState(false);
+    const [showRoomChild, setShowRoomChild] = useState(false);
+    const [showTourChild, setShowTourChild] = useState(false);
+    const [showReservationChild, setShowReservationChild] = useState(false);
+    const [showCommunityChild, setShowCommunityChild] = useState(false);
+    const [showSubMenu, setShowSubMenu] = useState(false);
+    const [mouseLeaveMenu, setMouseLeaveMenu] = useState(true);
+    const [mouseLeaveSubMenu, setMouseLeaveSubMenu] = useState(true);
 
-    const Header = styled.div`
-        @media screen and (max-width: 768px) {
-            flex-wrap: wrap;
-            .menuwrap {
-                left: ${(isToggled ? "0" : "-300px")};
-             }            
+    const changeMenuFontWeight = (parentId) => {
+        document.getElementById("ABOUT").style.fontWeight = "400";
+        document.getElementById("ROOM").style.fontWeight = "400";
+        document.getElementById("TOUR").style.fontWeight = "400";
+        document.getElementById("RESERVATION").style.fontWeight = "400";
+        document.getElementById("COMMUNITY").style.fontWeight = "400";
+        if(parentId) document.getElementById(parentId).style.fontWeight = "700";
+    }
+
+    const handleLinkMove = (e, link) => {
+
+        const childId = link.split("/")[1];
+        if(document.getElementById(childId) != undefined) {
+            document.getElementById(childId).classList.add("selected");
+            setOpenedMenu(document.getElementById(childId).parentNode.previousSibling.id+"-"+childId);
+            changeMenuFontWeight(document.getElementById(childId).parentNode.previousSibling.id);
         }
-    `;
 
-    const handleSubMenuOpen = (e) => {
-        if(e.target.classList.contains("introduce")) {
-            console.log("???")
-            setShowIntroduceChild(!showInroduceChild);
-            setShowAroundGuideChild(false);
-            setShowReservationGuideChild(false);
-        }else if(e.target.classList.contains("around_guide")) {
-            setShowAroundGuideChild(!showAroundGuideChild);
-            setShowIntroduceChild(false);
-            setShowReservationGuideChild(false);
-        }else if(e.target.classList.contains("reservation_guide")) {
-            setShowReservationGuideChild(!showReservationGuide);
-            setShowIntroduceChild(false);
-            setShowAroundGuideChild(false);
-        }else {
-            setShowReservationGuideChild(false);
-            setShowIntroduceChild(false);
-            setShowAroundGuideChild(false);
+        if(isMobile) {
             setIsToggled(false);
+            setShowSubMenu(false);
+            setShowAboutChild(false);
+            setShowRoomChild(false);
+            setShowTourChild(false);
+            setShowReservationChild(false);
+            setShowCommunityChild(false);
+        }else {
+            setMouseLeaveMenu(true);
+        }
+
+        navigate(link);
+    }
+
+    const handleMenuOpenClick = (e, menuId, flag) => {
+
+        let id =  menuId ? menuId : e.target.id;
+
+        if(e != null) {
+            if(e.target.nodeName === "svg") {
+                id = e.target.parentNode.parentNode.id;
+            }else if(e.target.nodeName === "path") {
+                id = e.target.parentNode.parentNode.parentNode.id;
+            }
+        }
+
+        if(isMobile) {
+            if(id === "ABOUT") {
+                setShowAboutChild(flag ? flag : !showAboutChild);
+            }else if(id === "ROOM") {
+                setShowRoomChild(flag ? flag : !showRoomChild);
+            }else if(id === "TOUR") {
+                setShowTourChild(flag ? flag : !showTourChild);
+            }else if(id === "RESERVATION") {
+                setShowReservationChild(flag ? flag : !showReservationChild);
+            }else if(id === "COMMUNITY") {
+                setShowCommunityChild(flag ? flag : !showCommunityChild);
+            }
         }
     }
 
-    const handleDimmed = (e) => {
+    const handleResize = (e) => {
+        if(window.innerWidth >= 768) {
+            setIsMobile(false);
+            setIsToggled(false);
+            setShowSubMenu(false);
+            setShowAboutChild(false);
+            setShowRoomChild(false);
+            setShowTourChild(false);
+            setShowReservationChild(false);
+            setShowCommunityChild(false);
+        }else {
+            setIsMobile(true);
+        }
+    }
+
+    const clickDimmed = (e) => {
         setIsToggled(false);
     }
 
     useEffect(() => {
-        if(isToggled) { //메뉴펼침
-            // document.querySelector('.menuwrap').classList.add('on');
-            document.body.style.overflow = "hidden";
-        }else { //메뉴닫힘
-            // document.querySelector('.menuwrap').classList.remove('on');
-            document.body.style.overflow = "unset";
+        setIsMobile(window.innerWidth >= 768 ? false : true);
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        }
+    }, []);
+
+    useEffect(() => {
+        document.body.style.overflow = isToggled ? "hidden" : "unset";
+        if(isToggled) {
+            // 토글 열릴때 오픈메뉴 셋팅
+            if(openedMenu != undefined) {
+                const parentId = openedMenu.split("-")[0];
+                handleMenuOpenClick(null, parentId, true);
+            }
         }
     }, [isToggled]);
 
+
+    useEffect(() => {
+        if(isMobile) {
+            // 오픈메뉴 셋팅되면 색깔 채우기
+            if(openedMenu != undefined) {
+                if(showAboutChild || showRoomChild || showTourChild || showReservationChild || showCommunityChild)
+                    document.getElementById(openedMenu.split("-")[1]).classList.add("selected");
+            }
+        }
+    }, [showAboutChild, showRoomChild, showTourChild, showReservationChild, showCommunityChild]);
+
+    useEffect(() => {
+        if(!isMobile) {
+            if(mouseLeaveMenu && mouseLeaveSubMenu && showSubMenu) {
+                setShowSubMenu(false);
+                document.getElementById("submenu_background").style.height = "0px";
+            }else if(!mouseLeaveMenu && !showSubMenu) {
+                setShowSubMenu(true);
+                document.getElementById("submenu_background").style.height = "180px";
+            }
+        }
+    }, [mouseLeaveMenu, mouseLeaveSubMenu]);
+
     return (
+            <HeaderStyle id="header" isToggled={isToggled} showSubMenu={showSubMenu} showAboutChild={showAboutChild}>
+                { !isMobile && <div id="submenu_background" onMouseOver={() => setMouseLeaveSubMenu(false)} onMouseOut={() => setMouseLeaveSubMenu(true)}></div>    }
+                { isToggled && <div id="dimmed" onClick={clickDimmed}></div> }
 
-            <Header id="header">
-                {isToggled && <div id="dimmed" onClick={handleDimmed}></div>}
-
-                {/* 햄버거 버튼(bar) */}
                 <div className="toggle" onClick={() => { setIsToggled(!isToggled); }}>
                     <FontAwesomeIcon icon={faBars}/>
                 </div>
 
-                {/* Apple 로고 */}
                 <div className="logo">
-                    소백산 자연누리 펜션
+                    <Link to="/">소백산 자연누리 펜션</Link>
                     {/*<FontAwesomeIcon icon={faApple}/>*/}
                 </div>
 
-                {/* 메뉴 리스트 */}
                 <div className="menuwrap">
-                    {/* 햄버거 버튼(bar) */}
-                    <div className="toggle" onClick={() => { setIsToggled(!isToggled); }}>
+                    <div className="toggle_x" onClick={() => { setIsToggled(!isToggled); }}>
                         <FontAwesomeIcon icon={faTimes}/>
                     </div>
-                    <nav id="menu">
+                    <nav id="menu" onMouseEnter={() => setMouseLeaveMenu(false)} onMouseLeave={() => setMouseLeaveMenu(true)}>
                         <ul className="header__menulist">
-                            <li className="introduce" onClick={handleSubMenuOpen}>
-                                자연누리 소개 <BiChevronDown className="menuDownIcon introduce" onClick={handleSubMenuOpen} />
-                                { showInroduceChild &&
+                            <li>
+                                <div id="ABOUT" onClick={handleMenuOpenClick}>
+                                    ABOUT
+                                    {isMobile && <span className="btn_toggle">
+                                        {!showAboutChild && <VscChevronDown onClick={(e)=>e.preventDefault()}/>}
+                                        {showAboutChild && <VscChevronUp/>}
+                                    </span>}
+                                </div>
+                                {(showSubMenu || showAboutChild) &&
                                 <ul className="inner_ul">
-                                    <li><Link to="/introduce">자연누리 둘러보기</Link></li>
-                                    <li><Link to="/room1">객실 1,2,3호</Link></li>
-                                    <li><Link to="/room5">객실 5,6호</Link></li>
-                                    <li><Link to="/caravan1">카라반 1호</Link></li>
-                                    <li><Link to="/caravan2">카라반 2호</Link></li>
-                                    <li><Link to="/caravan3">카라반 3호</Link></li>
-                                    <li><Link to="/caravan4">카라반 4호</Link></li>
-                                </ul> }
+                                    <li id="introduce"><div onClick={(e)=>handleLinkMove(e, "/introduce")}>자연누리 소개</div></li>
+                                    <li id="way_to_come"><div onClick={(e)=>handleLinkMove(e, "/way_to_come")}>오시는 길</div></li>
+                                </ul>}
                             </li>
-                            <li className="around_guide" onClick={handleSubMenuOpen}>
-                                여행 가이드 <BiChevronDown className="menuDownIcon around_guide" onClick={handleSubMenuOpen} />
-                                { showAroundGuideChild &&
+                            <li>
+                                <div id="ROOM" onClick={handleMenuOpenClick}>
+                                    ROOM
+                                    {isMobile && <span className="btn_toggle">
+                                        {!showRoomChild && <VscChevronDown onClick={(e)=>e.preventDefault()}/>}
+                                        {showRoomChild && <VscChevronUp/>}
+                                    </span>}
+                                </div>
+                                {(showSubMenu || showRoomChild) &&
                                 <ul className="inner_ul">
-                                    <li><Link to="/around">주변 여행지</Link></li>
-                                    <li><Link to="/mountain">소백산 등산로</Link></li>
-                                </ul> }
+                                    <li id="room1"><div onClick={(e)=>handleLinkMove(e, "/room1")}>객실 1,2,3호</div></li>
+                                    <li id="room5"><div onClick={(e)=>handleLinkMove(e, "/room5")}>객실 5,6호</div></li>
+                                    <li id="caravan1"><div onClick={(e)=>handleLinkMove(e, "/caravan1")}>카라반 1호</div></li>
+                                    <li id="caravan2"><div onClick={(e)=>handleLinkMove(e, "/caravan2")}>카라반 2호</div></li>
+                                    <li id="caravan3"><div onClick={(e)=>handleLinkMove(e, "/caravan3")}>카라반 3호</div></li>
+                                    <li id="caravan4"><div onClick={(e)=>handleLinkMove(e, "/caravan4")}>카라반 4호</div></li>
+                                </ul>}
                             </li>
-                            <li className="reservation_guide" onClick={handleSubMenuOpen} >
-                                예약 가이드 <BiChevronDown className="menuDownIcon reservation_guide" onClick={handleSubMenuOpen} />
-                                { showReservationGuide &&
-                                <ul className="inner_ul">
-                                    <li><Link to="/reservation">예약 현황</Link></li>
-                                    <li><Link to="/terms_of_use">이용 수칙</Link></li>
-                                    <li><Link to="/use_price">이용 가격</Link></li>
-                                </ul> }
+                            <li>
+                                <div id="TOUR" onClick={handleMenuOpenClick}>
+                                    TOUR
+                                    {isMobile && <span className="btn_toggle">
+                                        {!showTourChild && <VscChevronDown onClick={(e)=>e.preventDefault()}/>}
+                                        {showTourChild && <VscChevronUp/>}
+                                    </span>}
+                                </div>
+                                {(showSubMenu || showTourChild) &&
+                                <ul className="inner_ul" style={{ariaExpanded:"true"}}>
+                                    <li id="around"><div onClick={(e)=>handleLinkMove(e, "/around")}>주변 여행지</div></li>
+                                    <li id="mountain"><div onClick={(e)=>handleLinkMove(e, "/mountain")}>소백산 등산로</div></li>
+                                </ul>}
                             </li>
-                            <li className="reservation" onClick={handleSubMenuOpen}>
-                                <Link to="/reservation">실시간 예약 <BiChevronDown className="menuDownIcon" style={{visibility:"hidden"}} /></Link>
+                            <li>
+                                <div id="RESERVATION" onClick={handleMenuOpenClick}>
+                                    RESERVATION
+                                    {isMobile && <span className="btn_toggle">
+                                        {!showReservationChild && <VscChevronDown onClick={(e)=>e.preventDefault()}/>}
+                                        {showReservationChild && <VscChevronUp/>}
+                                    </span>}
+                                </div>
+                                {(showSubMenu || showReservationChild) &&
+                                <ul className="inner_ul" style={{ariaExpanded:"true"}}>
+                                    <li id="reservation"><div onClick={(e)=>handleLinkMove(e, "/reservation")}>실시간 예약</div></li>
+                                    <li id="terms_of_use"><div onClick={(e)=>handleLinkMove(e, "/terms_of_use")}>이용수칙</div></li>
+                                    <li id="use_price"><div onClick={(e)=>handleLinkMove(e, "/use_price")}>이용가격</div></li>
+                                </ul>}
                             </li>
-                            <li className="way_to_come" onClick={handleSubMenuOpen}>
-                                <Link to="/way_to_come"> 오시는 길 <BiChevronDown className="menuDownIcon" style={{visibility:"hidden"}} /></Link>
+                            <li>
+                                <div id="COMMUNITY" onClick={handleMenuOpenClick}>
+                                    COMMUNITY
+                                    {isMobile && <span className="btn_toggle">
+                                        {!showCommunityChild && <VscChevronDown onClick={(e)=>e.preventDefault()}/>}
+                                        {showCommunityChild && <VscChevronUp/>}
+                                    </span>}
+                                </div>
+                                {(showSubMenu || showCommunityChild) &&
+                                <ul className="inner_ul" style={{ariaExpanded:"true"}}>
+                                    <li id="notice"><div onClick={(e)=>handleLinkMove(e, "/notice")}>공지사항</div></li>
+                                    <li id="reviews"><div onClick={(e)=>handleLinkMove(e, "/reviews")}>이용후기</div></li>
+                                </ul>}
                             </li>
-                            <li className="reviews" onClick={handleSubMenuOpen}>
-                                <Link to="/reviews">이용 후기 <BiChevronDown className="menuDownIcon" style={{visibility:"hidden"}} /></Link>
-                            </li>
-                        </ul>
+                         </ul>
                     </nav>
                 </div>
 
-            </Header>
+            </HeaderStyle>
     );
 }
 
