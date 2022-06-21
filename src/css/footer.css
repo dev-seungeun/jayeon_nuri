@@ -1,0 +1,10 @@
+hr {
+    margin: 0;
+}
+#footer {
+    text-align: center;
+}
+#footer > p {
+    margin: 0;
+    padding: 15px 0;
+}

@@ -5,11 +5,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faApple } from "@fortawesome/free-brands-svg-icons";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { VscChevronDown, VscChevronUp } from "react-icons/vsc";
+import { FaLeaf } from "react-icons/fa";
+import { GiFallingLeaf, GiChestnutLeaf } from "react-icons/gi";
+import { IoLeafOutline, IoLeafSharp, IoLeaf } from "react-icons/io5";
+import { TbLeaf } from "react-icons/tb";
 
 import "../css/header.css";
 
+const max_width = 1000;
 const HeaderStyle = styled.div`
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1000px) {
         flex-wrap: wrap;
         .menuwrap {
             left: ${(props) => props.isToggled ? "0" : "-300px"}; 
@@ -25,7 +30,7 @@ function Header() {
     const [isMobile, setIsMobile] = useState(false);
     const [showAboutChild, setShowAboutChild] = useState(false);
     const [showRoomChild, setShowRoomChild] = useState(false);
-    const [showTourChild, setShowTourChild] = useState(false);
+    const [showAroundChild, setShowAroundChild] = useState(false);
     const [showReservationChild, setShowReservationChild] = useState(false);
     const [showCommunityChild, setShowCommunityChild] = useState(false);
     const [showSubMenu, setShowSubMenu] = useState(false);
@@ -35,7 +40,7 @@ function Header() {
     const changeMenuFontWeight = (parentId) => {
         document.getElementById("ABOUT").style.fontWeight = "400";
         document.getElementById("ROOM").style.fontWeight = "400";
-        document.getElementById("TOUR").style.fontWeight = "400";
+        document.getElementById("AROUND").style.fontWeight = "400";
         document.getElementById("RESERVATION").style.fontWeight = "400";
         document.getElementById("COMMUNITY").style.fontWeight = "400";
         if(parentId) document.getElementById(parentId).style.fontWeight = "700";
@@ -55,7 +60,7 @@ function Header() {
             setShowSubMenu(false);
             setShowAboutChild(false);
             setShowRoomChild(false);
-            setShowTourChild(false);
+            setShowAroundChild(false);
             setShowReservationChild(false);
             setShowCommunityChild(false);
         }else {
@@ -82,8 +87,8 @@ function Header() {
                 setShowAboutChild(flag ? flag : !showAboutChild);
             }else if(id === "ROOM") {
                 setShowRoomChild(flag ? flag : !showRoomChild);
-            }else if(id === "TOUR") {
-                setShowTourChild(flag ? flag : !showTourChild);
+            }else if(id === "AROUND") {
+                setShowAroundChild(flag ? flag : !showAroundChild);
             }else if(id === "RESERVATION") {
                 setShowReservationChild(flag ? flag : !showReservationChild);
             }else if(id === "COMMUNITY") {
@@ -93,13 +98,13 @@ function Header() {
     }
 
     const handleResize = (e) => {
-        if(window.innerWidth >= 768) {
+        if(window.innerWidth >= max_width) {
             setIsMobile(false);
             setIsToggled(false);
             setShowSubMenu(false);
             setShowAboutChild(false);
             setShowRoomChild(false);
-            setShowTourChild(false);
+            setShowAroundChild(false);
             setShowReservationChild(false);
             setShowCommunityChild(false);
         }else {
@@ -112,7 +117,7 @@ function Header() {
     }
 
     useEffect(() => {
-        setIsMobile(window.innerWidth >= 768 ? false : true);
+        setIsMobile(window.innerWidth >= max_width ? false : true);
         window.addEventListener("resize", handleResize);
 
         return () => {
@@ -136,11 +141,11 @@ function Header() {
         if(isMobile) {
             // 오픈메뉴 셋팅되면 색깔 채우기
             if(openedMenu != undefined) {
-                if(showAboutChild || showRoomChild || showTourChild || showReservationChild || showCommunityChild)
+                if(showAboutChild || showRoomChild || showAroundChild || showReservationChild || showCommunityChild)
                     document.getElementById(openedMenu.split("-")[1]).classList.add("selected");
             }
         }
-    }, [showAboutChild, showRoomChild, showTourChild, showReservationChild, showCommunityChild]);
+    }, [showAboutChild, showRoomChild, showAroundChild, showReservationChild, showCommunityChild]);
 
     useEffect(() => {
         if(!isMobile) {
@@ -163,12 +168,11 @@ function Header() {
                     <FontAwesomeIcon icon={faBars}/>
                 </div>
 
-                <div className="logo">
-                    <Link to="/">소백산 자연누리 펜션</Link>
-                    {/*<FontAwesomeIcon icon={faApple}/>*/}
-                </div>
-
                 <div className="menuwrap">
+                    <div className="logo">
+                        <Link to="/"><TbLeaf/></Link>
+                        {/*FaLeaf, GiFallingLeaf, GiChestnutLeaf, loLeafOutline, IoLeafSharp, IoLeaf, TbLeaf */}
+                    </div>
                     <div className="toggle_x" onClick={() => { setIsToggled(!isToggled); }}>
                         <FontAwesomeIcon icon={faTimes}/>
                     </div>
@@ -183,7 +187,7 @@ function Header() {
                                     </span>}
                                 </div>
                                 {(showSubMenu || showAboutChild) &&
-                                <ul className="inner_ul">
+                                <ul id="about_child_ul" className="inner_ul">
                                     <li id="introduce"><div onClick={(e)=>handleLinkMove(e, "/introduce")}>자연누리 소개</div></li>
                                     <li id="way_to_come"><div onClick={(e)=>handleLinkMove(e, "/way_to_come")}>오시는 길</div></li>
                                 </ul>}
@@ -197,7 +201,7 @@ function Header() {
                                     </span>}
                                 </div>
                                 {(showSubMenu || showRoomChild) &&
-                                <ul className="inner_ul">
+                                <ul id="room_child_ul" className="inner_ul">
                                     <li id="room1"><div onClick={(e)=>handleLinkMove(e, "/room1")}>객실 1,2,3호</div></li>
                                     <li id="room5"><div onClick={(e)=>handleLinkMove(e, "/room5")}>객실 5,6호</div></li>
                                     <li id="caravan1"><div onClick={(e)=>handleLinkMove(e, "/caravan1")}>카라반 1호</div></li>
@@ -207,14 +211,14 @@ function Header() {
                                 </ul>}
                             </li>
                             <li>
-                                <div id="TOUR" onClick={handleMenuOpenClick}>
-                                    TOUR
+                                <div id="AROUND" onClick={handleMenuOpenClick}>
+                                    AROUND
                                     {isMobile && <span className="btn_toggle">
-                                        {!showTourChild && <VscChevronDown onClick={(e)=>e.preventDefault()}/>}
-                                        {showTourChild && <VscChevronUp/>}
+                                        {!showAroundChild && <VscChevronDown onClick={(e)=>e.preventDefault()}/>}
+                                        {showAroundChild && <VscChevronUp/>}
                                     </span>}
                                 </div>
-                                {(showSubMenu || showTourChild) &&
+                                {(showSubMenu || showAroundChild) &&
                                 <ul className="inner_ul" style={{ariaExpanded:"true"}}>
                                     <li id="around"><div onClick={(e)=>handleLinkMove(e, "/around")}>주변 여행지</div></li>
                                     <li id="mountain"><div onClick={(e)=>handleLinkMove(e, "/mountain")}>소백산 등산로</div></li>
@@ -251,6 +255,7 @@ function Header() {
                             </li>
                          </ul>
                     </nav>
+
                 </div>
 
             </HeaderStyle>
