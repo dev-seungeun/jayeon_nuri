@@ -185,6 +185,8 @@ function Header() {
                 {isMobile && location.pathname != "/" &&
                 <div className="name">
                     <span onClick={(e)=>{
+                        const parentId = openedMenu.split("-")[0];
+                        handleMenuOpenClick(null, parentId, false);
                         setOpenedMenu();
                         navigate("/");
                     }}>JayeonNuri
