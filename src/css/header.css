@@ -16,6 +16,7 @@ a {
 li {
     list-style: none;
     cursor: pointer;
+    z-index: 120;
 }
 
 /* PC 화면 */
@@ -26,10 +27,12 @@ li {
     }
 
     .logo a {
-        color: white;
         cursor: pointer;
         float: left;
-        padding: 21px 17px 12px 17px
+        padding: 5px 17px 12px 25px;
+    }
+    .logo a svg {
+        color: white;
     }
 
     .toggle {
@@ -48,8 +51,9 @@ li {
     .header__menulist {
         display: flex;
         justify-content: center;
-        padding: 40px 0;
-        margin: 0 84px 0 0;
+        margin: 0 100px 0 0;
+        height: 100px;
+        line-height: 100px;
     }
 
     .header__menulist > li {
@@ -59,13 +63,13 @@ li {
 
     .header__menulist > li:nth-child(1),
     .header__menulist > li:nth-child(2) {
-        padding: 0 20px 0 0;
+        margin: 0 20px 0 0;
     }
     .header__menulist > li:nth-child(3) {
-        padding: 0 35px 0 0;
+        margin: 0 35px 0 0;
     }
     .header__menulist > li:nth-child(4) {
-        padding: 0 40px 0 0;
+        margin: 0 40px 0 0;
     }
 
     .header__menulist > li > div:hover {
@@ -74,8 +78,8 @@ li {
 
     ul .inner_ul {
         padding: 0;
-        position: fixed;
-        top: 104px;
+        position: relative;
+        top: -32px;
         transition: all 0.5s;
     }
 
@@ -85,6 +89,7 @@ li {
         font-size: 13px;
         background: none;
         color: #1B2430;
+        height: 15px;
     }
 
     #submenu_background {
@@ -105,16 +110,31 @@ li {
 /* Mobile 화면 */
 @media screen and (max-width: 1000px) {
 
+    .name {
+        position: relative;
+        top: 7px;
+        height: 70px;
+        font-size: 25px;
+        width: 100%;
+        text-align: center;
+    }
+    .name span {
+        cursor: pointer;
+    }
+
     .logo {
         display: none;
     }
 
     .toggle {
+        position: relative;
+        top: 0;
         float: left;
         padding: 10px 15px;
         width: 20px;
         font-size: 1.5rem;
         cursor: pointer;
+        z-index: 110;
     }
 
     .toggle_x {

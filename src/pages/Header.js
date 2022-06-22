@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faApple } from "@fortawesome/free-brands-svg-icons";
@@ -25,6 +25,7 @@ const HeaderStyle = styled.div`
 function Header() {
 
     const navigate = useNavigate();
+    const location = useLocation();
     const [openedMenu, setOpenedMenu] = useState();
     const [isToggled, setIsToggled] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
@@ -71,6 +72,12 @@ function Header() {
     }
 
     const handleMenuOpenClick = (e, menuId, flag) => {
+
+        // 메인에서 토글 선택
+        if(e == null && menuId == null) {
+            changeMenuFontWeight();
+            return ;
+        }
 
         let id =  menuId ? menuId : e.target.id;
 
@@ -119,7 +126,6 @@ function Header() {
     useEffect(() => {
         setIsMobile(window.innerWidth >= max_width ? false : true);
         window.addEventListener("resize", handleResize);
-
         return () => {
             window.removeEventListener("resize", handleResize);
         }
@@ -129,8 +135,17 @@ function Header() {
         document.body.style.overflow = isToggled ? "hidden" : "unset";
         if(isToggled) {
             // 토글 열릴때 오픈메뉴 셋팅
-            if(openedMenu != undefined) {
-                const parentId = openedMenu.split("-")[0];
+            let parentId = "";
+            if(location.pathname == "/") {
+                handleMenuOpenClick(null, null, true);
+            }else {
+                if(openedMenu != undefined) {
+                    parentId = openedMenu.split("-")[0];
+                }else {
+                    // 메인 박스 아이콘 선택으로 들어왔을 경우 path보고 판단
+                    parentId = location.pathname.split("/")[location.pathname.split("/").length-1];
+                    setOpenedMenu(parentId+"-"+location.pathname.split("/")[location.pathname.split("/").length-2]);
+                }
                 handleMenuOpenClick(null, parentId, true);
             }
         }
@@ -167,6 +182,14 @@ function Header() {
                 <div className="toggle" onClick={() => { setIsToggled(!isToggled); }}>
                     <FontAwesomeIcon icon={faBars}/>
                 </div>
+                {isMobile && location.pathname != "/" &&
+                <div className="name">
+                    <span onClick={(e)=>{
+                        setOpenedMenu();
+                        navigate("/");
+                    }}>JayeonNuri
+                    </span>
+                </div>}
 
                 <div className="menuwrap">
                     <div className="logo">
@@ -188,8 +211,8 @@ function Header() {
                                 </div>
                                 {(showSubMenu || showAboutChild) &&
                                 <ul id="about_child_ul" className="inner_ul">
-                                    <li id="introduce"><div onClick={(e)=>handleLinkMove(e, "/introduce")}>자연누리 소개</div></li>
-                                    <li id="way_to_come"><div onClick={(e)=>handleLinkMove(e, "/way_to_come")}>오시는 길</div></li>
+                                    <li id="introduce"><div onClick={(e)=>handleLinkMove(e, "/introduce/ABOUT")}>자연누리 소개</div></li>
+                                    <li id="way_to_come"><div onClick={(e)=>handleLinkMove(e, "/way_to_come/ABOUT")}>오시는 길</div></li>
                                 </ul>}
                             </li>
                             <li>
@@ -202,12 +225,12 @@ function Header() {
                                 </div>
                                 {(showSubMenu || showRoomChild) &&
                                 <ul id="room_child_ul" className="inner_ul">
-                                    <li id="room1"><div onClick={(e)=>handleLinkMove(e, "/room1")}>객실 1,2,3호</div></li>
-                                    <li id="room5"><div onClick={(e)=>handleLinkMove(e, "/room5")}>객실 5,6호</div></li>
-                                    <li id="caravan1"><div onClick={(e)=>handleLinkMove(e, "/caravan1")}>카라반 1호</div></li>
-                                    <li id="caravan2"><div onClick={(e)=>handleLinkMove(e, "/caravan2")}>카라반 2호</div></li>
-                                    <li id="caravan3"><div onClick={(e)=>handleLinkMove(e, "/caravan3")}>카라반 3호</div></li>
-                                    <li id="caravan4"><div onClick={(e)=>handleLinkMove(e, "/caravan4")}>카라반 4호</div></li>
+                                    <li id="room1"><div onClick={(e)=>handleLinkMove(e, "/room1/ROOM")}>객실 1,2,3호</div></li>
+                                    <li id="room5"><div onClick={(e)=>handleLinkMove(e, "/room5/ROOM")}>객실 5,6호</div></li>
+                                    <li id="caravan1"><div onClick={(e)=>handleLinkMove(e, "/caravan1/ROOM")}>카라반 1호</div></li>
+                                    <li id="caravan2"><div onClick={(e)=>handleLinkMove(e, "/caravan2/ROOM")}>카라반 2호</div></li>
+                                    <li id="caravan3"><div onClick={(e)=>handleLinkMove(e, "/caravan3/ROOM")}>카라반 3호</div></li>
+                                    <li id="caravan4"><div onClick={(e)=>handleLinkMove(e, "/caravan4/ROOM")}>카라반 4호</div></li>
                                 </ul>}
                             </li>
                             <li>
@@ -220,8 +243,8 @@ function Header() {
                                 </div>
                                 {(showSubMenu || showAroundChild) &&
                                 <ul className="inner_ul" style={{ariaExpanded:"true"}}>
-                                    <li id="around"><div onClick={(e)=>handleLinkMove(e, "/around")}>주변 여행지</div></li>
-                                    <li id="mountain"><div onClick={(e)=>handleLinkMove(e, "/mountain")}>소백산 등산로</div></li>
+                                    <li id="around"><div onClick={(e)=>handleLinkMove(e, "/around/AROUND")}>주변 여행지</div></li>
+                                    <li id="mountain"><div onClick={(e)=>handleLinkMove(e, "/mountain/AROUND")}>소백산 등산로</div></li>
                                 </ul>}
                             </li>
                             <li>
@@ -235,8 +258,8 @@ function Header() {
                                 {(showSubMenu || showReservationChild) &&
                                 <ul className="inner_ul" style={{ariaExpanded:"true"}}>
                                     <li id="reservation"><div onClick={(e)=>handleLinkMove(e, "/reservation")}>실시간 예약</div></li>
-                                    <li id="terms_of_use"><div onClick={(e)=>handleLinkMove(e, "/terms_of_use")}>이용수칙</div></li>
-                                    <li id="use_price"><div onClick={(e)=>handleLinkMove(e, "/use_price")}>이용가격</div></li>
+                                    <li id="terms_of_use"><div onClick={(e)=>handleLinkMove(e, "/terms_of_use/RESERVATION")}>이용수칙</div></li>
+                                    <li id="use_price"><div onClick={(e)=>handleLinkMove(e, "/use_price/RESERVATION")}>이용가격</div></li>
                                 </ul>}
                             </li>
                             <li>
@@ -249,8 +272,8 @@ function Header() {
                                 </div>
                                 {(showSubMenu || showCommunityChild) &&
                                 <ul className="inner_ul" style={{ariaExpanded:"true"}}>
-                                    <li id="notice"><div onClick={(e)=>handleLinkMove(e, "/notice")}>공지사항</div></li>
-                                    <li id="reviews"><div onClick={(e)=>handleLinkMove(e, "/reviews")}>이용후기</div></li>
+                                    <li id="notice"><div onClick={(e)=>handleLinkMove(e, "/notice/COMMUNITY")}>공지사항</div></li>
+                                    <li id="reviews"><div onClick={(e)=>handleLinkMove(e, "/reviews/COMMUNITY")}>이용후기</div></li>
                                 </ul>}
                             </li>
                          </ul>
