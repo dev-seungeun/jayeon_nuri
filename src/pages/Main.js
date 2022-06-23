@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { openImageModal } from "../App"
 import "../css/main.css";
 import "../css/fluid-gallery.css";
 import 'bootstrap/dist/css/bootstrap.css';
@@ -100,24 +101,16 @@ const Main = (props) => {
                         <div className="row">
 
                             <div className="col-xs-12 col-sm-6 col-lg-6 col-xl-3">
-                                <a className="lightbox" href="/main/1.jpg">
-                                    <img src="/main/1.jpg" />
-                                </a>
+                                <img src="/main/1.jpg" onClick={openImageModal} />
                             </div>
                             <div className="col-xs-12 col-sm-6 col-lg-6 col-xl-3">
-                                <a className="lightbox" href="/main/3.jpg">
-                                    <img src="/main/3.jpg" />
-                                </a>
+                                <img src="/main/3.jpg" onClick={openImageModal} />
                             </div>
                             <div className="col-xs-12 col-sm-6 col-lg-6 col-xl-3">
-                                <a className="lightbox" href="/main/2.jpg">
-                                    <img src="/main/2.jpg" />
-                                </a>
+                                <img src="/main/2.jpg" onClick={openImageModal} />
                             </div>
                             <div className="col-xs-12 col-sm-6 col-lg-6 col-xl-3">
-                                <a className="lightbox" href="/main/4.jpg">
-                                    <img src="/main/4.jpg" />
-                                </a>
+                                <img src="/main/4.jpg" onClick={openImageModal} />
                             </div>
                         </div>
                     </div>
