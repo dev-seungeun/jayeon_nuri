@@ -25,6 +25,7 @@ a {
     }
     .main_carousel_wrap img {
         height: 100%;
+        object-fit: cover;
     }
     .main_title {
         /* height: 700px; */
@@ -166,6 +167,7 @@ a {
     }
     .main_carousel_wrap img {
         height: 100%;
+        object-fit: cover;
     }
     .main_title {
         /* height: 400px; */
