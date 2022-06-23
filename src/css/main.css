@@ -36,6 +36,7 @@ a {
         text-align: center;
         font-weight: 750;
         z-index: 2;
+        font-family: "Referi";
     }
 
     /* 메뉴박스 */
@@ -69,11 +70,13 @@ a {
         position: relative;
         bottom:57%;
         font-size: 20px;
+        font-family: "Referi-Regular";
     }
     .menu_box  .menu_box_kor {
         position: relative;
         bottom: 122%;
         font-size: 13px;
+        font-family: "Referi";
     }
 
     /* 메인 작은 이미지 그리드 */
@@ -106,6 +109,7 @@ a {
         margin: 0 5%;
         position: relative;
         top: -20px;
+        font-family: "Referi";
     }
     .etc_info > table {
         width: 100%;
@@ -178,6 +182,7 @@ a {
         text-align: center;
         font-weight: 750;
         z-index: 2;
+        font-family: "Referi";
     }
     .carousel_left, .carousel_right {
         display: none !important;
@@ -214,11 +219,13 @@ a {
         position: relative;
         bottom: 110px;
         font-size: 35px;
+        font-family: "Referi-Regular";
     }
     .menu_box  .menu_box_kor {
         position: relative;
         bottom: 260px;
         font-size: 17px;
+        font-family: "Referi";
     }
 
     /* 메인 작은 이미지 그리드 */
@@ -245,6 +252,7 @@ a {
     .etc_info {
         margin: 40px 1%;
         position: relative;
+        font-family: "Referi";
     }
     .etc_info > table {
         width: 100%;

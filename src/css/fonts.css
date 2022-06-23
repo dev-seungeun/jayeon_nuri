@@ -1,0 +1,30 @@
+@font-face {
+    /* 사용할 폰트의 이름 */
+    font-family: "Referi";
+    font-display: fallback;
+
+    /*
+    src: 사용할 폰트의 위치 및 형식
+       Safari, Android, iOS => ttf
+       Modern Browsers => woff
+       IE6-IE8 => eot
+    */
+    src: url("/public/fonts/LeferiPointWhite.ttf") format("truetype"), url("/public/fonts/LeferiPointWhite.woff")
+    format("woff"), url("/public/fonts/LeferiPointWhite.eot?iefix") format("embedded-opentype");
+
+    /* 사용할 폰트의 기본 스타일 */
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Referi-Regular";
+    font-display: fallback;
+
+    src: url("/public/fonts/LeferiBaseRegular.ttf") format("truetype"), url("/public/fonts/LeferiBaseRegular.woff")
+    format("woff"), url("/public/fonts/LeferiBaseRegular.eot?iefix") format("embedded-opentype");
+
+    /* 사용할 폰트의 기본 스타일 */
+    font-weight: 700;
+    font-style: normal;
+}

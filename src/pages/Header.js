@@ -9,7 +9,7 @@ import { FaLeaf } from "react-icons/fa";
 import { GiFallingLeaf, GiChestnutLeaf } from "react-icons/gi";
 import { IoLeafOutline, IoLeafSharp, IoLeaf } from "react-icons/io5";
 import { TbLeaf } from "react-icons/tb";
-
+import "../css/fonts.css";
 import "../css/header.css";
 
 const max_width = 1000;
@@ -50,7 +50,9 @@ function Header() {
     const handleLinkMove = (e, link) => {
 
         const childId = link.split("/")[1];
-        if(document.getElementById(childId) != undefined) {
+        if(childId == "reservation") {
+            window.open("http://www.pensionlife.co.kr/asp/calendar/online_cal.php?jid=1395","","width=900px, location=no, titlebar=no, scrollbars=yes, menubar=no, status = no, left = 500, toolbar=no");
+        }else if(document.getElementById(childId) != undefined) {
             document.getElementById(childId).classList.add("selected");
             setOpenedMenu(document.getElementById(childId).parentNode.previousSibling.id+"-"+childId);
             changeMenuFontWeight(document.getElementById(childId).parentNode.previousSibling.id);
@@ -68,7 +70,9 @@ function Header() {
             setMouseLeaveMenu(true);
         }
 
-        navigate(link);
+        if(childId != "reservation") {
+            navigate(link);
+        }
     }
 
     const handleMenuOpenClick = (e, menuId, forceFlag, toAll) => {
@@ -172,15 +176,17 @@ function Header() {
                 setShowSubMenu(false);
                 document.getElementById("submenu_background").style.height = "0px";
             }else if(!mouseLeaveMenu && !showSubMenu) {
-                setShowSubMenu(true);
-                document.getElementById("submenu_background").style.height = "180px";
+                setTimeout(function () {
+                    setShowSubMenu(true);
+                },200)
+                document.getElementById("submenu_background").style.height = "230px";
             }
         }
     }, [mouseLeaveMenu, mouseLeaveSubMenu]);
 
     return (
             <HeaderStyle id="header" isToggled={isToggled} showSubMenu={showSubMenu} showAboutChild={showAboutChild}>
-                { !isMobile && <div id="submenu_background" onMouseOver={() => setMouseLeaveSubMenu(false)} onMouseOut={() => setMouseLeaveSubMenu(true)}></div>    }
+                { !isMobile && <div id="submenu_background" onMouseEnter={() => setMouseLeaveSubMenu(false)} onMouseLeave={() => setMouseLeaveSubMenu(true)}></div>    }
                 { isToggled && <div id="dimmed" onClick={clickDimmed}></div> }
 
                 <div className="toggle" onClick={() => { setIsToggled(!isToggled); }}>
@@ -199,12 +205,11 @@ function Header() {
                 </div>}
 
                 <div className="menuwrap">
-                    <div className="logo">
-                        <Link to="/"><TbLeaf/></Link>
-                        {/*FaLeaf, GiFallingLeaf, GiChestnutLeaf, loLeafOutline, IoLeafSharp, IoLeaf, TbLeaf */}
-                    </div>
                     <div className="toggle_x" onClick={() => { setIsToggled(!isToggled); }}>
                         <FontAwesomeIcon icon={faTimes}/>
+                    </div>
+                    <div className="logo" onClick={(e)=>{ window.location.reload(); }}>
+                        <TbLeaf/>
                     </div>
                     <nav id="menu" onMouseEnter={() => setMouseLeaveMenu(false)} onMouseLeave={() => setMouseLeaveMenu(true)}>
                         <ul className="header__menulist">
