@@ -87,7 +87,9 @@ const Main = (props) => {
                         <Link to="/terms_of_use/RESERVATION"><div className="menu_box"><TbListCheck /><br/><span className="menu_box_eng">RULES</span><br/><span className="menu_box_kor">이용수칙</span></div></Link>
                     </div>
                     <div>
-                        <Link to="/reservation"><div className="menu_box"><IoCalendarOutline /><br/><span className="menu_box_eng">RESERVATION</span><br/><span className="menu_box_kor">예약안내</span></div></Link>
+                        <div onClick={(e) => {window.open("http://www.pensionlife.co.kr/asp/calendar/online_cal.php?jid=1395","","width=900px, location=no, titlebar=no, scrollbars=yes, menubar=no, status = no, left = 500, toolbar=no");}} className="menu_box"><IoCalendarOutline />
+                            <br/><span className="menu_box_eng">RESERVATION</span><br/><span className="menu_box_kor">예약</span>
+                        </div>
                     </div>
                     <div>
                         <Link to="/reviews/COMMUNITY"><div className="menu_box"><TbPencil /><br/><span className="menu_box_eng">REVIEWS</span><br/><span className="menu_box_kor">이용후기</span></div></Link>

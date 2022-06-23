@@ -208,11 +208,11 @@ function Header() {
                     <div className="toggle_x" onClick={() => { setIsToggled(!isToggled); }}>
                         <FontAwesomeIcon icon={faTimes}/>
                     </div>
-                    <div className="logo" onClick={(e)=>{ window.location.reload(); }}>
+                    <div className="logo" onClick={(e)=>{ location.pathname == "/" ? window.location.reload() : navigate("/") }}>
                         <TbLeaf/>
                     </div>
-                    <nav id="menu" onMouseEnter={() => setMouseLeaveMenu(false)} onMouseLeave={() => setMouseLeaveMenu(true)}>
-                        <ul className="header__menulist">
+                    <nav id="menu">
+                        <ul className="header__menulist" onMouseEnter={() => setMouseLeaveMenu(false)} onMouseLeave={() => setMouseLeaveMenu(true)}>
                             <li>
                                 <div id="ABOUT" onClick={handleMenuOpenClick}>
                                     ABOUT
