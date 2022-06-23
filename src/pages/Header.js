@@ -17,8 +17,8 @@ const HeaderStyle = styled.div`
     @media screen and (max-width: 1000px) {
         flex-wrap: wrap;
         .menuwrap {
-            left: ${(props) => props.isToggled ? "0" : "-300px"}; 
-         }     
+            left: ${(props) => props.isToggled ? "0" : "-300px"};
+         }
     }
 `;
 
@@ -71,35 +71,34 @@ function Header() {
         navigate(link);
     }
 
-    const handleMenuOpenClick = (e, menuId, flag) => {
+    const handleMenuOpenClick = (e, menuId, forceFlag, toAll) => {
 
         // 메인에서 토글 선택
-        if(e == null && menuId == null) {
-            changeMenuFontWeight();
-            return ;
+        let id = "";
+        if(e != null || menuId != null) {
+          id =  menuId ? menuId : e.target.id;
+          if(e != null) {
+              if(e.target.nodeName === "svg") {
+                  id = e.target.parentNode.parentNode.id;
+              }else if(e.target.nodeName === "path") {
+                  id = e.target.parentNode.parentNode.parentNode.id;
+              }
+          }
         }
 
-        let id =  menuId ? menuId : e.target.id;
-
-        if(e != null) {
-            if(e.target.nodeName === "svg") {
-                id = e.target.parentNode.parentNode.id;
-            }else if(e.target.nodeName === "path") {
-                id = e.target.parentNode.parentNode.parentNode.id;
-            }
-        }
+        changeMenuFontWeight();
 
         if(isMobile) {
-            if(id === "ABOUT") {
-                setShowAboutChild(flag ? flag : !showAboutChild);
-            }else if(id === "ROOM") {
-                setShowRoomChild(flag ? flag : !showRoomChild);
-            }else if(id === "AROUND") {
-                setShowAroundChild(flag ? flag : !showAroundChild);
-            }else if(id === "RESERVATION") {
-                setShowReservationChild(flag ? flag : !showReservationChild);
-            }else if(id === "COMMUNITY") {
-                setShowCommunityChild(flag ? flag : !showCommunityChild);
+            if(id === "ABOUT" || toAll) {
+                setShowAboutChild(forceFlag != null ? forceFlag : !showAboutChild);
+            }else if(id === "ROOM" || toAll) {
+                setShowRoomChild(forceFlag != null ? forceFlag : !showRoomChild);
+            }else if(id === "AROUND" || toAll) {
+                setShowAroundChild(forceFlag != null ? forceFlag : !showAroundChild);
+            }else if(id === "RESERVATION" || toAll) {
+                setShowReservationChild(forceFlag != null ? forceFlag : !showReservationChild);
+            }else if(id === "COMMUNITY" || toAll) {
+                setShowCommunityChild(forceFlag != null ? forceFlag : !showCommunityChild);
             }
         }
     }
@@ -135,19 +134,24 @@ function Header() {
         document.body.style.overflow = isToggled ? "hidden" : "unset";
         if(isToggled) {
             // 토글 열릴때 오픈메뉴 셋팅
-            let parentId = "";
-            if(location.pathname == "/") {
-                handleMenuOpenClick(null, null, true);
-            }else {
-                if(openedMenu != undefined) {
-                    parentId = openedMenu.split("-")[0];
-                }else {
-                    // 메인 박스 아이콘 선택으로 들어왔을 경우 path보고 판단
-                    parentId = location.pathname.split("/")[location.pathname.split("/").length-1];
-                    setOpenedMenu(parentId+"-"+location.pathname.split("/")[location.pathname.split("/").length-2]);
-                }
-                handleMenuOpenClick(null, parentId, true);
-            }
+          let parentId = "";
+          if(location.pathname == "/") {
+              handleMenuOpenClick(null, null, true);
+          }else {
+              if(openedMenu != undefined) {
+                  parentId = openedMenu.split("-")[0];
+              }else {
+                  // 메인 박스 아이콘 선택으로 들어왔을 경우 path보고 판단
+                  parentId = location.pathname.split("/")[location.pathname.split("/").length-1];
+                  setOpenedMenu(parentId+"-"+location.pathname.split("/")[location.pathname.split("/").length-2]);
+              }
+              handleMenuOpenClick(null, parentId, true);
+          }
+        }else {
+          if(location.pathname == "/") {
+            setOpenedMenu();
+            handleMenuOpenClick(null, null, false, true);
+          }
         }
     }, [isToggled]);
 
@@ -185,7 +189,8 @@ function Header() {
                 {isMobile && location.pathname != "/" &&
                 <div className="name">
                     <span onClick={(e)=>{
-                        const parentId = openedMenu.split("-")[0];
+                        const parentId = openedMenu ? openedMenu.split("-")[0] : null;
+                        //열려있던 sub_ul 닫고 이동
                         handleMenuOpenClick(null, parentId, false);
                         setOpenedMenu();
                         navigate("/");

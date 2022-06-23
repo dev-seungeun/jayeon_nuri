@@ -27,10 +27,10 @@ a {
         height: 100%;
     }
     .main_title {
-        height: 700px;
-        line-height: 700px;
+        /* height: 700px; */
+        /* line-height: 700px; */
         position: relative;
-        top: -692px;
+        top: -400px;
         font-size: 80px;
         text-align: center;
         font-weight: 750;
@@ -168,17 +168,18 @@ a {
         height: 100%;
     }
     .main_title {
-        height: 400px;
-        line-height: 400px;
+        /* height: 400px; */
+        /* line-height: 400px; */
         position: relative;
-        top: -350px;
+        top: -175px;
         font-size: 40px;
         text-align: center;
         font-weight: 750;
         z-index: 2;
     }
     .carousel_left, .carousel_right {
-        bottom: -50px !important;
+        display: none !important;
+        /* bottom: -50px !important;  */
     }
 
     /* 메뉴박스 */

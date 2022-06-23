@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 're-carousel'
 import IndicatorDots from '../components/CarouselIndicatorDots'
 import Buttons from '../components/CarouselButtons'
-import "pure-react-carousel/dist/react-carousel.es.css";
 
 import { AiFillHome, AiOutlineCalendar } from "react-icons/ai";
 import { HiOutlineHome, HiChevronLeft,HiChevronRight, HiOutlinePencilAlt, HiOutlinePencil } from "react-icons/hi";
@@ -127,6 +126,8 @@ const Main = (props) => {
                 <div className="etc_info">
                     {!tableMobile &&
                     <table>
+                      <thead></thead>
+                      <tbody>
                         <tr>
                             <td rowSpan={2}>
                                 <div>
@@ -157,10 +158,13 @@ const Main = (props) => {
                                 </div>
                             </td>
                         </tr>
+                      </tbody>
                     </table>
                     }
                     {tableMobile &&
                     <table>
+                      <thead></thead>
+                      <tbody>
                         <tr>
                             <td colSpan={2}>
                                 <div>
@@ -193,6 +197,7 @@ const Main = (props) => {
                                 </div>
                             </td>
                         </tr>
+                      </tbody>
                     </table>
                     }
                 </div>
