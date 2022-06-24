@@ -105,35 +105,38 @@ a {
     .row div:last-child {
         padding-right: 0px !important;
     }
+    #summer_video {
+        width: 80%;
+        height: 100%;
+    }
 
     /* 그 외 정보 */
     .etc_info { margin: 30px 5%; position: relative; font-family: "Referi"; }
 
     .etc_info > table { width: 100%; position: relative; top: -40px; }
-    #etc_info_intro:nth-child(1) { width: 50%; height: 400px; padding-right: 10px; }
-    #etc_info_intro:nth-child(1) > div { height: 100%; }
-    #etc_info_intro:nth-child(1) > div > div:nth-child(1) { font-size: 17px; padding-bottom: 5px; color: rgb(186, 186, 186); }
-    #etc_info_intro:nth-child(1) > div > div:nth-child(2) { font-size: 35px; font-weight: 600; }
-    #etc_info_intro:nth-child(1) > div > div:nth-child(3) { font-size: 18px; color: gray; }
-    #etc_info_intro:nth-child(1) > div > div:nth-child(4) { width: 100%; height: 300px; }
-    #etc_info_intro:nth-child(1) > div > div:nth-child(4) > img { width: 100%; height: 100%; object-fit: cover; padding-top: 20px; }
+    #etc_info_intro { width: 50%; height: 400px; padding-right: 10px; }
+    #etc_info_intro > div { height: 100%; }
+    #etc_info_intro > div > div:nth-child(1) { font-size: 17px; padding-bottom: 5px; color: rgb(186, 186, 186); }
+    #etc_info_intro > div > div:nth-child(2) { font-size: 35px; font-weight: 600; }
+    #etc_info_intro > div > div:nth-child(3) { font-size: 18px; color: gray; }
+    #etc_info_intro > div > div:nth-child(4) { width: 100%; height: 300px; }
+    #etc_info_intro > div > div:nth-child(4) > img { width: 100%; height: 100%; object-fit: cover; padding-top: 20px; }
 
-    #etc_info_notice:nth-child(2)  { width: 50%; height: 190px; padding-left: 10px; }
-    #etc_info_notice:nth-child(2) > div { height: 100%; text-align: left; }
-    #etc_info_notice:nth-child(2) { width: 100%; height: 120px; }
-    #etc_info_notice:nth-child(2) > div { height: 100%; text-align: left; }
-    #etc_info_notice:nth-child(2) > div > div:nth-child(1) { color: black; font-size: 23px; font-weight: 600; }
-    #etc_info_notice:nth-child(2) > div > div:nth-child(2) { height:200px; line-height: 200px; text-align: center; font-size: 16px; }
+    #etc_info_notice  { width: 50%; height: 120px; padding-left: 10px; }
+    #etc_info_notice > div { height: 100%; text-align: left; }
+    #etc_info_notice > div > div:nth-child(1) { color: black; font-size: 23px; font-weight: 600; }
+    #etc_info_notice > div > div:nth-child(2) { height:200px; line-height: 200px; text-align: center; font-size: 16px; }
 
-    #etc_info_call:nth-child(1) { width: 25%; height: 150px; padding: 5px 5px 5px 10px; }
-    #etc_info_call:nth-child(1) > div { height: 100%; text-align: left; background-color: #9EDE73; padding: 10px 20px; }
-    #etc_info_call:nth-child(1) > div > div:nth-child(1) { color: black; font-size: 20px; font-weight: 600; padding-bottom: 15px; }
-    #etc_info_call:nth-child(1) > div > div:nth-child(2) { font-size: 25px; color: white; font-weight: 600; }
+    #etc_info_call { width: 25%; height: 150px; padding: 5px 5px 5px 10px; }
+    #etc_info_call > div { height: 100%; text-align: left; background-color: #9EDE73; padding: 10px 20px; }
+    #etc_info_call > div > div:nth-child(1) { color: black; font-size: 20px; font-weight: 600; padding-bottom: 15px; }
+    #etc_info_call > div > div:nth-child(2) { font-size: 25px; color: white; font-weight: 600; }
 
-    #etc_info_account:nth-child(1) { width: 100%; height: 150px; background-color: #FFC93C; text-align: left; padding: 10px 20px; }
-    #etc_info_account:nth-child(1) > div:nth-child(1) { color: black; font-size: 20px; font-weight: 600; padding-bottom: 15px; }
-    #etc_info_account:nth-child(1) > div:nth-child(2) { font-size: 25px; color: white; font-weight: 600; }
-    #etc_info_account:nth-child(1) > div:nth-child(3) { font-size: 17px; color: white; font-weight: 600; }
+    #etc_info_account { width: 25%; height: 150px; padding: 5px 5px 5px 10px; }
+    #etc_info_account > div { height: 100%; text-align: left; background-color: #FFC93C; padding: 10px 20px; }
+    #etc_info_account > div > div:nth-child(1) { color: black; font-size: 20px; font-weight: 600; padding-bottom: 15px; }
+    #etc_info_account > div > div:nth-child(2) { font-size: 25px; color: white; font-weight: 600; }
+    #etc_info_account > div > div:nth-child(3) { font-size: 17px; color: white; font-weight: 600; }
 
 }
 
@@ -233,6 +236,10 @@ a {
     .col:nth-child(2) > div {
         padding-right: 10px;
     }
+    #summer_video {
+        width: 100%;
+        height: 100%;
+    }
 
     /* 그 외 정보 */
     .etc_info {
@@ -244,32 +251,33 @@ a {
         width: 100%;
     }
 
-    #etc_info_intro:nth-child(1) { width: 100%; height: 100px; }
-    #etc_info_intro:nth-child(1) > div { height: 100% }
-    #etc_info_intro:nth-child(1) > div > div:nth-child(1) { font-size: 13px; padding-bottom: 5px; color: rgb(186, 186, 186); }
-    #etc_info_intro:nth-child(1) > div > div:nth-child(2) { font-size: 30px; font-weight: 600; }
-    #etc_info_intro:nth-child(1) > div > div:nth-child(3) { font-size: 15px; color: gray; }
-    #etc_info_intro:nth-child(1) > div > div:nth-child(4) { width: 100%; height: 300px; }
-    #etc_info_intro:nth-child(1) > div > div:nth-child(4) > img { width: 100%; height: 100%; object-fit: cover; padding-top: 20px; }
+    #etc_info_intro { width: 100%; height: 100px; }
+    #etc_info_intro > div { height: 100% }
+    #etc_info_intro > div > div:nth-child(1) { font-size: 13px; padding-bottom: 5px; color: rgb(186, 186, 186); }
+    #etc_info_intro > div > div:nth-child(2) { font-size: 30px; font-weight: 600; }
+    #etc_info_intro > div > div:nth-child(3) { font-size: 15px; color: gray; }
+    #etc_info_intro > div > div:nth-child(4) { width: 100%; height: 300px; }
+    #etc_info_intro > div > div:nth-child(4) > img { width: 100%; height: 100%; object-fit: cover; padding-top: 20px; }
 
-    #etc_info_notice:nth-child(1) { width: 100%; height: 120px; padding: 30px 0; }
-    #etc_info_notice:nth-child(1) > div { height: 100%; text-align: left; }
-    #etc_info_notice:nth-child(1) > div > div:nth-child(1) { color: black; font-weight: 600; }
-    #etc_info_notice:nth-child(1) > div > div:nth-child(2) { height:150px; line-height: 150px; text-align: center; font-size: 14px; }
+    #etc_info_notice { width: 100%; height: 120px; padding: 30px 0; }
+    #etc_info_notice > div { height: 100%; text-align: left; }
+    #etc_info_notice > div > div:nth-child(1) { color: black; font-weight: 600; }
+    #etc_info_notice > div > div:nth-child(2) { height:150px; line-height: 150px; text-align: center; font-size: 14px; }
 
-    #etc_info_call:nth-child(1) { width: 50%; height: 120px; }
-    #etc_info_call:nth-child(1) > div { height: 100%; text-align: left; background-color: #9EDE73; padding: 10px 20px; }
-    #etc_info_call:nth-child(1) > div > div:nth-child(1) { color: black; font-weight: 600; padding-bottom: 15px; }
-    #etc_info_call:nth-child(1) > div > div:nth-child(2) { font-size: 20px; color: white; font-weight: 600; }
+    #etc_info_call { width: 50%; height: 120px; }
+    #etc_info_call > div { height: 100%; text-align: left; background-color: #9EDE73; padding: 10px 20px; }
+    #etc_info_call > div > div:nth-child(1) { color: black; font-weight: 600; padding-bottom: 15px; }
+    #etc_info_call > div > div:nth-child(2) { font-size: 20px; color: white; font-weight: 600; }
 
-    #etc_info_account:nth-child(1) { width: 100%; height: 120px;  text-align: left; background-color: #FFC93C; padding: 10px 20px; }
-    #etc_info_account:nth-child(1) > div:nth-child(1) { color: black; font-weight: 600; padding-bottom: 15px; }
-    #etc_info_account:nth-child(1) > div:nth-child(2) { font-size: 20px; color: white; font-weight: 600; }
-    #etc_info_account:nth-child(1) > div:nth-child(3) { font-size: 15px; color: white; font-weight: 400; }
+    #etc_info_account { width: 50%; height: 120px; }
+    #etc_info_account > div { height: 100%;  text-align: left; background-color: #FFC93C; padding: 10px 20px; }
+    #etc_info_account > div > div:nth-child(1) { color: black; font-weight: 600; padding-bottom: 15px; }
+    #etc_info_account > div > div:nth-child(2) { font-size: 20px; color: white; font-weight: 600; }
+    #etc_info_account > div > div:nth-child(3) { font-size: 15px; color: white; font-weight: 400; }
 }
 
 
-/* Mobile 화면 */
+/* Tiny Mobile 화면 */
 @media screen and (max-width: 500px) {
 
     /* 메인이미지 Carousel */
@@ -302,4 +310,22 @@ a {
         bottom: 165px;
         font-size: 13px;
     }
+
+    #etc_info_call > div { height: 100%; text-align: left; background-color: #9EDE73; padding: 10px 20px; }
+    #etc_info_call > div > div:nth-child(2) { font-size: 16px; color: white; font-weight: 600; }
+
+    #etc_info_account > div > div:nth-child(2) { font-size: 16px; color: white; font-weight: 600; }
+    #etc_info_account > div > div:nth-child(3) { font-size: 12px; color: white; font-weight: 400; }
+}
+
+/* Tiny Tiny Mobile 화면 */
+@media screen and (max-device-width: 400px) {
+    /*#etc_info_call { width: 50%; height: 150px; }*/
+    /*#etc_info_account { width: 50%; height: 150px; }*/
+
+
+    #etc_info_call > div > div:nth-child(2) { font-size: 14px; color: white; font-weight: 600; }
+
+    #etc_info_account > div > div:nth-child(2) { font-size: 14px; color: white; font-weight: 600; }
+    #etc_info_account > div > div:nth-child(3) { font-size: 10px; color: white; font-weight: 400; }
 }

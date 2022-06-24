@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { openImageModal } from "../App"
-import "../css/main.css";
-import "../css/fluid-gallery.css";
-import 'bootstrap/dist/css/bootstrap.css';
+import platform from 'platform'
 import Carousel from 're-carousel'
 import IndicatorDots from '../components/CarouselIndicatorDots'
 import Buttons from '../components/CarouselButtons'
+import "../css/main.css";
+import "../css/fluid-gallery.css";
+import 'bootstrap/dist/css/bootstrap.css';
 
 import { AiFillHome, AiOutlineCalendar } from "react-icons/ai";
 import { HiOutlineHome, HiChevronLeft,HiChevronRight, HiOutlinePencilAlt, HiOutlinePencil } from "react-icons/hi";
@@ -42,11 +43,22 @@ import { ImFileText, ImFileText2 } from "react-icons/im";
 
 const Main = (props) => {
 
-    const [tableMobile, setTableMobile] = useState(true);
+    const videoRef = useRef();
+    // const [tableMobile, setTableMobile] = useState(true);
 
     useEffect(()=>{
         window.addEventListener('resize', handleResize);
         handleResize();
+
+        // alert(platform.name.toLowerCase());
+        // platform.name //
+        // PC : Chrome, Electron, Firefox, Firefox for iOS, IE, Microsoft Edge, PhantomJS, Safari, SeaMonkey, Silk, Opera Mini, Opera
+        // Mobile : Chrome Mobile, Firefox Mobile, IE Mobile, Opera Mobile
+        if(platform.name.toLowerCase() == "safari") {
+            videoRef.current.pause();
+        }else {
+            videoRef.current.play();
+        }
 
         return () => {
             window.removeEventListener('resize', handleResize);
@@ -56,7 +68,7 @@ const Main = (props) => {
     const handleResize = (e) => {
         var innerWidth = window.innerWidth;
         if(innerWidth > 1000) {
-            setTableMobile(false);
+            // setTableMobile(false);
             document.getElementById("etc_info_intro").setAttribute("rowSpan", 2);
             document.getElementById("etc_info_intro").removeAttribute("colSpan", 2);
 
@@ -65,7 +77,7 @@ const Main = (props) => {
                 document.getElementById("temp_tr").remove();
             }
         }else {
-            setTableMobile(true);
+            // setTableMobile(true);
             document.getElementById("etc_info_intro").setAttribute("colSpan", 2);
             document.getElementById("etc_info_intro").removeAttribute("rowSpan", 2);
 
@@ -133,6 +145,13 @@ const Main = (props) => {
                                 <img src="/main/5.jpg" onClick={openImageModal} />
                             </div>
                         </div>
+                        <div className='row'>
+                            <div className="col-xs-12">
+                                <video id="summer_video" ref={videoRef} autoPlay muted loop>
+                                    <source src="/main/summer_video1.mp4" type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
                         <div className="row">
                             <div className="col-xs-12 col-sm-4 col-lg-4 col-xl-4">
                                 <img src="/main/6.jpg" onClick={openImageModal} />
@@ -178,8 +197,8 @@ const Main = (props) => {
                                     <div>010-4382-0056</div>
                                 </div>
                             </td>
-                            <td>
-                                <div id="etc_info_account">
+                            <td id="etc_info_account">
+                                <div>
                                     <div>입금계좌</div>
                                     <div>1234-5678-91011</div>
                                     <div>농협은행 / 예금주 : 정정희</div>
