@@ -54,8 +54,8 @@ function Header() {
             window.open("http://www.pensionlife.co.kr/asp/calendar/online_cal.php?jid=1395","","width=900px, location=no, titlebar=no, scrollbars=yes, menubar=no, status = no, left = 500, toolbar=no");
         }else if(document.getElementById(childId) != undefined) {
             document.getElementById(childId).classList.add("selected");
-            setOpenedMenu(document.getElementById(childId).parentNode.previousSibling.id+"-"+childId);
-            changeMenuFontWeight(document.getElementById(childId).parentNode.previousSibling.id);
+            setOpenedMenu(document.getElementById(childId).parentNode.parentNode.previousSibling.id+"-"+childId);
+            changeMenuFontWeight(document.getElementById(childId).parentNode.parentNode.previousSibling.id);
         }
 
         if(isMobile) {
@@ -179,7 +179,7 @@ function Header() {
                 setTimeout(function () {
                     setShowSubMenu(true);
                 },200)
-                document.getElementById("submenu_background").style.height = "230px";
+                document.getElementById("submenu_background").style.height = "250px";
             }
         }
     }, [mouseLeaveMenu, mouseLeaveSubMenu]);
@@ -222,10 +222,13 @@ function Header() {
                                     </span>}
                                 </div>
                                 {(showSubMenu || showAboutChild) &&
-                                <ul id="about_child_ul" className="inner_ul">
-                                    <li id="introduce"><div onClick={(e)=>handleLinkMove(e, "/introduce/ABOUT")}>자연누리 소개</div></li>
-                                    <li id="way_to_come"><div onClick={(e)=>handleLinkMove(e, "/way_to_come/ABOUT")}>오시는 길</div></li>
-                                </ul>}
+                                <div>
+                                    {!isMobile && <span id="about_child_ul_title">ABOUT</span>}
+                                    <ul id="about_child_ul" className="inner_ul">
+                                        <li id="introduce"><div onClick={(e)=>handleLinkMove(e, "/introduce/ABOUT")}>자연누리 소개</div></li>
+                                        <li id="way_to_come"><div onClick={(e)=>handleLinkMove(e, "/way_to_come/ABOUT")}>오시는 길</div></li>
+                                    </ul>
+                                </div>}
                             </li>
                             <li>
                                 <div id="ROOM" onClick={handleMenuOpenClick}>
@@ -236,14 +239,17 @@ function Header() {
                                     </span>}
                                 </div>
                                 {(showSubMenu || showRoomChild) &&
-                                <ul id="room_child_ul" className="inner_ul">
-                                    <li id="room1"><div onClick={(e)=>handleLinkMove(e, "/room1/ROOM")}>객실 1,2,3호</div></li>
-                                    <li id="room5"><div onClick={(e)=>handleLinkMove(e, "/room5/ROOM")}>객실 5,6호</div></li>
-                                    <li id="caravan1"><div onClick={(e)=>handleLinkMove(e, "/caravan1/ROOM")}>카라반 1호</div></li>
-                                    <li id="caravan2"><div onClick={(e)=>handleLinkMove(e, "/caravan2/ROOM")}>카라반 2호</div></li>
-                                    <li id="caravan3"><div onClick={(e)=>handleLinkMove(e, "/caravan3/ROOM")}>카라반 3호</div></li>
-                                    <li id="caravan4"><div onClick={(e)=>handleLinkMove(e, "/caravan4/ROOM")}>카라반 4호</div></li>
-                                </ul>}
+                                <div>
+                                    {!isMobile && <span id="room_child_ul_title">ROOM</span>}
+                                    <ul id="room_child_ul" className="inner_ul">
+                                        <li id="room1"><div onClick={(e)=>handleLinkMove(e, "/room1/ROOM")}>객실 1,2,3호</div></li>
+                                        <li id="room5"><div onClick={(e)=>handleLinkMove(e, "/room5/ROOM")}>객실 5,6호</div></li>
+                                        <li id="caravan1"><div onClick={(e)=>handleLinkMove(e, "/caravan1/ROOM")}>카라반 1호</div></li>
+                                        <li id="caravan2"><div onClick={(e)=>handleLinkMove(e, "/caravan2/ROOM")}>카라반 2호</div></li>
+                                        <li id="caravan3"><div onClick={(e)=>handleLinkMove(e, "/caravan3/ROOM")}>카라반 3호</div></li>
+                                        <li id="caravan4"><div onClick={(e)=>handleLinkMove(e, "/caravan4/ROOM")}>카라반 4호</div></li>
+                                    </ul>
+                                </div>}
                             </li>
                             <li>
                                 <div id="AROUND" onClick={handleMenuOpenClick}>
@@ -254,10 +260,13 @@ function Header() {
                                     </span>}
                                 </div>
                                 {(showSubMenu || showAroundChild) &&
-                                <ul className="inner_ul" style={{ariaExpanded:"true"}}>
-                                    <li id="around"><div onClick={(e)=>handleLinkMove(e, "/around/AROUND")}>주변 여행지</div></li>
-                                    <li id="mountain"><div onClick={(e)=>handleLinkMove(e, "/mountain/AROUND")}>소백산 등산로</div></li>
-                                </ul>}
+                                <div>
+                                    {!isMobile && <span id="around_child_ul_title">AROUND</span>}
+                                    <ul id="around_child_ul" className="inner_ul" style={{ariaExpanded:"true"}}>
+                                        <li id="around"><div onClick={(e)=>handleLinkMove(e, "/around/AROUND")}>주변 여행지</div></li>
+                                        <li id="mountain"><div onClick={(e)=>handleLinkMove(e, "/mountain/AROUND")}>소백산 등산로</div></li>
+                                    </ul>
+                                </div>}
                             </li>
                             <li>
                                 <div id="RESERVATION" onClick={handleMenuOpenClick}>
@@ -268,11 +277,14 @@ function Header() {
                                     </span>}
                                 </div>
                                 {(showSubMenu || showReservationChild) &&
-                                <ul className="inner_ul" style={{ariaExpanded:"true"}}>
-                                    <li id="reservation"><div onClick={(e)=>handleLinkMove(e, "/reservation")}>실시간 예약</div></li>
-                                    <li id="terms_of_use"><div onClick={(e)=>handleLinkMove(e, "/terms_of_use/RESERVATION")}>이용수칙</div></li>
-                                    <li id="use_price"><div onClick={(e)=>handleLinkMove(e, "/use_price/RESERVATION")}>이용가격</div></li>
-                                </ul>}
+                                <div>
+                                    {!isMobile && <span id="reservation_child_ul_title">RESERVATION</span>}
+                                    <ul id="reservation_child_ul" className="inner_ul" style={{ariaExpanded:"true"}}>
+                                        <li id="reservation"><div onClick={(e)=>handleLinkMove(e, "/reservation")}>실시간 예약</div></li>
+                                        <li id="terms_of_use"><div onClick={(e)=>handleLinkMove(e, "/terms_of_use/RESERVATION")}>이용수칙</div></li>
+                                        <li id="use_price"><div onClick={(e)=>handleLinkMove(e, "/use_price/RESERVATION")}>이용가격</div></li>
+                                    </ul>
+                                </div>}
                             </li>
                             <li>
                                 <div id="COMMUNITY" onClick={handleMenuOpenClick}>
@@ -283,10 +295,13 @@ function Header() {
                                     </span>}
                                 </div>
                                 {(showSubMenu || showCommunityChild) &&
-                                <ul className="inner_ul" style={{ariaExpanded:"true"}}>
-                                    <li id="notice"><div onClick={(e)=>handleLinkMove(e, "/notice/COMMUNITY")}>공지사항</div></li>
-                                    <li id="reviews"><div onClick={(e)=>handleLinkMove(e, "/reviews/COMMUNITY")}>이용후기</div></li>
-                                </ul>}
+                                <div>
+                                    {!isMobile && <span id="community_child_ul_title">COMMUNITY</span>}
+                                    <ul id="community_child_ul" className="inner_ul" style={{ariaExpanded:"true"}}>
+                                        <li id="notice"><div onClick={(e)=>handleLinkMove(e, "/notice/COMMUNITY")}>공지사항</div></li>
+                                        <li id="reviews"><div onClick={(e)=>handleLinkMove(e, "/reviews/COMMUNITY")}>이용후기</div></li>
+                                    </ul>
+                                </div>}
                             </li>
                          </ul>
                     </nav>

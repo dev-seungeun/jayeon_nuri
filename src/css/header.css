@@ -52,7 +52,7 @@ li {
     .header__menulist {
         display: flex;
         justify-content: center;
-        margin: 0 100px 0 0;
+        margin: 0 130px 0 0;
         height: 100px;
         line-height: 100px;
     }
@@ -72,17 +72,37 @@ li {
         margin: 0 35px 0 0;
     }
     .header__menulist > li:nth-child(4) {
-        margin: 0 40px 0 0;
+        margin: 0 70px 0 0;
     }
 
     .header__menulist > li > div:hover {
         /*color: #CDC2AE;*/
     }
 
+    .header__menulist > li > div:nth-child(2) span {
+        position: relative;
+        top: -8px;
+        color:#EEBB4D;
+        font-family: "Referi-Regular";
+        z-index: 11;
+    }
+
+    #about_child_ul { left: -80px; }
+    #about_child_ul_title { left: -72px; }
+    #room_child_ul { left: -10px; }
+    #room_child_ul_title { left: -5px; }
+    #around_child_ul { left: 60px; }
+    #around_child_ul_title { left: 62px; }
+    #reservation_child_ul { left: 130px; }
+    #reservation_child_ul_title { left: 110px; }
+    #community_child_ul { left: 140px; }
+    #community_child_ul_title { left: 120px; }
+
     ul .inner_ul {
         padding: 0;
+        width: 100px;
         position: relative;
-        top: -27px;
+        top: -92px;
         transition: all 0.5s;
         text-align: left;
         z-index: 11;
@@ -94,8 +114,7 @@ li {
         font-size: 12px;
         font-weight: 400;
         background: none;
-        /*color: #1B2430;*/
-        height: 15px;
+        height: 12px;
         color: #F9F3F3;
         font-family: "Referi";
     }
@@ -179,7 +198,10 @@ li {
         border-top: 1px solid #f3f3f3;
     }
 
-    .header__menulist > li > div {
+    .header__menulist > li > div > ul {
+        padding: 0px 0 10px 0;
+    }
+    .header__menulist > li > div:first-child {
         padding: 15px 50px 14px 20px;
     }
 

@@ -31,12 +31,13 @@ a {
         /* height: 700px; */
         /* line-height: 700px; */
         position: relative;
-        top: -400px;
+        top: -420px;
         font-size: 80px;
+        color: white;
         text-align: center;
-        font-weight: 750;
+        font-weight: 700;
         z-index: 2;
-        font-family: "Referi";
+        /*font-family: "Referi";*/
     }
 
     /* 메뉴박스 */
@@ -96,6 +97,7 @@ a {
     }
     .row div {
         padding: 0 10px 10px 0;
+        padding-left: 0 !important;
         display: flex;
         justify-content:center;
         align-items: center;
@@ -105,54 +107,34 @@ a {
     }
 
     /* 그 외 정보 */
-    .etc_info {
-        margin: 0 5%;
-        position: relative;
-        top: -20px;
-        font-family: "Referi";
-    }
-    .etc_info > table {
-        width: 100%;
-        position: relative;
-        top: -40px;
-    }
+    .etc_info { margin: 30px 5%; position: relative; font-family: "Referi"; }
 
-    .etc_info  tr:first-child td:nth-child(1) {
-        width: 50%;
-        height: 400px;
-        padding-right: 10px;
-    }
-    .etc_info  tr:first-child td:nth-child(1) > div{
-        background-color: skyblue;
-        height: 100%;
-    }
-    .etc_info tr:first-child td:nth-child(2)  {
-        width: 50%;
-        height: 190px;
-        padding-left: 10px;
-    }
-    .etc_info tr:first-child td:nth-child(2) > div {
-        background-color: coral;
-        height: 100%;
-    }
-    .etc_info tr:last-child td:nth-child(1) {
-        width: 25%;
-        height: 170px;
-        padding: 20px 10px 0 10px;
-    }
-    .etc_info tr:last-child td:nth-child(1) > div {
-        background-color: gold;
-        height: 100%;
-    }
-    .etc_info tr:last-child td:nth-child(2) {
-        width: 25%;
-        height: 170px;
-        padding: 20px 0 0 10px;
-    }
-    .etc_info tr:last-child td:nth-child(2) > div {
-        background-color: yellowgreen;
-        height: 100%;
-    }
+    .etc_info > table { width: 100%; position: relative; top: -40px; }
+    #etc_info_intro:nth-child(1) { width: 50%; height: 400px; padding-right: 10px; }
+    #etc_info_intro:nth-child(1) > div { height: 100%; }
+    #etc_info_intro:nth-child(1) > div > div:nth-child(1) { font-size: 17px; padding-bottom: 5px; color: rgb(186, 186, 186); }
+    #etc_info_intro:nth-child(1) > div > div:nth-child(2) { font-size: 35px; font-weight: 600; }
+    #etc_info_intro:nth-child(1) > div > div:nth-child(3) { font-size: 18px; color: gray; }
+    #etc_info_intro:nth-child(1) > div > div:nth-child(4) { width: 100%; height: 300px; }
+    #etc_info_intro:nth-child(1) > div > div:nth-child(4) > img { width: 100%; height: 100%; object-fit: cover; padding-top: 20px; }
+
+    #etc_info_notice:nth-child(2)  { width: 50%; height: 190px; padding-left: 10px; }
+    #etc_info_notice:nth-child(2) > div { height: 100%; text-align: left; }
+    #etc_info_notice:nth-child(2) { width: 100%; height: 120px; }
+    #etc_info_notice:nth-child(2) > div { height: 100%; text-align: left; }
+    #etc_info_notice:nth-child(2) > div > div:nth-child(1) { color: black; font-size: 23px; font-weight: 600; }
+    #etc_info_notice:nth-child(2) > div > div:nth-child(2) { height:200px; line-height: 200px; text-align: center; font-size: 16px; }
+
+    #etc_info_call:nth-child(1) { width: 25%; height: 150px; padding: 5px 5px 5px 10px; }
+    #etc_info_call:nth-child(1) > div { height: 100%; text-align: left; background-color: #9EDE73; padding: 10px 20px; }
+    #etc_info_call:nth-child(1) > div > div:nth-child(1) { color: black; font-size: 20px; font-weight: 600; padding-bottom: 15px; }
+    #etc_info_call:nth-child(1) > div > div:nth-child(2) { font-size: 25px; color: white; font-weight: 600; }
+
+    #etc_info_account:nth-child(1) { width: 100%; height: 150px; background-color: #FFC93C; text-align: left; padding: 10px 20px; }
+    #etc_info_account:nth-child(1) > div:nth-child(1) { color: black; font-size: 20px; font-weight: 600; padding-bottom: 15px; }
+    #etc_info_account:nth-child(1) > div:nth-child(2) { font-size: 25px; color: white; font-weight: 600; }
+    #etc_info_account:nth-child(1) > div:nth-child(3) { font-size: 17px; color: white; font-weight: 600; }
+
 }
 
 
@@ -180,12 +162,13 @@ a {
         /* height: 400px; */
         /* line-height: 400px; */
         position: relative;
-        top: -220px;
+        top: -225px;
         font-size: 40px;
+        color: white;
         text-align: center;
         font-weight: 700;
         z-index: 2;
-        font-family: "Referi-Regular";
+        /*font-family: "Referi-Regular";*/
     }
     .carousel_left, .carousel_right {
         display: none !important;
@@ -221,13 +204,13 @@ a {
     .menu_box  .menu_box_eng {
         position: relative;
         bottom: 110px;
-        font-size: 35px;
+        font-size: 26px;
         font-family: "Referi-Regular";
     }
     .menu_box  .menu_box_kor {
         position: relative;
         bottom: 260px;
-        font-size: 17px;
+        font-size: 15px;
         font-family: "Referi";
     }
 
@@ -253,7 +236,7 @@ a {
 
     /* 그 외 정보 */
     .etc_info {
-        margin: 40px 1%;
+        margin: 100px 1% 50px 1%;
         position: relative;
         font-family: "Referi";
     }
@@ -261,41 +244,28 @@ a {
         width: 100%;
     }
 
-    .etc_info  tr:first-child td:nth-child(1) {
-        width: 100%;
-        height: 100px;
-    }
-    .etc_info  tr:first-child td:nth-child(1) > div{
-        background-color: skyblue;
-        height: 100%;
-    }
-    .etc_info tr:nth-child(2) td:nth-child(1)  {
-        width: 100%;
-        height: 120px;
-        padding-top: 20px;
-    }
-    .etc_info tr:nth-child(2) td:nth-child(1) > div {
-        background-color: coral;
-        height: 100%;
-    }
-    .etc_info tr:last-child td:nth-child(1) {
-        width: 50%;
-        height: 120px;
-        padding-top: 20px;
-    }
-    .etc_info tr:last-child td:nth-child(1) > div {
-        background-color: gold;
-        height: 100%;
-    }
-    .etc_info tr:last-child td:nth-child(2) {
-        width: 50%;
-        height: 120px;
-        padding-top: 20px;
-    }
-    .etc_info tr:last-child td:nth-child(2) > div {
-        background-color: yellowgreen;
-        height: 100%;
-    }
+    #etc_info_intro:nth-child(1) { width: 100%; height: 100px; }
+    #etc_info_intro:nth-child(1) > div { height: 100% }
+    #etc_info_intro:nth-child(1) > div > div:nth-child(1) { font-size: 13px; padding-bottom: 5px; color: rgb(186, 186, 186); }
+    #etc_info_intro:nth-child(1) > div > div:nth-child(2) { font-size: 30px; font-weight: 600; }
+    #etc_info_intro:nth-child(1) > div > div:nth-child(3) { font-size: 15px; color: gray; }
+    #etc_info_intro:nth-child(1) > div > div:nth-child(4) { width: 100%; height: 300px; }
+    #etc_info_intro:nth-child(1) > div > div:nth-child(4) > img { width: 100%; height: 100%; object-fit: cover; padding-top: 20px; }
+
+    #etc_info_notice:nth-child(1) { width: 100%; height: 120px; padding: 30px 0; }
+    #etc_info_notice:nth-child(1) > div { height: 100%; text-align: left; }
+    #etc_info_notice:nth-child(1) > div > div:nth-child(1) { color: black; font-weight: 600; }
+    #etc_info_notice:nth-child(1) > div > div:nth-child(2) { height:150px; line-height: 150px; text-align: center; font-size: 14px; }
+
+    #etc_info_call:nth-child(1) { width: 50%; height: 120px; }
+    #etc_info_call:nth-child(1) > div { height: 100%; text-align: left; background-color: #9EDE73; padding: 10px 20px; }
+    #etc_info_call:nth-child(1) > div > div:nth-child(1) { color: black; font-weight: 600; padding-bottom: 15px; }
+    #etc_info_call:nth-child(1) > div > div:nth-child(2) { font-size: 20px; color: white; font-weight: 600; }
+
+    #etc_info_account:nth-child(1) { width: 100%; height: 120px;  text-align: left; background-color: #FFC93C; padding: 10px 20px; }
+    #etc_info_account:nth-child(1) > div:nth-child(1) { color: black; font-weight: 600; padding-bottom: 15px; }
+    #etc_info_account:nth-child(1) > div:nth-child(2) { font-size: 20px; color: white; font-weight: 600; }
+    #etc_info_account:nth-child(1) > div:nth-child(3) { font-size: 15px; color: white; font-weight: 400; }
 }
 
 
@@ -325,11 +295,11 @@ a {
     .menu_box  .menu_box_eng {
         position: relative;
         bottom: 70px;
-        font-size: 25px;
+        font-size: 20px;
     }
     .menu_box  .menu_box_kor {
         position: relative;
         bottom: 165px;
-        font-size: 15px;
+        font-size: 13px;
     }
 }

@@ -57,8 +57,24 @@ const Main = (props) => {
         var innerWidth = window.innerWidth;
         if(innerWidth > 1000) {
             setTableMobile(false);
+            document.getElementById("etc_info_intro").setAttribute("rowSpan", 2);
+            document.getElementById("etc_info_intro").removeAttribute("colSpan", 2);
+
+            if(document.getElementById("temp_tr") != null) {
+                document.getElementById("etc_info_intro").insertAdjacentElement("afterend", document.getElementById("etc_info_notice"));
+                document.getElementById("temp_tr").remove();
+            }
         }else {
             setTableMobile(true);
+            document.getElementById("etc_info_intro").setAttribute("colSpan", 2);
+            document.getElementById("etc_info_intro").removeAttribute("rowSpan", 2);
+
+            if(document.getElementById("temp_tr") == undefined) {
+                var tr = document.createElement("tr");
+                tr.setAttribute("id", "temp_tr");
+                tr.appendChild(document.getElementById("etc_info_notice"));
+                document.getElementById("etc_info_intro").parentNode.insertAdjacentElement("afterend", tr);
+            }
         }
     }
 
@@ -71,10 +87,8 @@ const Main = (props) => {
                         <img className="main_carousel_img" src="/main/carousel/2.jpg" />
                         <img className="main_carousel_img" src="/main/carousel/3.jpg" />
                         <img className="main_carousel_img" src="/main/carousel/4.jpg" />
-                        {/*<img className="main_carousel_img" src="/main/carousel/5.jpg" />*/}
-                        {/*<video resizeMode="stretch" className="main_carousel_img" src="/main/carousel/6.mp4" />*/}
                     </Carousel>
-                    <div className="main_title">JAYEON-NURI PENSION</div>
+                    <div className="main_title">JAYEONNURI PENSION</div>
                 </div>
                 <div className="menu_box_wrap">
                     <div>
@@ -101,52 +115,71 @@ const Main = (props) => {
                 <div className="main_img">
                     <div className="tz-gallery">
                         <div className="row">
-
-                            <div className="col-xs-12 col-sm-6 col-lg-6 col-xl-3">
+                            <div className="col-xs-12 col-sm-6 col-lg-6 col-xl-6">
                                 <img src="/main/1.jpg" onClick={openImageModal} />
                             </div>
-                            <div className="col-xs-12 col-sm-6 col-lg-6 col-xl-3">
-                                <img src="/main/3.jpg" onClick={openImageModal} />
-                            </div>
-                            <div className="col-xs-12 col-sm-6 col-lg-6 col-xl-3">
+                            <div className="col-xs-12 col-sm-6 col-lg-6 col-xl-6">
                                 <img src="/main/2.jpg" onClick={openImageModal} />
                             </div>
-                            <div className="col-xs-12 col-sm-6 col-lg-6 col-xl-3">
+                        </div>
+                        <div className="row">
+                            <div className="col-xs-12 col-sm-4 col-lg-4 col-xl-4">
+                                <img src="/main/3.jpg" onClick={openImageModal} />
+                            </div>
+                            <div className="col-xs-12 col-sm-4 col-lg-4 col-xl-4">
                                 <img src="/main/4.jpg" onClick={openImageModal} />
+                            </div>
+                            <div className="col-xs-12 col-sm-4 col-lg-4 col-xl-4">
+                                <img src="/main/5.jpg" onClick={openImageModal} />
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-xs-12 col-sm-4 col-lg-4 col-xl-4">
+                                <img src="/main/6.jpg" onClick={openImageModal} />
+                            </div>
+                            <div className="col-xs-12 col-sm-4 col-lg-4 col-xl-4">
+                                <img src="/main/7.jpg" onClick={openImageModal} />
+                            </div>
+                            <div className="col-xs-12 col-sm-4 col-lg-4 col-xl-4">
+                                <img src="/main/8.jpg" onClick={openImageModal} />
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div className="etc_info">
-                    {!tableMobile &&
                     <table>
                       <thead></thead>
                       <tbody>
                         <tr>
-                            <td rowSpan={2}>
+                            <td id="etc_info_intro">
                                 <div>
-                                    <div>Notice</div>
-                                    <div>1</div>
-                                    <div>2</div>
+                                    <div>JAYEONNURI PENSION</div>
+                                    <div>Happiness & Comfort</div>
+                                    <div>행복한 여행을 만들어 드립니다</div>
+                                    <div>
+                                        <img src="/main/bottom.jpg" />
+                                    </div>
                                 </div>
                             </td>
-                            <td colSpan={2}>
+                            <td id="etc_info_notice" colSpan={2}>
                                 <div>
-                                    <div>주소</div>
-                                    <div>경상북도 영주시 풍기읍 삼가로 288 자연누리펜션</div>
+                                    <div>Notice & Event</div>
+                                    <div>
+                                    게시물이 없습니다.
+                                    </div>
                                 </div>
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td id="etc_info_call">
                                 <div>
-                                    <div>문의전화</div>
-                                    <div>1234-5678</div>
+                                    <div>문의사항</div>
+                                    <div>010-4382-0056</div>
                                 </div>
                             </td>
                             <td>
-                                <div>
+                                <div id="etc_info_account">
                                     <div>입금계좌</div>
                                     <div>1234-5678-91011</div>
                                     <div>농협은행 / 예금주 : 정정희</div>
@@ -155,46 +188,6 @@ const Main = (props) => {
                         </tr>
                       </tbody>
                     </table>
-                    }
-                    {tableMobile &&
-                    <table>
-                      <thead></thead>
-                      <tbody>
-                        <tr>
-                            <td colSpan={2}>
-                                <div>
-                                    <div>Notice</div>
-                                    <div>1</div>
-                                    <div>2</div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colSpan={2}>
-                                <div>
-                                    <div>주소</div>
-                                    <div>경상북도 영주시 풍기읍 삼가로 288 자연누리펜션</div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div>
-                                    <div>문의전화</div>
-                                    <div>1234-5678</div>
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <div>입금계좌</div>
-                                    <div>1234-5678-91011</div>
-                                    <div>농협은행 / 예금주 : 정정희</div>
-                                </div>
-                            </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    }
                 </div>
             </div>
         </>
