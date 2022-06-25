@@ -70,6 +70,8 @@ function Header() {
             setMouseLeaveMenu(true);
         }
 
+        changeToggleColor(link);
+
         if(childId != "reservation") {
             navigate(link);
         }
@@ -126,9 +128,19 @@ function Header() {
         setIsToggled(false);
     }
 
+    const changeToggleColor = (pathname) => {
+        console.log(location.pathname)
+        if(pathname != "/") {
+            document.querySelector(".toggle").style.color = "black";
+        }else {
+            document.querySelector(".toggle").style.color = "white";
+        }
+    }
+
     useEffect(() => {
         setIsMobile(window.innerWidth >= max_width ? false : true);
         window.addEventListener("resize", handleResize);
+
         return () => {
             window.removeEventListener("resize", handleResize);
         }
@@ -195,9 +207,9 @@ function Header() {
                 {isMobile && location.pathname != "/" &&
                 <div className="name">
                     <span onClick={(e)=>{
+                        changeToggleColor("/");
                         const parentId = openedMenu ? openedMenu.split("-")[0] : null;
-                        //열려있던 sub_ul 닫고 이동
-                        handleMenuOpenClick(null, parentId, false);
+                        handleMenuOpenClick(null, parentId, false); //열려있던 sub_ul 닫고 이동
                         setOpenedMenu();
                         navigate("/");
                     }}>JayeonNuri
@@ -208,7 +220,10 @@ function Header() {
                     <div className="toggle_x" onClick={() => { setIsToggled(!isToggled); }}>
                         <FontAwesomeIcon icon={faTimes}/>
                     </div>
-                    <div className="logo" onClick={(e)=>{ location.pathname == "/" ? window.location.reload() : navigate("/") }}>
+                    <div className="logo" onClick={(e)=>{
+                        changeToggleColor("/");
+                        location.pathname == "/" ? window.location.reload() : navigate("/")
+                    }}>
                         <TbLeaf/>
                     </div>
                     <nav id="menu">
