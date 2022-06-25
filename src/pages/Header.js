@@ -57,6 +57,7 @@ function Header() {
 
     const handleLinkMove = (e, link) => {
 
+        console.log(link);
         const childId = link.split("/")[1];
         if(childId == "reservation") {
             window.open("http://www.pensionlife.co.kr/asp/calendar/online_cal.php?jid=1395","","width=900px, location=no, titlebar=no, scrollbars=yes, menubar=no, status = no, left = 500, toolbar=no");
@@ -102,17 +103,25 @@ function Header() {
 
         changeMenuFontWeight();
 
-        if(isMobile) {
-            if(id === "ABOUT" || toAll) {
-                setShowAboutChild(forceFlag != null ? forceFlag : !showAboutChild);
-            }else if(id === "ROOM" || toAll) {
-                setShowRoomChild(forceFlag != null ? forceFlag : !showRoomChild);
-            }else if(id === "AROUND" || toAll) {
-                setShowAroundChild(forceFlag != null ? forceFlag : !showAroundChild);
-            }else if(id === "RESERVATION" || toAll) {
-                setShowReservationChild(forceFlag != null ? forceFlag : !showReservationChild);
-            }else if(id === "COMMUNITY" || toAll) {
-                setShowCommunityChild(forceFlag != null ? forceFlag : !showCommunityChild);
+        if(toAll) {
+            setShowAboutChild(forceFlag);
+            setShowRoomChild(forceFlag);
+            setShowAroundChild(forceFlag);
+            setShowReservationChild(forceFlag);
+            setShowCommunityChild(forceFlag);
+        }else {
+            if(isMobile) {
+                if(id === "ABOUT") {
+                    setShowAboutChild(forceFlag != null ? forceFlag : !showAboutChild);
+                }else if(id === "ROOM") {
+                    setShowRoomChild(forceFlag != null ? forceFlag : !showRoomChild);
+                }else if(id === "AROUND") {
+                    setShowAroundChild(forceFlag != null ? forceFlag : !showAroundChild);
+                }else if(id === "RESERVATION") {
+                    setShowReservationChild(forceFlag != null ? forceFlag : !showReservationChild);
+                }else if(id === "COMMUNITY") {
+                    setShowCommunityChild(forceFlag != null ? forceFlag : !showCommunityChild);
+                }
             }
         }
     }
@@ -147,12 +156,12 @@ function Header() {
 
     useEffect(() => {
         document.body.style.overflow = isToggled ? "hidden" : "unset";
+
         if(isToggled) {
+
             // 토글 열릴때 오픈메뉴 셋팅
           let parentId = "";
-          if(location.pathname == "/") {
-              handleMenuOpenClick(null, null, true);
-          }else {
+          if(location.pathname != "/") {
               if(openedMenu != undefined) {
                   parentId = openedMenu.split("-")[0];
               }else {
@@ -160,14 +169,16 @@ function Header() {
                   parentId = location.pathname.split("/")[location.pathname.split("/").length-1];
                   setOpenedMenu(parentId+"-"+location.pathname.split("/")[location.pathname.split("/").length-2]);
               }
-              handleMenuOpenClick(null, parentId, true);
+              handleMenuOpenClick(null, parentId, true); // 특정 parentId 의 sub_ul 열기
           }
+
         }else {
           if(location.pathname == "/") {
             setOpenedMenu();
-            handleMenuOpenClick(null, null, false, true);
+            handleMenuOpenClick(null, null, false, true); // sub_ul 모두닫기
           }
         }
+
     }, [isToggled]);
 
 
@@ -208,7 +219,7 @@ function Header() {
                     <span onClick={(e)=>{
                         changeToggleColor("/");
                         const parentId = openedMenu ? openedMenu.split("-")[0] : null;
-                        handleMenuOpenClick(null, parentId, false); //열려있던 sub_ul 닫고 이동
+                        handleMenuOpenClick(null, null, false, true); // sub_ul 모두 닫고 이동
                         setOpenedMenu();
                         navigate("/");
                     }}>JayeonNuri

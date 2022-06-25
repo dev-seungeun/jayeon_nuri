@@ -1,9 +1,12 @@
 import React from 'react';
+import "../App.css";
 
 function Around(props) {
     return (
         <>
-            <h1>Around</h1>
+            <div className="top_img">
+                <img src="/main/top/leaf2.jpg" />
+            </div>
         </>
     );
 }

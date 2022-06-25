@@ -1,9 +1,12 @@
 import React from 'react';
+import "../App.css";
 
 function Mountain(props) {
     return (
         <>
-            <h1>Mountain</h1>
+            <div className="top_img">
+                <img src="/main/top/leaf2.jpg" />
+            </div>
         </>
     );
 }

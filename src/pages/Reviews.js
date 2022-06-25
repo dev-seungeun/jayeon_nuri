@@ -1,9 +1,12 @@
 import React from 'react';
+import "../App.css";
 
 function Reviews(props) {
     return (
         <>
-            <h1>Reviews</h1>
+            <div className="top_img">
+                <img src="/main/top/cloud1.jpg" />
+            </div>
         </>
     );
 }

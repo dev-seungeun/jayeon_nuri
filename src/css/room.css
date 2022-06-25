@@ -1,0 +1,60 @@
+.row div {
+    display: block;
+}
+
+/* PC 화면 */
+@media screen and (min-width: 1200px) {
+    .row > div {
+        padding: 5px !important;
+    }
+    #room_title {
+        font-size: 20px;
+        margin: 0;
+        font-family: "Referi-Regular";
+        position: relative;
+        top:-40px;
+    }
+    #room_title svg {
+        font-size: 30px !important;
+    }
+    #room_image_wrap {
+        margin: 0 10%;
+    }
+}
+
+/* Tablet 화면 */
+@media screen and (max-width: 1200px) {
+    #room_title {
+        font-size: 20px;
+        margin: 0;
+        font-family: "Referi-Regular";
+        position: relative;
+        top:-40px;
+    }
+    #room_title svg {
+        font-size: 25px !important;
+    }
+    #room_image_wrap {
+        margin: 0px;
+    }
+}
+
+/* Mobile 화면 */
+@media screen and (max-width: 1000px) {
+    #room_title {
+        font-size: 17px;
+        margin: 0;
+        font-family: "Referi-Regular";
+        position: relative;
+        top:-20px;
+    }
+    #room_title svg {
+        font-size: 20px !important;
+    }
+    .row > div {
+        padding-bottom: 5px !important;
+    }
+    #room_image_wrap {
+        margin: 0px;
+    }
+}

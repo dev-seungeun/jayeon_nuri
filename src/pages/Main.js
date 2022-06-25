@@ -135,39 +135,39 @@ const Main = (props) => {
                     <div className="tz-gallery">
                         <div className="row">
                             <div className="col-xs-12 col-sm-6 col-lg-6 col-xl-6">
-                                <img src="/main/1.jpg" onClick={openImageModal} />
+                                <img src="/main/main_list/1.jpg" onClick={openImageModal} />
                             </div>
                             <div className="col-xs-12 col-sm-6 col-lg-6 col-xl-6">
-                                <img src="/main/2.jpg" onClick={openImageModal} />
+                                <img src="/main/main_list/2.jpg" onClick={openImageModal} />
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-xs-12 col-sm-4 col-lg-4 col-xl-4">
-                                <img src="/main/3.jpg" onClick={openImageModal} />
+                                <img src="/main/main_list/3.jpg" onClick={openImageModal} />
                             </div>
                             <div className="col-xs-12 col-sm-4 col-lg-4 col-xl-4">
-                                <img src="/main/4.jpg" onClick={openImageModal} />
+                                <img src="/main/main_list/4.jpg" onClick={openImageModal} />
                             </div>
                             <div className="col-xs-12 col-sm-4 col-lg-4 col-xl-4">
-                                <img src="/main/5.jpg" onClick={openImageModal} />
+                                <img src="/main/main_list/5.jpg" onClick={openImageModal} />
                             </div>
                         </div>
                         <div className='row'>
                             <div className="col-xs-12">
                                 <video id="summer_video" ref={videoRef} autoPlay muted loop>
-                                    <source src="/main/summer_video1.mp4" type="video/mp4" />
+                                    <source src="/main/main_list/summer_video1.mp4" type="video/mp4" />
                                 </video>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-xs-12 col-sm-4 col-lg-4 col-xl-4">
-                                <img src="/main/6.jpg" onClick={openImageModal} />
+                                <img src="/main/main_list/6.jpg" onClick={openImageModal} />
                             </div>
                             <div className="col-xs-12 col-sm-4 col-lg-4 col-xl-4">
-                                <img src="/main/7.jpg" onClick={openImageModal} />
+                                <img src="/main/main_list/7.jpg" onClick={openImageModal} />
                             </div>
                             <div className="col-xs-12 col-sm-4 col-lg-4 col-xl-4">
-                                <img src="/main/8.jpg" onClick={openImageModal} />
+                                <img src="/main/main_list/8.jpg" onClick={openImageModal} />
                             </div>
                         </div>
                     </div>
@@ -207,7 +207,7 @@ const Main = (props) => {
                             <td id="etc_info_account">
                                 <div>
                                     <div>입금계좌</div>
-                                    <div>1234-5678-91011</div>
+                                    <div>351-7557-4935-03</div>
                                     <div>농협은행 / 예금주 : 정정희</div>
                                 </div>
                             </td>

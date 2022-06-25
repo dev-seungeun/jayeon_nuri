@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Header, Footer, NotFound, Main, Introduce } from './pages';
+import { HiX } from "react-icons/hi";
 import Caravan1 from "./pages/Caravan1";
 import Caravan2 from "./pages/Caravan2";
 import Caravan3 from "./pages/Caravan3";
@@ -12,13 +13,12 @@ import Mountain from "./pages/Mountain";
 import TermsOfUse from "./pages/TermsOfUse";
 import UsePrice from "./pages/UsePrice";
 import WayToCome from "./pages/WayToCome";
+import Notice from "./pages/Notice";
 import Reviews from "./pages/Reviews";
 import "./App.css";
 
 const openImageModal = (e) => {
   document.getElementById("my_modal").style.display = "block";
-  console.log(e.target);
-  console.log(e.target.id);
   let imgSrc = e.target.src;
   document.getElementById("modalBoxImg").src = imgSrc;
 };
@@ -32,7 +32,7 @@ const App = () => {
   return (
       <div className='App'>
         <div id="my_modal" className="my_modal" onClick={closeImageModal}>
-          <button onClick={closeImageModal}>&times;</button>
+          <button onClick={closeImageModal}><HiX /></button>
           <div id="modalBox" className="modalBox">
             <img id="modalBoxImg" src="" />
           </div>
@@ -53,6 +53,7 @@ const App = () => {
             <Route path="/mountain/:parent" element={<Mountain />}></Route>
             <Route path="/terms_of_use/:parent" element={<TermsOfUse />}></Route>
             <Route path="/use_price/:parent" element={<UsePrice />}></Route>
+            <Route path="/notice/:parent" element={<Notice />}></Route>
             <Route path="/reviews/:parent" element={<Reviews />}></Route>
             <Route path="*" element={<NotFound />}></Route>
           </Routes>
