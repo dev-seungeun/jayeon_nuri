@@ -22,6 +22,14 @@ const HeaderStyle = styled.div`
     }
 `;
 
+const changeToggleColor = (pathname) => {
+    if(pathname != "/") {
+        document.querySelector(".toggle").style.color = "black";
+    }else {
+        document.querySelector(".toggle").style.color = "white";
+    }
+}
+
 function Header() {
 
     const navigate = useNavigate();
@@ -126,15 +134,6 @@ function Header() {
 
     const clickDimmed = (e) => {
         setIsToggled(false);
-    }
-
-    const changeToggleColor = (pathname) => {
-        console.log(location.pathname)
-        if(pathname != "/") {
-            document.querySelector(".toggle").style.color = "black";
-        }else {
-            document.querySelector(".toggle").style.color = "white";
-        }
     }
 
     useEffect(() => {
@@ -328,3 +327,4 @@ function Header() {
 }
 
 export default Header;
+export { changeToggleColor };

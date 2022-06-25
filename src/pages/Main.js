@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { openImageModal } from "../App"
-import platform from 'platform'
-import Carousel from 're-carousel'
-import IndicatorDots from '../components/CarouselIndicatorDots'
-import Buttons from '../components/CarouselButtons'
+import { Link, useNavigate } from 'react-router-dom';
+import { openImageModal } from "../App";
+import { changeToggleColor } from "./Header";
+import platform from 'platform';
+import Carousel from 're-carousel';
+import IndicatorDots from '../components/CarouselIndicatorDots';
+import Buttons from '../components/CarouselButtons';
 import "../css/main.css";
 import "../css/fluid-gallery.css";
 import 'bootstrap/dist/css/bootstrap.css';
@@ -43,6 +44,7 @@ import { ImFileText, ImFileText2 } from "react-icons/im";
 
 const Main = (props) => {
 
+    const navigate = useNavigate();
     const videoRef = useRef();
     // const [tableMobile, setTableMobile] = useState(true);
 
@@ -90,6 +92,11 @@ const Main = (props) => {
         }
     }
 
+    const handleLinkMove = (e, link) => {
+        changeToggleColor(link.split("/")[2]);
+        navigate(link);
+    }
+
     return (
         <>
             <div className="main_wrap">
@@ -104,13 +111,13 @@ const Main = (props) => {
                 </div>
                 <div className="menu_box_wrap">
                     <div>
-                        <Link to="/introduce/ABOUT"><div className="menu_box"><HiOutlineHome /><br/><span className="menu_box_eng">INTRODUCE</span><br/><span className="menu_box_kor">펜션소개</span></div></Link>
+                        <div className="menu_box" onClick={(e)=>handleLinkMove(e, "/introduce/ABOUT")}><HiOutlineHome /><br/><span className="menu_box_eng">INTRODUCE</span><br/><span className="menu_box_kor">펜션소개</span></div>
                     </div>
                     <div>
-                        <Link to="/room1/ROOM"><div className="menu_box"><BiBed /><br/><span className="menu_box_eng">ROOM</span><br/><span className="menu_box_kor">객실안내</span></div></Link>
+                        <div className="menu_box" onClick={(e)=>handleLinkMove(e, "/room1/ROOM")}><BiBed /><br/><span className="menu_box_eng">ROOM</span><br/><span className="menu_box_kor">객실안내</span></div>
                     </div>
                     <div>
-                        <Link to="/terms_of_use/RESERVATION"><div className="menu_box"><TbListCheck /><br/><span className="menu_box_eng">RULES</span><br/><span className="menu_box_kor">이용수칙</span></div></Link>
+                        <div className="menu_box" onClick={(e)=>handleLinkMove(e, "/terms_of_use/RESERVATION")}><TbListCheck /><br/><span className="menu_box_eng">RULES</span><br/><span className="menu_box_kor">이용수칙</span></div>
                     </div>
                     <div>
                         <div onClick={(e) => {window.open("http://www.pensionlife.co.kr/asp/calendar/online_cal.php?jid=1395","","width=900px, location=no, titlebar=no, scrollbars=yes, menubar=no, status = no, left = 500, toolbar=no");}} className="menu_box"><IoCalendarOutline />
@@ -118,10 +125,10 @@ const Main = (props) => {
                         </div>
                     </div>
                     <div>
-                        <Link to="/reviews/COMMUNITY"><div className="menu_box"><TbPencil /><br/><span className="menu_box_eng">REVIEWS</span><br/><span className="menu_box_kor">이용후기</span></div></Link>
+                        <div className="menu_box" onClick={(e)=>handleLinkMove(e, "/reviews/COMMUNITY")}><TbPencil /><br/><span className="menu_box_eng">REVIEWS</span><br/><span className="menu_box_kor">이용후기</span></div>
                     </div>
                     <div>
-                        <Link to="/way_to_come/ABOUT"><div className="menu_box"><GrMapLocation /><br/><span className="menu_box_eng">LOCATION</span><br/><span className="menu_box_kor">오시는 길</span></div></Link>
+                        <div className="menu_box" onClick={(e)=>handleLinkMove(e, "/way_to_come/ABOUT")}><GrMapLocation /><br/><span className="menu_box_eng">LOCATION</span><br/><span className="menu_box_kor">오시는 길</span></div>
                     </div>
                 </div>
                 <div className="main_img">
