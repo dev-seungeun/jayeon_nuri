@@ -102,10 +102,10 @@ const Main = (props) => {
             <div className="main_wrap">
                 <div className="main_carousel_wrap">
                     <Carousel loop auto widgets={[IndicatorDots, Buttons]}>
-                        <img className="main_carousel_img" src="/main/carousel/1.jpg" />
-                        <img className="main_carousel_img" src="/main/carousel/2.jpg" />
-                        <img className="main_carousel_img" src="/main/carousel/3.jpg" />
-                        <img className="main_carousel_img" src="/main/carousel/4.jpg" />
+                        <img className="main_carousel_img" src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fcarousel%2F1.jpg?alt=media&token=fd6a42cb-2ca6-45e3-b6f7-c1b1e74a30ee" />
+                        <img className="main_carousel_img" src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fcarousel%2F2.jpg?alt=media&token=0fff63df-11c3-41e3-b024-7e6e6b753444" />
+                        <img className="main_carousel_img" src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fcarousel%2F3.jpg?alt=media&token=e0979a08-affc-4182-8b8a-da9177ff7a9b" />
+                        <img className="main_carousel_img" src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fcarousel%2F4.jpg?alt=media&token=17ee9d23-13b0-4921-8283-a180d660e639" />
                     </Carousel>
                     <div className="main_title">JAYEONNURI PENSION</div>
                 </div>

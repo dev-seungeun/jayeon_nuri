@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component, useState, useEffect} from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Header, Footer, NotFound, Main, Introduce } from './pages';
 import { HiX } from "react-icons/hi";
@@ -16,10 +16,11 @@ import WayToCome from "./pages/WayToCome";
 import Notice from "./pages/Notice";
 import Reviews from "./pages/Reviews";
 import "./App.css";
+import platform from "platform";
 
-const openImageModal = (e) => {
+const openImageModal = (e, src) => {
   document.getElementById("my_modal").style.display = "block";
-  let imgSrc = e.target.src;
+  let imgSrc = src ? src : e.target.src;
   document.getElementById("modalBoxImg").src = imgSrc;
 };
 
@@ -28,7 +29,6 @@ const closeImageModal = (e) => {
 };
 
 const App = () => {
-
   return (
       <div className='App'>
         <div id="my_modal" className="my_modal" onClick={closeImageModal}>

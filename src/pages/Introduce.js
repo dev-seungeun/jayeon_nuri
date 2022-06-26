@@ -23,7 +23,7 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-12 col-xl-8">
-                            <img src="/main/introduce/1.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F1.jpg?alt=media&token=2ac97545-1eff-4036-847c-c6e85165282e" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
                     </div>
@@ -38,7 +38,7 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-12 col-xl-8">
-                            <img src="/main/introduce/2.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F2.jpg?alt=media&token=9a6c8946-5801-40b7-8525-378e63f59527" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
                     </div>
@@ -54,10 +54,10 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/3.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F3.jpg?alt=media&token=42c3ff05-44ed-455f-bb0f-c35ad6be7e3e" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/4.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F4.jpg?alt=media&token=b927f85b-6ee1-4608-b30e-af11a89fa7ad" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
                     </div>
@@ -71,10 +71,10 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/5.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F5.jpg?alt=media&token=b529750e-ff28-46ee-ad78-ae0201e49476" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/6.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F6.jpg?alt=media&token=7a19bc4e-2751-444c-b909-456c4161a38f" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
                     </div>
@@ -86,28 +86,28 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/7.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F7.jpg?alt=media&token=2ff42de7-c659-4029-8377-c600566e4a87" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/8.jpg" onClick={openImageModal} />
-                        </div>
-                        <div className="col-lg-0 col-xl-2"></div>
-
-                        <div className="col-lg-0 col-xl-2"></div>
-                        <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/9.jpg" onClick={openImageModal} />
-                        </div>
-                        <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/10.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F8.jpg?alt=media&token=716a1cf3-4daa-4a08-ac4f-a6d85ce8fb2a" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
 
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/11.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F9.jpg?alt=media&token=30d38dda-e526-4955-bb0e-0de6b4bbdd2a" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/12.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F10.jpg?alt=media&token=9f2e35c4-c9d4-4dfa-9e7b-006f5ce45425" onClick={openImageModal} />
+                        </div>
+                        <div className="col-lg-0 col-xl-2"></div>
+
+                        <div className="col-lg-0 col-xl-2"></div>
+                        <div className="col-lg-6 col-xl-4">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F11.JPG?alt=media&token=c6b8caf2-b8d4-466c-92c3-b9547527f914" onClick={openImageModal} />
+                        </div>
+                        <div className="col-lg-6 col-xl-4">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F12.jpg?alt=media&token=1d0c7830-f773-4e04-83e5-d8de491d98b9" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
                     </div>
@@ -121,7 +121,7 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-xl-2"></div>
                         <div className="col-xl-8">
-                            <img src="/main/introduce/13.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F13.jpg?alt=media&token=0f74a02a-6ba1-42da-ab1c-176a8a0a00f9" onClick={openImageModal} />
                         </div>
                         <div className="col-xl-2"></div>
                     </div>
@@ -129,10 +129,10 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/14.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F14.jpg?alt=media&token=b08ee987-cf8e-44ad-b894-426961a08456" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/15.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F15.jpg?alt=media&token=8c5cf548-62bd-4272-aea9-449964a0bd2c" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
                     </div>
@@ -146,10 +146,10 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/16.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F16.jpg?alt=media&token=63564520-eeaf-4d6a-a5a0-b6574db4d0aa" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/17.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F17.jpg?alt=media&token=634f7b97-6e5d-4391-acad-8f553f3138e9" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
                     </div>
@@ -164,7 +164,7 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-xl-2"></div>
                         <div className="col-xl-8">
-                            <img src="/main/introduce/18.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F18.jpg?alt=media&token=ec7855b0-d2c7-4d5b-adad-ba04df10efed" onClick={openImageModal} />
                         </div>
                         <div className="col-xl-2"></div>
                     </div>
@@ -176,7 +176,7 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-xl-2"></div>
                         <div className="col-xl-8">
-                            <img src="/main/introduce/19.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F19.jpg?alt=media&token=aa35ba82-3830-451d-96e0-598cef27dbe3" onClick={openImageModal} />
                         </div>
                         <div className="col-xl-2"></div>
                     </div>
@@ -188,10 +188,10 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/20.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F20.jpg?alt=media&token=c7c887b0-e5ac-4f5a-af61-a3648100d65f" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/21.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F21.jpg?alt=media&token=8ad7f0f4-b154-4c28-b4c2-1b85d5d976af" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
                     </div>
@@ -204,10 +204,10 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/22.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F22.jpg?alt=media&token=562f3a9a-9f0c-46bf-bfcd-4c21266d85cd" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/23.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F23.jpg?alt=media&token=223150f7-5887-4ccf-93e4-18e6c8e6cd43" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
                     </div>
@@ -222,7 +222,7 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-xl-2"></div>
                         <div className="col-xl-8">
-                            <img src="/main/introduce/24.jpg" onClick={openImageModal} />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fintroduce%2F24.jpg?alt=media&token=2e2bbde3-1354-4f91-b21c-828aa95cc74a" onClick={openImageModal} />
                         </div>
                         <div className="col-xl-2"></div>
                     </div>
