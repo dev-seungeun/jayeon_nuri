@@ -1,0 +1,19 @@
+#use_price_wrap {
+    font-family: "Referi";
+}
+
+/* Mobile 화면 */
+@media screen and (max-width: 1000px) {
+    #use_price_wrap .price_title {
+        width: auto !important;
+        margin: 0 0 10px 10px !important;
+    }
+    #use_price_wrap #room_price table {
+        width:99% !important;
+    }
+}
+
+/* Tiny Mobile 화면 */
+@media screen and (max-width: 550px) {
+
+}

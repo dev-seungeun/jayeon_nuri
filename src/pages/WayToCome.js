@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import KakaoMapScript from "../components/KakaoMapScript";
 import "../App.css";
+import "../css/way_to_com.css";
 
 function WayToCome(props) {
 
@@ -15,7 +16,7 @@ function WayToCome(props) {
             </div>
 
             <div id="map_wrap">
-              <div id='map' style={{ margin: "0 auto", width: '800px', height: '500px' }}></div>
+              <div id='map' style={{ margin: "0 auto" }}></div>
             </div>
         </>
     );

@@ -8,14 +8,14 @@ Header {
     background-color: lightgray;
 }
 
+#header li {
+    list-style: none;
+    cursor: pointer;
+}
+
 a {
     text-decoration: none;
     color: #354259;
-}
-
-li {
-    list-style: none;
-    cursor: pointer;
 }
 
 /* PC 화면 */

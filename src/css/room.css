@@ -1,3 +1,6 @@
+.control-arrow {
+    display: none;
+}
 .row div {
     display: block;
 }
@@ -6,9 +9,17 @@
 }
 .slider-wrapper img {
     object-fit: contain;
-    width: 100%;
+    width: auto !important;
     height: 500px;
 }
+.carousel .carousel-status{
+    display: none;
+}
+
+#bottom_info{
+    font-family: "Referi";
+}
+
 
 /* PC 화면 */
 @media screen and (min-width: 1200px) {
@@ -16,35 +27,159 @@
         padding: 5px !important;
     }
     #room_title {
-        font-size: 20px;
-        margin: 0;
+        width: 80%;
+        font-size: 30px;
+        font-weight: 800;
+        margin: 0 auto;
         font-family: "Referi-Regular";
         position: relative;
         top:-40px;
+        padding: 30px 0;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
     }
     #room_title svg {
         font-size: 30px !important;
     }
+    #room_title p {
+        font-size: 15px;
+        padding-top: 30px;
+        margin-bottom: 10px;
+    }
+    .add_wrap {
+        width: 80%;
+        margin: 0 auto;
+        padding: 50px 0;
+        border-top: 1px solid #ddd;
+    }
+    .add_wrap .price_title {
+        margin: 0 10px 30px 0;
+        float: left;
+        font-size: 25px;
+        font-weight: 800;
+        width:11%;
+    }
+    .add_wrap .stuff {
+        font-weight: 100;
+        font-size: 15px;
+        width: 98%;
+    }
+    #room_price table {
+        width: 85%;
+        margin: 0 auto;
+    }
+    #room_price table th {
+        font-weight: 800;
+        font-size: 14px;
+        color: #333;
+        background-color: #f7f7f7;
+        border: 1px solid #ddd;
+    }
+    #room_price table td{
+        border: 1px solid #ddd;
+        font-size: 13px;
+    }
+    .room_bottom_btn {
+        position: relative;
+        display: inline-block;
+        width: 154px;
+        height: 50px;
+        margin: 40px 0 70px 0;
+        border-radius: 100px;
+        font-size: 16px;
+        line-height: 50px;
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+        font-family: "Referi-Regular";
+    }
+    .hrr {
+        width: 80%;
+        margin: 0 auto;
+        border-top: 1px solid #ddd;
+    }
 }
 
 /* Tablet 화면 */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) and (min-width: 1000px) {
     #room_title {
-        font-size: 20px;
-        margin: 0;
+        width: 80%;
+        font-size: 27px;
+        font-weight: 800;
+        margin: 0 auto;
         font-family: "Referi-Regular";
         position: relative;
         top:-40px;
+        padding: 30px 0;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
     }
     #room_title svg {
         font-size: 25px !important;
+    }
+    #room_title p {
+        font-size: 14px;
+        padding-top: 30px;
+        margin-bottom: 10px;
+    }
+    .add_wrap {
+        width: 90%;
+        margin: 0 auto;
+        padding: 50px 0;
+        border-top: 1px solid #ddd;
+    }
+    .add_wrap .price_title {
+        margin: 0 10px 30px 0;
+        float: left;
+        font-size: 25px;
+        font-weight: 800;
+        width:11%;
+    }
+    .add_wrap .stuff {
+        font-weight: 100;
+        font-size: 15px;
+        width: 98%;
+    }
+    #room_price table {
+        width: 86%;
+        margin: 0 auto;
+    }
+    #room_price table th {
+        font-weight: 800;
+        font-size: 14px;
+        color: #333;
+        background-color: #f7f7f7;
+        border: 1px solid #ddd;
+    }
+    #room_price table td{
+        border: 1px solid #ddd;
+        font-size: 13px;
+    }
+    .room_bottom_btn {
+        position: relative;
+        display: inline-block;
+        width: 154px;
+        height: 50px;
+        margin: 40px 0 70px 0;
+        border-radius: 100px;
+        font-size: 15px;
+        line-height: 50px;
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+        font-family: "Referi-Regular";
+    }
+    .hrr {
+        width: 90%;
+        margin: 0 auto;
+        border-top: 1px solid #ddd;
     }
 }
 
 /* Mobile 화면 */
 @media screen and (max-width: 1000px) {
     #room_title {
-        font-size: 17px;
+        font-size: 25px;
         margin: 0;
         font-family: "Referi-Regular";
         position: relative;
@@ -55,5 +190,147 @@
     }
     .row > div {
         padding-bottom: 5px !important;
+    }
+    #room_title p {
+        font-size: 13px;
+        padding: 30px 0 20px 0;
+    }
+    #bottom_info {
+        margin-top: 30px;
+    }
+    .add_wrap {
+        position: relative;
+        too:0;
+        width: 97%;
+        margin: 0 auto;
+        padding: 50px 0;
+        border-top: 1px solid #ddd;
+    }
+    .add_wrap .price_title {
+        margin: 0 10px 30px 0;
+        float: left;
+        font-size: 20px;
+        font-weight: 800;
+        width:16%;
+    }
+    .add_wrap .stuff {
+        font-weight: 100;
+        font-size: 13px;
+        width: 95%;
+    }
+    #room_price table {
+        width: 78%;
+        margin: 0 auto;
+    }
+    #room_price table th {
+        font-weight: 800;
+        font-size: 11px;
+        color: #333;
+        background-color: #f7f7f7;
+        border: 1px solid #ddd;
+    }
+    #room_price table td{
+        border: 1px solid #ddd;
+        font-size: 10px;
+    }
+    .room_bottom_btn {
+        position: relative;
+        display: inline-block;
+        width: 154px;
+        height: 50px;
+        margin: 40px 0 50px 0;
+        border-radius: 100px;
+        font-size: 12px;
+        line-height: 50px;
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+        font-family: "Referi-Regular";
+    }
+    .hrr {
+        width: 97%;
+        margin: 0 auto;
+        border-top: 1px solid #ddd;
+    }
+}
+
+/* Tiny Mobile 화면 */
+@media screen and (max-width: 500px) {
+    #room_title {
+        font-size: 20px;
+        margin: 0;
+        font-family: "Referi-Regular";
+        position: relative;
+        top:-20px;
+    }
+    #room_title svg {
+        font-size: 20px !important;
+    }
+    .row > div {
+        padding-bottom: 5px !important;
+    }
+    #room_title p {
+        font-size: 10px;
+        padding: 20px 0 20px 0;
+    }
+    #bottom_info {
+        margin-top: 30px;
+    }
+    .add_wrap {
+        position: relative;
+        too:0;
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px 0;
+        border-top: 1px solid #ddd;
+    }
+    .add_wrap .price_title {
+        margin: 0 0 10px 10px;
+        text-align: left;
+        font-size: 15px;
+        font-weight: 800;
+        width:95%;
+    }
+    .add_wrap .stuff {
+        font-weight: 100;
+        font-size: 13px;
+        margin : 0 auto;
+        width: 96%;
+    }
+    #room_price table {
+        margin : 0 auto;
+        width: 98%;
+    }
+    #room_price table th {
+        padding: 5px !important;
+        font-weight: 800;
+        font-size: 9px;
+        color: #333;
+        background-color: #f7f7f7;
+        border: 1px solid #ddd;
+    }
+    #room_price table td{
+        padding: 5px !important;
+        border: 1px solid #ddd;
+        font-size: 9px;
+    }
+    .room_bottom_btn {
+        position: relative;
+        display: inline-block;
+        width: 124px;
+        height: 40px;
+        margin: 20px 0 30px 0;
+        border-radius: 100px;
+        font-size: 12px;
+        line-height: 40px;
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+        font-family: "Referi-Regular";
+    }
+    .hrr {
+        width: 97%;
+        margin: 0 auto;
+        border-top: 1px solid #ddd;
     }
 }

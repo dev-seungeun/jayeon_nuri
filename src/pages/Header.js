@@ -30,6 +30,10 @@ const changeToggleColor = (pathname) => {
     }
 }
 
+const openReervationLink = () => {
+    window.open("http://www.pensionlife.co.kr/asp/calendar/online_cal.php?jid=1395","","width=900px, location=no, titlebar=no, scrollbars=yes, menubar=no, status = no, left = 500, toolbar=no");
+}
+
 function Header() {
 
     const navigate = useNavigate();
@@ -57,10 +61,9 @@ function Header() {
 
     const handleLinkMove = (e, link) => {
 
-        console.log(link);
         const childId = link.split("/")[1];
         if(childId == "reservation") {
-            window.open("http://www.pensionlife.co.kr/asp/calendar/online_cal.php?jid=1395","","width=900px, location=no, titlebar=no, scrollbars=yes, menubar=no, status = no, left = 500, toolbar=no");
+            openReervationLink();
         }else if(document.getElementById(childId) != undefined) {
             document.getElementById(childId).classList.add("selected");
             setOpenedMenu(document.getElementById(childId).parentNode.parentNode.previousSibling.id+"-"+childId);
@@ -338,4 +341,4 @@ function Header() {
 }
 
 export default Header;
-export { changeToggleColor };
+export { changeToggleColor, openReervationLink };

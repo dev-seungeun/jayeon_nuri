@@ -41,7 +41,7 @@ body {
   overscroll-behavior-x: none;
 }
 
-.my_modal { display: none; z-index: 500;	width: 100%; height: 100%; position: fixed; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.9); }
+.my_modal { display: none; z-index: 500;	width: 110%; height: 110%; position: fixed; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.9); }
 .my_modal button {	z-index: 20; position: fixed; top: 20px; right: 20px; padding: 0; background: transparent; border: 0; color: white; cursor: pointer; }
 .my_modal button svg { width: 30px; height: 30px; }
 .my_modal .modalBox {	position: relative;	top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%;	height:100%; line-height: 100%; }
