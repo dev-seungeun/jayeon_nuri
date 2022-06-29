@@ -1,0 +1,44 @@
+{
+  room1: {
+      title: "객실 1,2,3 호",
+      people: "4인",
+      off_season: {weekday: 100000, weekend: 130000},
+      peak_season: {weekday: 130000, weekend: 150000},
+      high_peak_season: 200000
+  },
+  room5: {
+      title: "객실 5,6 호",
+      people: "4인",
+      off_season: {weekday: 100000, weekend: 130000},
+      peak_season: {weekday: 130000, weekend: 150000},
+      high_peak_season: 200000
+  },
+  caravan1: {
+      title: "카라반 1호",
+      people: "4인 (최대 5인)",
+      off_season: {weekday: 120000, weekend: 150000},
+      peak_season: {weekday: 150000, weekend: 170000},
+      high_peak_season: 220000
+  },
+  caravan2: {
+      title: "카라반 2호",
+      people: "4인",
+      off_season: {weekday: 120000, weekend: 150000},
+      peak_season: {weekday: 150000, weekend: 170000},
+      high_peak_season: 220000
+  },
+  caravan3: {
+      title: "카라반 3호",
+      people: "4인",
+      off_season: {weekday: 100000, weekend: 130000},
+      peak_season: {weekday: 130000, weekend: 150000},
+      high_peak_season: 200000
+  },
+  caravan4: {
+      title: "카라반 4호",
+      people: "4인",
+      off_season: {weekday: 100000, weekend: 130000},
+      peak_season: {weekday: 130000, weekend: 150000},
+      high_peak_season: 200000
+  }
+}
