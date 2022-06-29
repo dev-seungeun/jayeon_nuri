@@ -36,7 +36,7 @@ function Caravan3(props) {
 
             <div id="bottom_info">
                 { priceJson &&
-                    <RoomPriceTable priceDataList={[priceJson]} />
+                    <RoomPriceTable priceDataMap={priceJson} />
                 }
                 {RoomInfo()}
             </div>
