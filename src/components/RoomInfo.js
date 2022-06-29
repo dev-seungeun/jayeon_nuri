@@ -1,19 +1,21 @@
 import React, {useEffect, useState} from 'react';
 import "../css/room.css";
+import { getEtcInfoJson } from "../components/FetchData";
 import { openReervationLink } from "../pages/Header";
 
-function RoomInfo(stuffArr) {
+function RoomInfo(props) {
 
     const [stuff, setStuff] = useState();
 
-    useEffect(()=>{
-        console.log(stuffArr)
+    useEffect(() => {
+
         let stuffTemp = "";
-        stuffArr.forEach((st, index) => {
-            stuffTemp += st + (stuffArr.length-1 != index ? "," : "");
+        getEtcInfoJson().stuff.forEach((st, index) => {
+            stuffTemp += st + (getEtcInfoJson().stuff.length-1 != index ? "," : "");
         });
         setStuff(stuffTemp);
-    },[])
+
+    },[]);
 
     return (
         <>

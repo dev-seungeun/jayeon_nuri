@@ -1,29 +1,27 @@
-import React, {useEffect} from 'react';
-import { getPriceData as getPriceDataRoom1 } from "./Room1";
-import { getPriceData as getPriceDataRoom5 } from "./Room5";
-import { getPriceData as getPriceDataCaravan1 } from "./Caravan1";
-import { getPriceData as getPriceDataCaravan2 } from "./Caravan2";
-import { getPriceData as getPriceDataCaravan3 } from "./Caravan3";
-import { getPriceData as getPriceDataCaravan4 } from "./Caravan4";
+import React, {useEffect, useState} from 'react';
+import { getPriceJson, getEtcInfoJson } from "../components/FetchData";
 import RoomPriceTable from "../components/RoomPriceTable";
 import "../App.css";
 import "../css/use_price.css";
+import "../css/room.css";
 
 function UsePrice(props) {
 
-    var priceData = [
-        getPriceDataRoom1(),
-        getPriceDataRoom5(),
-        getPriceDataCaravan1(),
-        getPriceDataCaravan2(),
-        getPriceDataCaravan3(),
-        getPriceDataCaravan4()
-    ]
+    const [priceJson, setPriceJson] = useState();
+    const [season, setSeason] = useState();
 
     useEffect(() => {
-        document.querySelector(".add_wrap").style.position = "relative";
-        document.querySelector(".add_wrap").style.top = "-50px";
-        document.querySelector(".add_wrap").style.border = "none";
+
+        setPriceJson(getPriceJson());
+        setSeason(getEtcInfoJson().season);
+
+        document.querySelectorAll(".add_wrap").forEach(function(el) {
+            el.style.position = "relative";
+            el.style.top = "-20px";
+            el.style.border = "none";
+            el.style.marginBottom = "50px";
+            el.style.padding = "0px";
+        });
     }, []);
 
     return (
@@ -33,42 +31,49 @@ function UsePrice(props) {
             </div>
 
             <div id="use_price_wrap">
-                {RoomPriceTable(priceData)}
+                {priceJson && <RoomPriceTable priceDataMap={priceJson} />}
 
-                <div>
-                    취소 및 환불규정
 
-                    당일 취소 : 환불 불가
+                <div className="add_wrap">
+                    <div className="is_all_price_title">환불규정</div>
 
-                    입실일 기준 1 일전 : 취소 위약금 70% | 환불금액 - 결제금액의 30%
-
-                    입실일 기준 2 일전 : 취소 위약금 50% | 환불금액 - 결제금액의 50%
-
-                    이용일 당일 예약 후 당일 취소시 환불이 불가 합니다.
+                    <div className="use_cont">
+                        · 당일 취소 : <span style={{color:"red"}}>환불 불가</span>
+                        <br/>
+                        · 입실일 기준 1 일전 - 취소 위약금 : <span style={{color:"red"}}>70%</span>, 환불금액 : <span style={{color:"red"}}>30%</span>
+                        <br/>
+                        · 입실일 기준 2 일전 - 취소 위약금 : <span style={{color:"red"}}>50%</span>, 환불금액 : <span style={{color:"red"}}>50%</span>
+                        <br/>
+                        · 이용일 당일 예약 후 <span style={{color:"red"}}>당일 취소시 환불이 불가</span> 합니다.
+                    </div>
                 </div>
 
+                <div className="add_wrap">
+                    <div className="is_all_price_title">성수기 안내 { season && "("+season.year+")" }</div>
 
-                <div>
-                    숯불제공은 4인 기준
-                    20,000원
+                    <div className="use_cont">
+                        · 성수기 기간&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - { season && season.peak }
+                        <br/>
+                        · 극성수기 기간&nbsp; - { season && season.high_peak }
+                        <br/>
+                        · 공휴일 전날은 주말요금이 적용됩니다.
+                    </div>
                 </div>
 
-                <div>
-                    성수기 기간 (2021년)
-                    7월 23일 ~ 7월 29일
-                    8월 8일 ~ 8월 31일
+                <div className="add_wrap">
+                    <div className="is_all_price_title">예약 완료 기준</div>
 
-
-                    극 성수기 기간 (2021년)
-                    7월 30일 ~ 8월 7일
+                    <div className="use_cont">
+                        · 예약 후 전액 입금 하셔야 예약이 완료됩니다. 24시간이 지나면 취소될 수 있습니다.
+                        <br/>
+                        · 입금은 꼭 예약자명으로 해주세요~ 만약 입금자명이 다를 경우 꼭 전화주세요
+                        <br/>
+                        · 예약전화 - 010-4382-0056
+                        <br/>
+                        · 예약계좌 - [농협] 351-7557-4935-03 (예금주 정정희)
+                    </div>
                 </div>
 
-                <div>
-                    예약 후 전액 입금 하셔야 예약이 완료됩니다. 24시간이 지나면 취소될 수 있습니다!!
-                    예약전화 : 010-4382-0056
-                    예약계좌 : [농협] 351-7557-4935-03 (예금주 정정희)
-                    입금은 꼭 예약자명으로 해주세요~ 만약 입금자명이 다를 경우 꼭 전화주세요
-                </div>
             </div>
         </>
     );

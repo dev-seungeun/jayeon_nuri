@@ -8,7 +8,7 @@ import "../css/room.css";
 import "../css/fluid-gallery.css";
 import 'bootstrap/dist/css/bootstrap.css';
 
-function RoomPhotos(imgData) {
+function RoomPhotos(props) {
 
     const [mobilePhotos, setMobilePhotos] = useState(null);
     const [pcPhotos, setPcPhotos] = useState();
@@ -17,12 +17,13 @@ function RoomPhotos(imgData) {
         window.addEventListener('resize', handleResize);
         handleResize();
 
-        const mobile = imgData.map((imgSrc, index) => {
-            return ( <img key={"mobile_photo_"+index} src={imgSrc} /> )
+        const imgList = props.imgList;
+        const mobile = imgList.map((imgSrc, index) => {
+            return ( <img key={"mobile_photo_"+index} src={imgSrc} style={{marginBottom:"10px"}} /> )
         });
         setMobilePhotos(mobile);
 
-        const pc = imgData.map((imgSrc, index) => {
+        const pc = imgList.map((imgSrc, index) => {
             return (
                 <img key={"pc_photo_"+index} src={imgSrc} />
             )

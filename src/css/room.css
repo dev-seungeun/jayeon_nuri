@@ -20,6 +20,14 @@
     font-family: "Referi";
 }
 
+.weekday {
+    color: #4D77FF;
+    font-weight: 500;
+}
+.weekend {
+    color: #FD5D5D;
+    font-weight: 500;
+}
 
 /* PC 화면 */
 @media screen and (min-width: 1200px) {
@@ -53,19 +61,39 @@
         border-top: 1px solid #ddd;
     }
     .add_wrap .price_title {
-        margin: 0 10px 30px 0;
+        margin: 0 10px 10px 0;
         float: left;
         font-size: 25px;
         font-weight: 800;
-        width:11%;
+        width:100%;
+        text-align: left;
+    }
+    .add_wrap .is_all_price_title {
+        float: none;
+        height: 43px;
+        line-height: 43px;
+        width: 100%;
+        background-color: #f5f5f5;
+        color: #222;
+        font-size: 17px;
+        font-weight: 900;
+        text-align: left;
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+    .add_price {
+        margin: 10px 0 0 0;
+        text-align: right;
+        font-size: 15px;
+        font-weight: 600;
     }
     .add_wrap .stuff {
         font-weight: 100;
         font-size: 15px;
-        width: 98%;
+        width: 99%;
     }
     #room_price table {
-        width: 85%;
+        width: 100%;
         margin: 0 auto;
     }
     #room_price table th {
@@ -73,10 +101,10 @@
         font-size: 14px;
         color: #333;
         background-color: #f7f7f7;
-        border: 1px solid #ddd;
+        border: 1px solid #dfdfdf;
     }
     #room_price table td{
-        border: 1px solid #ddd;
+        border: 1px solid #dfdfdf;
         font-size: 13px;
     }
     .room_bottom_btn {
@@ -129,19 +157,39 @@
         border-top: 1px solid #ddd;
     }
     .add_wrap .price_title {
-        margin: 0 10px 30px 0;
+        margin: 0 0 10px 0;
         float: left;
         font-size: 25px;
         font-weight: 800;
-        width:11%;
+        width:100%;
+        text-align: left;
+    }
+    .add_wrap .is_all_price_title {
+        float: none;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        background-color: #f5f5f5;
+        color: #222;
+        font-size: 16px;
+        font-weight: 900;
+        text-align: left;
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+    .add_price {
+        margin: 10px 0 0 0;
+        text-align: right;
+        font-size: 14px;
+        font-weight: 600;
     }
     .add_wrap .stuff {
         font-weight: 100;
         font-size: 15px;
-        width: 98%;
+        width: 99%;
     }
     #room_price table {
-        width: 86%;
+        width: 100%;
         margin: 0 auto;
     }
     #room_price table th {
@@ -149,10 +197,10 @@
         font-size: 14px;
         color: #333;
         background-color: #f7f7f7;
-        border: 1px solid #ddd;
+        border: 1px solid #dfdfdf;
     }
     #room_price table td{
-        border: 1px solid #ddd;
+        border: 1px solid #dfdfdf;
         font-size: 13px;
     }
     .room_bottom_btn {
@@ -199,27 +247,46 @@
         margin-top: 30px;
     }
     .add_wrap {
-        position: relative;
-        too:0;
         width: 97%;
         margin: 0 auto;
         padding: 50px 0;
         border-top: 1px solid #ddd;
     }
     .add_wrap .price_title {
-        margin: 0 10px 30px 0;
+        margin: 0 0 10px 0;
         float: left;
         font-size: 20px;
         font-weight: 800;
-        width:16%;
+        width:100%;
+        text-align: left;
+    }
+    .add_wrap .is_all_price_title {
+        float: none;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        background-color: #f5f5f5;
+        color: #222;
+        font-size: 15px;
+        font-weight: 900;
+        text-align: left;
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+    .add_price,
+    .price_color {
+        margin: 5px 5px 0 0;
+        text-align: right;
+        font-size: 13px;
+        font-weight: 600;
     }
     .add_wrap .stuff {
         font-weight: 100;
         font-size: 13px;
-        width: 95%;
+        width: 99%;
     }
     #room_price table {
-        width: 78%;
+        width: 100%;
         margin: 0 auto;
     }
     #room_price table th {
@@ -227,10 +294,10 @@
         font-size: 11px;
         color: #333;
         background-color: #f7f7f7;
-        border: 1px solid #ddd;
+        border: 1px solid #dfdfdf;
     }
     #room_price table td{
-        border: 1px solid #ddd;
+        border: 1px solid #dfdfdf;
         font-size: 10px;
     }
     .room_bottom_btn {
@@ -279,27 +346,48 @@
     .add_wrap {
         position: relative;
         too:0;
-        width: 100%;
+        width: 98%;
         margin: 0 auto;
         padding: 30px 0;
         border-top: 1px solid #ddd;
     }
     .add_wrap .price_title {
-        margin: 0 0 10px 10px;
+        margin: 0 0 10px 0;
         text-align: left;
         font-size: 15px;
         font-weight: 800;
-        width:95%;
+        width: 100%;
+        text-align: left;
+    }
+    .add_wrap .is_all_price_title {
+        float: none;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        background-color: #f5f5f5;
+        color: #222;
+        font-size: 15px;
+        font-weight: 900;
+        text-align: left;
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+    .add_price,
+    .price_color {
+        margin: 5px 5px 0 0;
+        text-align: right;
+        font-size: 13px;
+        font-weight: 600;
     }
     .add_wrap .stuff {
         font-weight: 100;
         font-size: 13px;
         margin : 0 auto;
-        width: 96%;
+        width: 99%;
     }
     #room_price table {
         margin : 0 auto;
-        width: 98%;
+        width: 100%;
     }
     #room_price table th {
         padding: 5px !important;
@@ -307,11 +395,11 @@
         font-size: 9px;
         color: #333;
         background-color: #f7f7f7;
-        border: 1px solid #ddd;
+        border: 1px solid #dfdfdf;
     }
     #room_price table td{
         padding: 5px !important;
-        border: 1px solid #ddd;
+        border: 1px solid #dfdfdf;
         font-size: 9px;
     }
     .room_bottom_btn {
