@@ -135,7 +135,7 @@ function RoomPriceTable(props) {
                     </tr>
                 )
             });
-            setPriceHighPeakMobile(pricePeak);
+            setPriceHighPeakMobile(priceHighPeak);
         }
 
     },[isAllPrice])
@@ -182,7 +182,7 @@ function RoomPriceTable(props) {
                             <th colSpan="2">비수기</th>
                         </tr>
                         <tr>
-                            <th className="room_bold">주중</th>
+                            <th className="room_bold" style={{width: "50%"}}>주중</th>
                             <th className="room_bold">주말(금,토)</th>
                         </tr>
                         { priceOffMobile }
@@ -190,7 +190,7 @@ function RoomPriceTable(props) {
                             <th colSpan="2">성수기</th>
                         </tr>
                         <tr>
-                            <th className="room_bold">주중</th>
+                            <th className="room_bold" style={{width: "50%"}}>주중</th>
                             <th className="room_bold">주말(금,토)</th>
                         </tr>
                         { pricePeakMobile }
@@ -198,7 +198,7 @@ function RoomPriceTable(props) {
                             <th colSpan="2">극성수기</th>
                         </tr>
                         <tr>
-                            <th className="room_bold">주중</th>
+                            <th className="room_bold" style={{width: "50%"}}>주중</th>
                             <th className="room_bold">주말(금,토)</th>
                         </tr>
                         { priceHighPeakMobile }
