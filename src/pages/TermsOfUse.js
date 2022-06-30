@@ -25,7 +25,7 @@ function TermsOfUse(props) {
 
                 <div className="is_all_price_title">유의 사항</div>
                 <div className="use_cont">
-                    - 입실 시간은 오후 2시 이후, 퇴실 시간은 오전 11시까지 입니다. (앞뒤 손님이 없을 시 조정가능 합니다^^)
+                    - 입실 시간은 <span style={{color:"red"}}>오후 2시 이후</span>, 퇴실 시간은 <span style={{color:"red"}}>오전 11시</span>까지 입니다. (앞뒤 손님이 없을 시 조정가능 합니다^^)
                     <br/><br/>
                     - 풍기 기차역에서 픽업가능합니다~^^
                     <br/><br/>
