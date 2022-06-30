@@ -151,7 +151,7 @@ function Header() {
     useEffect(() => {
         setIsMobile(window.innerWidth >= max_width ? false : true);
         window.addEventListener("resize", handleResize);
-
+        changeToggleColor(location.pathname);
         return () => {
             window.removeEventListener("resize", handleResize);
         }
