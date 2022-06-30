@@ -84,7 +84,7 @@ a {
     .main_img {
         width: 100%;
         position: relative;
-        top: -100px;
+        top: -104px;
         text-align: center;
     }
     .main_img img {
@@ -236,6 +236,9 @@ a {
     .col:nth-child(2) > div {
         padding-right: 10px;
     }
+    .main_img .row div {
+        padding-right: 0px !important;
+    }
     #summer_video {
         width: 100%;
         height: 100%;
@@ -309,6 +312,9 @@ a {
         position: relative;
         bottom: 165px;
         font-size: 13px;
+    }
+    .main_img .row div {
+        padding-right: 0px !important;
     }
 
     #etc_info_call > div { height: 100%; text-align: left; background-color: #9EDE73; padding: 10px 20px; }

@@ -134,10 +134,10 @@ const Main = (props) => {
                 <div className="main_img">
                     <div className="tz-gallery">
                         <div className="row">
-                            <div className="col-xs-12 col-sm-6 col-lg-6 col-xl-6">
+                            <div className="col-xs-12 col-sm-6 col-lg-6 col-xl-6" style={{paddingTop:"0px !important"}}>
                                 <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fmain_list%2F1.jpg?alt=media&token=40fe08e2-633b-4c26-8c2b-b2124c015215" onClick={openImageModal} />
                             </div>
-                            <div className="col-xs-12 col-sm-6 col-lg-6 col-xl-6">
+                            <div className="col-xs-12 col-sm-6 col-lg-6 col-xl-6" style={{paddingTop:"0px !important"}}>
                                 <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fmain_list%2F2.jpg?alt=media&token=321097fe-a2cc-435b-a1da-f252380c01e1" onClick={openImageModal} />
                             </div>
                         </div>
@@ -154,7 +154,7 @@ const Main = (props) => {
                         </div>
                         <div className='row'>
                             <div className="col-xs-12">
-                                <video id="summer_video" ref={videoRef} autoPlay muted loop>
+                                <video id="summer_video" ref={videoRef} autoPlay controls muted loop>
                                     <source src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fmain_list%2Fsummer_video1.mp4?alt=media&token=ea95d2af-113a-4c81-9463-bea328aa2a39" type="video/mp4" />
                                 </video>
                             </div>
