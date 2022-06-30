@@ -54,13 +54,18 @@
         padding-top: 30px;
         margin-bottom: 10px;
     }
-    .add_wrap {
+    #bottom_info {
+
+    }
+    #bottom_info .add_wrap {
         width: 80%;
         margin: 0 auto;
         padding: 50px 0;
-        border-top: 1px solid #ddd;
+        /* position: relative;
+        top: -50px; */
+        /* border-top: 1px solid #ddd; */
     }
-    .add_wrap .price_title {
+    #bottom_info .add_wrap .price_title {
         margin: 0 10px 10px 0;
         float: left;
         font-size: 25px;
@@ -68,7 +73,7 @@
         width:100%;
         text-align: left;
     }
-    .add_wrap .is_all_price_title {
+    #bottom_info .add_wrap .is_all_price_title {
         float: none;
         height: 43px;
         line-height: 43px;
@@ -81,16 +86,16 @@
         padding-left: 20px;
         margin-bottom: 10px;
     }
+    #bottom_info .add_wrap .stuff {
+        font-weight: 100;
+        font-size: 15px;
+        width: 99%;
+    }
     .add_price {
         margin: 10px 0 0 0;
         text-align: right;
         font-size: 15px;
         font-weight: 600;
-    }
-    .add_wrap .stuff {
-        font-weight: 100;
-        font-size: 15px;
-        width: 99%;
     }
     #room_price table {
         width: 100%;
@@ -150,13 +155,18 @@
         padding-top: 30px;
         margin-bottom: 10px;
     }
-    .add_wrap {
+    #bottom_info {
+
+    }
+    #bottom_info .add_wrap {
         width: 90%;
         margin: 0 auto;
         padding: 50px 0;
-        border-top: 1px solid #ddd;
+        /* position: relative; */
+        /* top: -50px; */
+        /* border-top: 1px solid #ddd; */
     }
-    .add_wrap .price_title {
+    #bottom_info .add_wrap .price_title {
         margin: 0 0 10px 0;
         float: left;
         font-size: 25px;
@@ -164,7 +174,7 @@
         width:100%;
         text-align: left;
     }
-    .add_wrap .is_all_price_title {
+    #bottom_info .add_wrap .is_all_price_title {
         float: none;
         height: 40px;
         line-height: 40px;
@@ -177,16 +187,16 @@
         padding-left: 20px;
         margin-bottom: 10px;
     }
+    #bottom_info .add_wrap .stuff {
+        font-weight: 100;
+        font-size: 15px;
+        width: 99%;
+    }
     .add_price {
         margin: 10px 0 0 0;
         text-align: right;
         font-size: 14px;
         font-weight: 600;
-    }
-    .add_wrap .stuff {
-        font-weight: 100;
-        font-size: 15px;
-        width: 99%;
     }
     #room_price table {
         width: 100%;
@@ -244,15 +254,17 @@
         padding: 30px 0 20px 0;
     }
     #bottom_info {
-        margin-top: 30px;
+        margin-top: 20px;
     }
-    .add_wrap {
+    #bottom_info .add_wrap {
         width: 97%;
         margin: 0 auto;
         padding: 50px 0;
-        border-top: 1px solid #ddd;
+        /* position: relative;
+        top: -50px; */
+        /* border-top: 1px solid #ddd; */
     }
-    .add_wrap .price_title {
+    #bottom_info .add_wrap .price_title {
         margin: 0 0 10px 0;
         float: left;
         font-size: 20px;
@@ -260,7 +272,7 @@
         width:100%;
         text-align: left;
     }
-    .add_wrap .is_all_price_title {
+    #bottom_info .add_wrap .is_all_price_title {
         float: none;
         height: 40px;
         line-height: 40px;
@@ -273,17 +285,17 @@
         padding-left: 20px;
         margin-bottom: 10px;
     }
+    #bottom_info .add_wrap .stuff {
+        font-weight: 100;
+        font-size: 13px;
+        width: 99%;
+    }
     .add_price,
     .price_color {
         margin: 5px 5px 0 0;
         text-align: right;
         font-size: 13px;
         font-weight: 600;
-    }
-    .add_wrap .stuff {
-        font-weight: 100;
-        font-size: 13px;
-        width: 99%;
     }
     #room_price table {
         width: 100%;
@@ -341,17 +353,17 @@
         padding: 20px 0 20px 0;
     }
     #bottom_info {
-        margin-top: 30px;
+        margin-top: 10px;
     }
-    .add_wrap {
-        position: relative;
-        too:0;
+    #bottom_info .add_wrap {
         width: 98%;
         margin: 0 auto;
         padding: 30px 0;
-        border-top: 1px solid #ddd;
+        /* position: relative;
+        top: -40px; */
+        /* border-top: 1px solid #ddd; */
     }
-    .add_wrap .price_title {
+    #bottom_info .add_wrap .price_title {
         margin: 0 0 10px 0;
         text-align: left;
         font-size: 15px;
@@ -359,7 +371,7 @@
         width: 100%;
         text-align: left;
     }
-    .add_wrap .is_all_price_title {
+    #bottom_info .add_wrap .is_all_price_title {
         float: none;
         height: 40px;
         line-height: 40px;
@@ -372,18 +384,18 @@
         padding-left: 20px;
         margin-bottom: 10px;
     }
+    #bottom_info .add_wrap .stuff {
+        font-weight: 100;
+        font-size: 13px;
+        margin : 0 auto;
+        width: 99%;
+    }
     .add_price,
     .price_color {
         margin: 5px 5px 0 0;
         text-align: right;
         font-size: 13px;
         font-weight: 600;
-    }
-    .add_wrap .stuff {
-        font-weight: 100;
-        font-size: 13px;
-        margin : 0 auto;
-        width: 99%;
     }
     #room_price table {
         margin : 0 auto;

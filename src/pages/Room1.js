@@ -34,10 +34,18 @@ function Room1(props) {
                 <RoomPhotos imgList={imageJson} />
             }
 
+            <br/>
+
             <div id="bottom_info">
+
+                <div className="hrr" />
+
                 { priceJson &&
                     <RoomPriceTable priceDataMap={priceJson} />
                 }
+
+                <div className="hrr" />
+
                 {RoomInfo()}
             </div>
         </>

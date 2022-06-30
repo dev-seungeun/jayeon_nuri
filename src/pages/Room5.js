@@ -35,9 +35,15 @@ function Room5(props) {
             }
 
             <div id="bottom_info">
+
+                <div className="hrr" /><br/><br/>
+
                 { priceJson &&
                     <RoomPriceTable priceDataMap={priceJson} />
                 }
+
+                <div className="hrr" /><br/><br/>
+                
                 {RoomInfo()}
             </div>
         </>

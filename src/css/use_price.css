@@ -12,6 +12,10 @@
         padding: 35px 30px;
         font-size: 14px;
     }
+    .add_wrap {
+        position: relative;
+        top: -70px;
+    }
 }
 
 /* Tablet 화면 */
@@ -20,6 +24,10 @@
         border: 1px solid #dfdfdf;
         padding: 30px 25px;
         font-size: 14px;
+    }
+    .add_wrap {
+        position: relative;
+        top: -70px;
     }
 }
 
@@ -30,6 +38,10 @@
         padding: 20px 15px;
         font-size: 13px;
     }
+    .add_wrap {
+        position: relative;
+        top: -50px;
+    }
 }
 
 /* Tiny Mobile 화면 */
@@ -38,5 +50,9 @@
         border: 1px solid #dfdfdf;
         padding: 17px 12px;
         font-size: 11px;
+    }
+    .add_wrap {
+        position: relative;
+        top: -50px;
     }
 }
