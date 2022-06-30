@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { getEtcInfoJson } from "../components/FetchData";
 import "../css/room.css";
-import "../css/way_to_com.css";
 
 const max_width = 600;
 
@@ -86,11 +85,11 @@ function RoomPriceTable(props) {
             });
             setPriceRowMobile(priceMobile);
 
-            document.querySelector(".add_wrap").style.position = "relative";
-            document.querySelector(".add_wrap").style.top = "-20px";
-            document.querySelector(".add_wrap").style.marginBottom = "50px";
-            document.querySelector(".add_wrap").style.padding = "0px";
-            document.querySelector(".add_wrap").style.border = "none";
+            // document.querySelector(".add_wrap").style.position = "relative";
+            // document.querySelector(".add_wrap").style.top = "-20px";
+            // document.querySelector(".add_wrap").style.marginBottom = "50px";
+            // document.querySelector(".add_wrap").style.padding = "0px";
+            // document.querySelector(".add_wrap").style.border = "none";
 
 
         }else if(isAllPrice == false) {

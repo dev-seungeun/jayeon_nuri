@@ -15,13 +15,13 @@ function UsePrice(props) {
         setPriceJson(getPriceJson());
         setSeason(getEtcInfoJson().season);
 
-        document.querySelectorAll(".add_wrap").forEach(function(el) {
-            el.style.position = "relative";
-            el.style.top = "-20px";
-            el.style.border = "none";
-            el.style.marginBottom = "50px";
-            el.style.padding = "0px";
-        });
+        // document.querySelectorAll(".add_wrap").forEach(function(el) {
+        //     el.style.position = "relative";
+        //     el.style.top = "-20px";
+        //     el.style.border = "none";
+        //     el.style.marginBottom = "50px";
+        //     el.style.padding = "0px";
+        // });
     }, []);
 
     return (

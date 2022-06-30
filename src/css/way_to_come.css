@@ -1,0 +1,166 @@
+#map_wrap {
+  width: 100%;
+  text-align: center;
+}
+
+.text_center {
+    text-align: center;
+    font-family: "Referi";
+}
+.hrrr {
+  width:90%;
+  border-top: 1px solid #ddd;
+  margin: 0 auto;
+}
+.orangered {
+    font-weight: 800;
+    color: orangered;
+}
+table {
+    width: 100%;
+    margin: 0 auto;
+}
+table th {
+    font-weight: 800;
+    font-size: 11px;
+    color: #333;
+    background-color: #f7f7f7;
+    border: 1px solid #dfdfdf;
+    padding: 10px 0;
+    text-align: center;
+}
+table td{
+    border: 1px solid #dfdfdf;
+    font-size: 10px;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+#way_wrap img {
+  width: 100%;
+}
+
+/* PC 화면 */
+@media screen and (min-width: 1000px) {
+    #map {
+        width: 60%;
+        height: 600px;
+        text-align: center;
+    }
+    #way_wrap {
+      margin: 0 auto;
+      width: 80%;
+    }
+    .title {
+        float: none;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        background-color: #f5f5f5;
+        color: #222;
+        font-size: 16px;
+        font-weight: 900;
+        text-align: left;
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+    .cont {
+        border: 1px solid #dfdfdf;
+        padding: 30px 25px;
+        font-size: 14px;
+        margin-bottom: 50px;
+        text-align: left;
+    }
+    .time_title {
+        font-size: 15px;
+        font-weight: 800;
+    }
+    .address {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+
+/* Mobile 화면 */
+@media screen and (max-width: 1000px) {
+    #map {
+        width: 90%;
+        height: 500px;
+        text-align: center;
+    }
+    #way_wrap {
+      margin: 0 auto;
+      width: 90%;
+    }
+    .title {
+        float: none;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        background-color: #f5f5f5;
+        color: #222;
+        font-size: 15px;
+        font-weight: 900;
+        text-align: left;
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+    .cont {
+        border: 1px solid #dfdfdf;
+        padding: 20px 15px;
+        font-size: 13px;
+        margin-bottom: 50px;
+        text-align: left;
+    }
+    .time_title {
+        font-size: 14px;
+        font-weight: 800;
+    }
+    .address {
+        font-size: 15px;
+        font-weight: 400;
+    }
+}
+
+
+/* Tiny Mobile 화면 */
+@media screen and (max-width: 500px) {
+    #map {
+        width: 95%;
+        height: 300px;
+        text-align: center;
+    }
+    #way_wrap {
+      margin: 0 auto;
+      width:97%;
+    }
+    .title {
+        float: none;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        background-color: #f5f5f5;
+        color: #222;
+        font-size: 15px;
+        font-weight: 900;
+        text-align: left;
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+    .cont {
+        border: 1px solid #dfdfdf;
+        padding: 17px 12px;
+        font-size: 11px;
+        margin-bottom: 50px;
+        text-align: left;
+    }
+    .time_title {
+        font-size: 12px;
+        font-weight: 800;
+    }
+    .address {
+        font-size: 13px;
+        font-weight: 400;
+    }
+}
