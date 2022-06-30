@@ -48,9 +48,11 @@ function UsePrice(props) {
                     <div className="info_title">성수기 안내 <span className="orangered">{ season && "("+season.year+")" }</span></div>
 
                     <div className="info_cont">
-                        · 준성수기 기간&nbsp; - { season && season.peak }
+                        · 준성수기 기간&nbsp; - { season && season.semi_peak }
                         <br/>
-                        · 성수기 기간&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - { season && season.high_peak }
+                        · 성수기 기간&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - { season && season.peak }
+                        <br/>
+                        · 극성수기 기간&nbsp; - { season && season.high_peak }
                         <br/>
                         · 공휴일 전날은 주말요금이 적용됩니다.
                     </div>
