@@ -36,13 +36,13 @@ function Caravan3(props) {
 
             <div id="bottom_info">
 
-                <div className="hrr" /><br/><br/>
+                <div className="hrr" />
 
                 { priceJson &&
                     <RoomPriceTable priceDataMap={priceJson} />
                 }
 
-                <div className="hrr" /><br/><br/>
+                <div className="hrr" />
                 
                 {RoomInfo()}
             </div>

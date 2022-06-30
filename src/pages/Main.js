@@ -182,7 +182,7 @@ const Main = (props) => {
                                 <div>
                                     <div>JAYEONNURI PENSION</div>
                                     <div>Happiness & Comfort</div>
-                                    <div>행복한 여행을 만들어 드립니다</div>
+                                    <div>여러분의 행복한 여행을 위해<br/>항상 쾌적하고 안락한 휴식처를 제공하기 위해 노력하겠습니다</div>
                                     <div>
                                         <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fmain_list%2Fbottom.jpg?alt=media&token=360becab-b233-4a73-b5db-b057500b8e91" />
                                     </div>

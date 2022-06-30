@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import KakaoMapScript from "../components/KakaoMapScript";
-// import "../App.css";
 import "../css/way_to_come.css";
+import "../css/common.css";
 
 function WayToCome(props) {
 
@@ -18,21 +18,20 @@ function WayToCome(props) {
             <div id="way_wrap">
 
                 <div className="add_wrap">
-                    <div className="title">지도</div>
-                    <div className="cont">
+                    <div className="info_title">지도</div>
+                    <div className="info_cont">
                          <div id="map_wrap">
                             <div className="address">경상북도 영주시 풍기읍 삼가로 288 [소백산 자연누리펜션]</div>
                             <br/>
                             <div className="hrr"/><br/>
-                            <div id='map' style={{ margin: "0 auto" }}></div>
+                            <div id='map'></div>
                         </div>
                     </div>
                 </div>
 
                 <div className="add_wrap">
-                    <div className="title">기차 <span className="orangered">&nbsp;KTX-이음(중앙선) 개통</span></div>
-
-                    <div className="cont">
+                    <div className="info_title">기차 <span className="orangered">&nbsp;KTX-이음(중앙선) 개통</span></div>
+                    <div className="info_cont">
                         <div>
                             <table>
                                 <tbody>
@@ -62,8 +61,8 @@ function WayToCome(props) {
                 </div>
 
                 <div className="add_wrap">
-                    <div className="title">마을버스 26번 (안정-풍기-항공고)</div>
-                    <div className="cont">
+                    <div className="info_title">마을버스 26번 (안정-풍기-항공고)</div>
+                    <div className="info_cont">
                         <table>
                             <tbody>
                                 <tr>
@@ -79,7 +78,7 @@ function WayToCome(props) {
                                     <td>18:00</td>
                                 </tr>
                                 <tr>
-                                    <td><span className="orangered">풍기역</span> 버스 탑승 예상 시간<br/>(교통상황에 따라 달라질 수 있습니다)</td>
+                                    <td><span className="orangered">풍기역</span> 버스 탑승 예상 시각<br/>(교통상황에 따라 달라질 수 있습니다)</td>
                                     <td>7:50</td>
                                     <td>8:45</td>
                                     <td>9:50</td>
@@ -94,11 +93,11 @@ function WayToCome(props) {
                         <div className="text_center">
                           <div style={{fontWeight: "800"}}>승차 정류소 (풍기역) 위치</div>
                           <br/>
-                          <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Faround%2Fstation_bus_stop_map.png?alt=media&token=0db5215c-95c4-46f3-8dea-160d49f36ef8" />
+                          <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fway_to_come%2Fstation_bus_stop_map.png?alt=media&token=5db39d93-2fd8-49e5-a6ad-6ad6ae5fde6f" />
                           <br/><br/><br/>
                           <div style={{fontWeight: "800"}}>하차 정류소 (삼가리-삼가교 입구 방면) 위치</div>
                           <br/>
-                          <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Faround%2Fbus_stop_map.png?alt=media&token=602a4300-f064-4222-bed8-1bccd7ec1943" />
+                          <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fway_to_come%2Fbus_stop_map.png?alt=media&token=eb124ba8-b071-412f-8c6b-c6bd5a377709" />
                         </div>
                     </div>
                 </div>

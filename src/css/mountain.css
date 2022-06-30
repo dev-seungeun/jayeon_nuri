@@ -1,0 +1,9 @@
+#mountain_wrap{
+    font-family: "Referi";
+}
+#mountain_wrap .tz-gallery .row {
+    margin: 0 auto;
+}
+#mountain_wrap img {
+    width: 100%;
+}

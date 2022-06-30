@@ -15,6 +15,7 @@ function RoomPriceTable(props) {
     const [priceRowPC, setPriceRowPC] = useState();
     const [priceRowMobile, setPriceRowMobile] = useState();
     const [priceOffMobile, setPriceOffMobile] = useState();
+    const [priceSemiPeakMobile, setPriceSemiPeakMobile] = useState();
     const [pricePeakMobile, setPricePeakMobile] = useState();
     const [priceHighPeakMobile, setPriceHighPeakMobile] = useState();
 
@@ -54,6 +55,8 @@ function RoomPriceTable(props) {
                         {isAllPrice && <td>{priceDataMap[roomName].people}</td>}
                         <td>{priceDataMap[roomName].off_season.weekday.toLocaleString()}</td>
                         <td>{priceDataMap[roomName].off_season.weekend.toLocaleString()}</td>
+                        <td>{priceDataMap[roomName].semi_peak_season.weekday.toLocaleString()}</td>
+                        <td>{priceDataMap[roomName].semi_peak_season.weekend.toLocaleString()}</td>
                         <td>{priceDataMap[roomName].peak_season.weekday.toLocaleString()}</td>
                         <td>{priceDataMap[roomName].peak_season.weekend.toLocaleString()}</td>
                         <td>{priceDataMap[roomName].high_peak_season.weekday.toLocaleString()}</td>
@@ -73,6 +76,10 @@ function RoomPriceTable(props) {
                             <div className="weekend">{priceDataMap[roomName].off_season.weekend.toLocaleString()}</div>
                         </td>
                         <td>
+                            <div className="weekday">{priceDataMap[roomName].semi_peak_season.weekday.toLocaleString()}</div>
+                            <div className="weekend">{priceDataMap[roomName].semi_peak_season.weekend.toLocaleString()}</div>
+                        </td>
+                        <td>
                             <div className="weekday">{priceDataMap[roomName].peak_season.weekday.toLocaleString()}</div>
                             <div className="weekend">{priceDataMap[roomName].peak_season.weekend.toLocaleString()}</div>
                         </td>
@@ -85,13 +92,6 @@ function RoomPriceTable(props) {
             });
             setPriceRowMobile(priceMobile);
 
-            // document.querySelector(".add_wrap").style.position = "relative";
-            // document.querySelector(".add_wrap").style.top = "-20px";
-            // document.querySelector(".add_wrap").style.marginBottom = "50px";
-            // document.querySelector(".add_wrap").style.padding = "0px";
-            // document.querySelector(".add_wrap").style.border = "none";
-
-
         }else if(isAllPrice == false) {
 
             // PC
@@ -102,6 +102,8 @@ function RoomPriceTable(props) {
                         {isAllPrice && <td>{priceDataMap.people}</td>}
                         <td>{priceDataMap.off_season.weekday.toLocaleString()}</td>
                         <td>{priceDataMap.off_season.weekend.toLocaleString()}</td>
+                        <td>{priceDataMap.semi_peak_season.weekday.toLocaleString()}</td>
+                        <td>{priceDataMap.semi_peak_season.weekend.toLocaleString()}</td>
                         <td>{priceDataMap.peak_season.weekday.toLocaleString()}</td>
                         <td>{priceDataMap.peak_season.weekend.toLocaleString()}</td>
                         <td>{priceDataMap.high_peak_season.weekday.toLocaleString()}</td>
@@ -115,13 +117,23 @@ function RoomPriceTable(props) {
             // mobile
             const priceOff = [priceDataMap].map((data, index) => {
                 return (
-                    <tr key={"price_peak_" + index}>
+                    <tr key={"price_off_" + index}>
                         <td>{priceDataMap.off_season.weekday.toLocaleString()}</td>
                         <td>{priceDataMap.off_season.weekend.toLocaleString()}</td>
                     </tr>
                 )
             });
             setPriceOffMobile(priceOff);
+
+            const priceSemiPeak = [priceDataMap].map((data, index) => {
+                return (
+                    <tr key={"price_semi_peak_" + index}>
+                        <td>{priceDataMap.semi_peak_season.weekday.toLocaleString()}</td>
+                        <td>{priceDataMap.semi_peak_season.weekend.toLocaleString()}</td>
+                    </tr>
+                )
+            });
+            setPriceSemiPeakMobile(priceSemiPeak);
 
             const pricePeak = [priceDataMap].map((data, index) => {
                 return (
@@ -135,13 +147,20 @@ function RoomPriceTable(props) {
 
             const priceHighPeak = [priceDataMap].map((data, index) => {
                 return (
-                    <tr key={"price_peak_" + index}>
+                    <tr key={"price_high_peak_" + index}>
                         <td>{priceDataMap.high_peak_season.weekday.toLocaleString()}</td>
                         <td>{priceDataMap.high_peak_season.weekend.toLocaleString()}</td>
                     </tr>
                 )
             });
             setPriceHighPeakMobile(priceHighPeak);
+
+
+            document.querySelectorAll(".add_wrap").forEach((el)=>{
+                el.style.position = "relative";
+                el.style.top = "0px";
+            })
+
         }
 
     },[isAllPrice])
@@ -150,7 +169,7 @@ function RoomPriceTable(props) {
         <>
             <div className="add_wrap">
                 {!isAllPrice && <div className="price_title">가격정보</div>}
-                {isAllPrice && <div className="is_all_price_title">이용가격</div>}
+                {isAllPrice && <div className="info_title">이용가격</div>}
 
                 {!isMobile &&
                 <div id="room_price">
@@ -160,10 +179,13 @@ function RoomPriceTable(props) {
                             {isAllPrice && <th rowSpan="2">객실명</th>}
                             {isAllPrice && <th rowSpan="2">인원</th>}
                             <th colSpan="2">비수기</th>
+                            <th colSpan="2">준성수기</th>
                             <th colSpan="2">성수기</th>
                             <th colSpan="2">극성수기</th>
                         </tr>
                         <tr>
+                            <th className="room_bold">주중</th>
+                            <th className="room_bold">주말(금,토)</th>
                             <th className="room_bold">주중</th>
                             <th className="room_bold">주말(금,토)</th>
                             <th className="room_bold">주중</th>
@@ -192,6 +214,14 @@ function RoomPriceTable(props) {
                             <th className="room_bold">주말(금,토)</th>
                         </tr>
                         { priceOffMobile }
+                        <tr>
+                            <th colSpan="2">준성수기</th>
+                        </tr>
+                        <tr>
+                            <th className="room_bold" style={{width: "50%"}}>주중</th>
+                            <th className="room_bold">주말(금,토)</th>
+                        </tr>
+                        { priceSemiPeakMobile }
                         <tr>
                             <th colSpan="2">성수기</th>
                         </tr>
@@ -224,6 +254,7 @@ function RoomPriceTable(props) {
                             <th>객실명</th>
                             <th>인원</th>
                             <th>비수기</th>
+                            <th>준성수기</th>
                             <th>성수기</th>
                             <th>극성수기</th>
                         </tr>

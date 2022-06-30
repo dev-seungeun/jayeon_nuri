@@ -1,0 +1,6 @@
+#around_wrap .tz-gallery .row {
+    margin: 0 auto;
+}
+#around_wrap img {
+    width: 100%;
+}
