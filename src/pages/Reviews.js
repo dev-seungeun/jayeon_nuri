@@ -26,7 +26,7 @@ function Reviews(props) {
     useEffect(()=> {
         _databaseGetReview(function (id, review) {
             review.key = id;
-            reviewListTemp = reviewListTemp.concat(review);
+            reviewListTemp = [review].concat(reviewListTemp);
             setReviewList(reviewListTemp);
         });
     },[])

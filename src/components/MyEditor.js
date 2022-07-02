@@ -11,9 +11,20 @@ function MyEditor(props) {
     const navigate = useNavigate();
     const [reviewAuthor, setReviewAuthor] = useState();
     const [reviewTitle, setReviewTitle] = useState();
-    const [reviewContent, setReviewContent] = useState();
+    const [reviewContent, setReviewContent] = useState("");
 
     const registReview = async(e) => {
+
+        if(document.querySelector(".editor_title").value.trim() == "") {
+            alert("제목을 입력해주세요.");
+            return;
+        }
+        if(reviewContent.trim() == "") {
+            alert("내용을 입력해주세요.");
+            return;
+        }
+
+
         if(props && props.id != null) {
 
             try {
@@ -33,6 +44,15 @@ function MyEditor(props) {
 
         }else {
 
+            if(document.querySelector(".editor_author").value.trim() == "") {
+                alert("작성자 성함을 입력해주세요.");
+                return;
+            }
+            if(document.querySelector(".editor_password").value.trim() == "") {
+                alert("비밀번호를 입력해주세요.");
+                return;
+            }
+
             try {
                 const review = {
                     time: Date.now(),
@@ -40,7 +60,7 @@ function MyEditor(props) {
                     title: document.querySelector(".editor_title").value,
                     content: reviewContent,
                     author: document.querySelector(".editor_author").value,
-                    password: document.querySelector(".password").value
+                    password: document.querySelector(".editor_password").value
                 }
 
                 await _databaseRegistReview(review)
@@ -70,7 +90,7 @@ function MyEditor(props) {
                 {props.id == null && <input className="editor_author" placeholder="작성자" value={reviewAuthor}/>}
                 {props.id != null && <div className="author">작성자 : {reviewAuthor}</div>}
                 {props.id == null && <input className="editor_password" placeholder="비밀번호" />}
-                <input className="editor_title" placeholder="제목" value={reviewTitle}/>
+                <input className="editor_title" placeholder="제목" value={reviewTitle} onChange={(e) => setReviewTitle(e.target.value)} />
                 <CKEditor
                     editor={ ClassicEditor }
                     data={ reviewContent }

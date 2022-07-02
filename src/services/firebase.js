@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getDatabase, ref, set, update, onChildAdded, onChildChanged, onValue, query, limitToLast } from "firebase/database";
+import { getDatabase, ref, set, update, onChildAdded, onChildChanged, onValue, query, limitToLast, orderByChild, orderByKey } from "firebase/database";
 // import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage";
 
 const firebaseConfig = {
@@ -27,6 +27,8 @@ export const database_limit_to_last= limitToLast;
 export const database_on_child_added = onChildAdded;
 export const database_on_child_changed = onChildChanged;
 export const database_on_value = onValue;
+export const database_order_by_key = orderByKey;
+export const database_order_by_child = orderByChild;
 
 // storage
 // export const storage  = getStorage();
