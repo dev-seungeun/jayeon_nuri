@@ -29,7 +29,7 @@ export const database_on_child_changed = onChildChanged;
 export const database_on_value = onValue;
 
 // storage
-export const storage  = getStorage();
-export const storage_ref  = storageRef;
-export const storage_upload_bytes  = uploadBytes;
-export const storage_download_url = getDownloadURL;
+// export const storage  = getStorage();
+// export const storage_ref  = storageRef;
+// export const storage_upload_bytes  = uploadBytes;
+// export const storage_download_url = getDownloadURL;

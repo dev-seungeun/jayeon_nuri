@@ -9,13 +9,6 @@ export function _databaseGetNotice(callback) {
     });
 }
 
-export function _databaseGetReview(callback) {
-    const reviewRef = database_query(database_ref(database, 'review'));
-    database_on_child_added(reviewRef, (snapshot) => {
-        callback(snapshot.val());
-    });
-}
-
 export function _databaseRegistNotice(notice) {
     return database_set(database_ref(database, "notice/"+_commonGetToday()), {
         date: Date.now()
@@ -28,14 +21,17 @@ export function _databaseUpdateNotice(notice) {
     });
 }
 
-export function _databaseRegistReview(review) {
-    return database_set(database_ref(database, "review/"+_commonGetToday()), {
-        date: Date.now()
+export function _databaseGetReview(callback) {
+    const reviewRef = database_query(database_ref(database, 'reviews'));
+    database_on_child_added(reviewRef, (snapshot) => {
+        callback(snapshot.key, snapshot.val());
     });
 }
 
-export function _databaseUpdateReview(review) {
-    return database_update(database_ref(database, "review/"+review), {
-        date: Date.now()
-    });
+export function _databaseRegistReview(review) {
+    return database_set(database_ref(database, "reviews/"+review.date+"_"+Math.floor(Math.random() * 100)), review);
+}
+
+export function _databaseUpdateReview(id, review) {
+    return database_update(database_ref(database, "reviews/"+id), review);
 }
