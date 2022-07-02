@@ -202,22 +202,15 @@
     #editor_wrap {
         font-size: 10px;
     }
-    #editor_wrap .editor_author {
-        margin-bottom: 2px;
-    }
-    #editor_wrap .editor_password {
-        margin-bottom: 2px;
-    }
     #editor_wrap .editor_title {
-        margin-bottom: 2px;
+        margin-bottom: 10px;
     }
     #editor_wrap .editor_author {
-        margin-bottom: 2px;
+        margin-bottom: 10px;
     }
     #editor_wrap .editor_password {
-        margin-bottom: 2px;
+        margin-bottom: 10px;
     }
-    #editor_wrap .
 
     /* Review List */
     #review_list table {
