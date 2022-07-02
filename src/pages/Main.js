@@ -10,12 +10,8 @@ import "../css/main.css";
 import "../css/fluid-gallery.css";
 import 'bootstrap/dist/css/bootstrap.css';
 
-import { AiFillHome, AiOutlineCalendar } from "react-icons/ai";
-import { HiOutlineHome, HiChevronLeft,HiChevronRight, HiOutlinePencilAlt, HiOutlinePencil } from "react-icons/hi";
-import { FiCalendar } from "react-icons/fi";
-import { FaRegCalendarAlt } from "react-icons/fa";
-import { VscHome } from "react-icons/vsc";
-import { TbHome, TbNotes, TbCheck, TbChecks, TbCircleCheck, TbListCheck, TbPencil } from "react-icons/tb";
+import { HiOutlineHome } from "react-icons/hi";
+import { TbListCheck, TbPencil } from "react-icons/tb";
 import { RiHome4Line } from "react-icons/ri";
 import { GrHome, GrHomeRounded, GrNotes, GrLocation, GrMapLocation } from "react-icons/gr";
 import { BiHome, BiBed, BiNotepad, BiCalendar } from "react-icons/bi";
@@ -23,30 +19,10 @@ import { GoLocation } from "react-icons/go";
 import { IoHomeOutline, IoBed, IoCheckmarkOutline, IoCheckmarkCircleOutline, IoCalendarNumberOutline, IoCalendarOutline, IoLocationOutline } from "react-icons/io5";
 import { ImFileText, ImFileText2 } from "react-icons/im";
 
-
-// const Desktop = ({ children }) => {
-//     const isDesktop = useMediaQuery({ minWidth: 1000 })
-//     return isDesktop ? children : null
-// }
-// const Tablet = ({ children }) => {
-//     const isTablet = useMediaQuery({ minWidth: 801, maxWidth: 999 })
-//     return isTablet ? children : null
-// }
-// const Mobile = ({ children }) => {
-//     const isMobile = useMediaQuery({ minWidth: 501, maxWidth: 800  })
-//     return isMobile ? children : null
-// }
-// const Tiny = ({ children }) => {
-//     const isTiny = useMediaQuery({ maxWidth: 500 })
-//     return isTiny ? children : null
-// }
-
-
 const Main = (props) => {
 
     const navigate = useNavigate();
     const videoRef = useRef();
-    // const [tableMobile, setTableMobile] = useState(true);
 
     useEffect(()=>{
         window.addEventListener('resize', handleResize);
@@ -70,7 +46,6 @@ const Main = (props) => {
     const handleResize = (e) => {
         var innerWidth = window.innerWidth;
         if(innerWidth > 1000) {
-            // setTableMobile(false);
             document.getElementById("etc_info_intro").setAttribute("rowSpan", 2);
             document.getElementById("etc_info_intro").removeAttribute("colSpan", 2);
 
@@ -79,7 +54,6 @@ const Main = (props) => {
                 document.getElementById("temp_tr").remove();
             }
         }else {
-            // setTableMobile(true);
             document.getElementById("etc_info_intro").setAttribute("colSpan", 2);
             document.getElementById("etc_info_intro").removeAttribute("rowSpan", 2);
 
@@ -190,9 +164,9 @@ const Main = (props) => {
                             </td>
                             <td id="etc_info_notice" colSpan={2}>
                                 <div>
-                                    <div>Notice & Event</div>
+                                    <div>Notice</div>
                                     <div>
-                                    게시물이 없습니다.
+                                        공지사항이 없습니다.
                                     </div>
                                 </div>
                             </td>

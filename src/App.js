@@ -1,5 +1,5 @@
 import React, {Component, useState, useEffect} from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './pages/Header';
 import Footer from './pages/Footer';
 import NotFound from './pages/NotFound';
@@ -17,7 +17,9 @@ import TermsOfUse from './pages/TermsOfUse';
 import UsePrice from './pages/UsePrice';
 import WayToCome from './pages/WayToCome';
 import Reviews from './pages/Reviews';
+import ReviewsSteps from './pages/ReviewsSteps';
 import Notice from './pages/Notice';
+import NoticeSteps from './pages/NoticeSteps';
 import { getJsonData } from "./components/FetchData";
 import "./App.css";
 import { HiX } from "react-icons/hi";
@@ -48,7 +50,7 @@ const App = () => {
           </div>
         </div>
           {getDataDone &&
-          <BrowserRouter>
+          <HashRouter>
               <Header/>
               <Routes>
                   <Route path="/" element={<Main/>}></Route>
@@ -65,11 +67,13 @@ const App = () => {
                   <Route path="/terms_of_use/:parent" element={<TermsOfUse/>}></Route>
                   <Route path="/use_price/:parent" element={<UsePrice/>}></Route>
                   <Route path="/notice/:parent" element={<Notice/>}></Route>
+                  <Route path="/notice_steps/:parent" element={<NoticeSteps/>}></Route>
                   <Route path="/reviews/:parent" element={<Reviews/>}></Route>
+                  <Route path="/reviews_steps/:parent" element={<ReviewsSteps/>}></Route>
                   <Route path="*" element={<NotFound/>}></Route>
               </Routes>
               <Footer/>
-          </BrowserRouter>
+          </HashRouter>
           }
       </div>
   );

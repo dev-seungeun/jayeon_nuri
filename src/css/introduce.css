@@ -1,4 +1,11 @@
 
+#intro_image_wrap .row {
+    margin: 0px;
+}
+#intro_image_wrap .row div {
+    padding: 0px;
+}
+
 /* PC 화면 */
 @media screen and (min-width: 1200px) {
     .explain {

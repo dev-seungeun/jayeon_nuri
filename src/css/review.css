@@ -1,157 +1,129 @@
 #review_wrap {
     font-family: "Referi";
-    height: auto;
 }
-
-#editor_wrap {
+#review_wrap button {
+    color: black;
+}
+#editor_wrap button {
+    color: black;
+}
+.menu_title {
+    font-size: 17px;
+    font-weight: 800;
     text-align: left;
 }
 
-.editor_title {
+
+/* Editor */
+#editor_wrap .ck-editor__main {
+    height: 400px;
+}
+#editor_wrap .ck-content {
+    height: 100%;
+}
+#review_wrap {
+    font-family: "Referi";
+    height: auto;
+}
+#editor_wrap {
+    text-align: left;
+}
+#editor_wrap .editor_title {
     width: 100%;
     height: 30px;
     line-height: 30px;
-    margin-bottom: 10px;
-    border: 1px solid #c4c4c4;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #c4c4c4;
     border-radius: 2px;
 }
-
-.author {
+#editor_wrap .editor_author {
     position: relative;
     left: 0;
     width: 51%;
     height: 30px;
     line-height: 30px;
-    margin-bottom: 10px;
+    margin: 20px 0;
+    border: none;
+    border-bottom: 1px solid #c4c4c4;
+    border-radius: 2px;
 }
-
-.editor_author {
+#editor_wrap .editor_password {
     position: relative;
     left: 0;
     width: 51%;
     height: 30px;
     line-height: 30px;
-    margin-bottom: 10px;
-    border: 1px solid #c4c4c4;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #c4c4c4;
     border-radius: 2px;
 }
 
-.in_password {
+
+/* Check Password */
+#review_check_password .in_password {
     width: 51%;
     /*margin-bottom: 10px;*/
     padding: 5px 15px;
     border: 1px solid #c4c4c4;
     border-radius: 2px;
 }
-.pass-check-button {
-    padding: 5px 15px;
-    margin: 0 0 6px 2px;
-    border: 1px solid #c4c4c4;
-    background-color: white;
-    border-radius: 2px;
-    vertical-align: middle;
-}
-.check-list-button {
-    padding: 5px 15px;
-    margin: 0 10px 6px 2px;
-    border: 1px solid #c4c4c4;
-    background-color: white;
-    border-radius: 2px;
-    vertical-align: middle;
-}
-.list-button {
-    padding: 5px 15px;
-    margin: 10px 10px 6px 2px;
-    border: 1px solid #c4c4c4;
-    background-color: white;
-    border-radius: 2px;
-    vertical-align: middle;
-    float:right;
-}
-.editor_password {
-    position: relative;
-    left: 0;
-    width: 51%;
-    height: 30px;
-    line-height: 30px;
-    margin-bottom: 10px;
-    border: 1px solid #c4c4c4;
-    border-radius: 2px;
-}
 
-.ck-editor__main {
-    height: 400px;
-}
 
-.ck-content {
-    height: 100%;
-}
-
-.submit-button {
-    position: relative;
-    float: right;
-    padding: 5px 15px;
-    border: 1px solid #c4c4c4;
-    background-color: white;
-    border-radius: 2px;
-    margin-top: 10px;
-    vertical-align: middle;
-}
-
-.cancel-button {
-    position: relative;
-    float: right;
-    padding: 5px 15px;
-    border: 1px solid #c4c4c4;
-    background-color: white;
-    border-radius: 2px;
-    margin: 10px 10px 0 0;
-    vertical-align: middle;
-}
-
+/* Review Detail */
 #review_detail table {
     width: 100%;
+    margin-bottom: 100px;
 }
 #review_detail table th {
     font-weight: 400;
-    border: 1px solid #c4c4c4;
-    padding: 8px 5px;
+    /*border-top: 1px solid #c4c4c4;*/
+    /*border-bottom: 1px solid #c4c4c4;*/
+    padding: 10px 10px;
     font-size: 16px;
 }
 #review_detail table td {
     font-weight: 400;
-    border: 1px solid #c4c4c4;
-    padding: 5px 10px;
+    /*border-bottom: 1px solid #c4c4c4;*/
+    padding: 10px 10px;
     font-size: 15px;
-    cursor: pointer;
 }
-#review_detail table th:nth-child(1){
+#review_detail .detail_title {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 800;
+    padding: 20px 10px;
+}
+#review_detail .detail_parent {
     width:25%;
     font-weight: 800;
+    border-bottom: 1px solid #c4c4c4;
 }
-#review_detail table th:nth-child(2){
+#review_detail .detail_child {
+    text-align: left;
+    padding: 5px 10px;
+}
+#review_detail .detail_child > span {
     text-align: left;
     padding-left: 20px;
+    color: gray;
+    font-size: 13px;
 }
-#review_detail table tr:nth-child(1) td:nth-child(2){
-    text-align: left;
-    padding-left: 20px;
-}
-#review_detail table td:nth-child(1){
-    width:10%;
-    text-align: center;
-    font-weight: 800;
-}
-#review_detail table tbody tr:nth-child(3) td {
+#review_detail .detail_content {
     text-align: left;
     padding: 20px 10px;
     vertical-align: top;
-    height: 400px;
-    font-weight: 400;
+    height: auto;
+    border-bottom: 1px solid #c4c4c4;
+    border-top: 1px solid #c4c4c4;
+}
+#review_detail img {
+    max-width: 100%;
 }
 
 
-
+/* Review List */
 #review_list table {
     width: 100%;
 }
@@ -164,7 +136,6 @@
 }
 #review_list table td {
     font-weight: 400;
-    border-top: 1px solid #c4c4c4;
     border-bottom: 1px solid #c4c4c4;
     padding: 5px 10px;
     font-size: 15px;
@@ -173,93 +144,160 @@
 #review_list td {
     color: gray;
 }
-.list_title {
+#review_list .list_title {
     text-align: left;
 }
+#review_list .list_time {
+    min-width: 120px;
+}
+#review_list .list_update_time {
+    min-width: 60px;
+}
+
+/* Button */
+#review_wrap .submit-button {
+    float: right;
+    padding: 5px 15px;
+    border: 1px solid #c4c4c4;
+    background-color: white;
+    border-radius: 2px;
+    margin-top: 5px;
+    vertical-align: middle;
+}
+#review_wrap .cancel-button {
+    margin-right: 5px;
+}
+#review_wrap .modify-button {
+}
+#review_wrap .register-button {
+}
+#review_wrap .list-button {
+    margin-right: 5px;
+}
+#review_wrap .check-list-button {
+    float: none;
+    margin: 0 0 5px 0;
+}
+#review_wrap .pass-check-button {
+    float: none;
+    margin: 0 5px 5px 5px;
+}
+
+
+
 
 /* Tiny Mobile 화면 */
-@media screen and (max-width: 500px) {
-    #review_wrap {
-        height: auto;
-    }
-    .ck-editor__main {
+@media screen and (max-width: 620px) {
+
+    /* Editor */
+    #editor_wrap .ck-editor__main {
         height: 300px;
     }
-    #review_detail table tbody tr:nth-child(3) td {
-        height: 270px;
-    }
-
-    #review_wrap table th {
-        padding: 3px 2px;
-        font-size: 12px;
-    }
-    #review_wrap table td {
-        padding: 2px 5px;
+    #editor_wrap .ck-content .ck-editor__editable{
         font-size: 10px;
-        cursor: pointer;
+    }
+    .menu_title {
+        font-size: 15px;
+    }
+    #editor_wrap {
+        font-size: 10px;
+    }
+    #editor_wrap .editor_author {
+        margin-bottom: 2px;
+    }
+    #editor_wrap .editor_password {
+        margin-bottom: 2px;
+    }
+    #editor_wrap .editor_title {
+        margin-bottom: 2px;
+    }
+    #editor_wrap .editor_author {
+        margin-bottom: 2px;
+    }
+    #editor_wrap .editor_password {
+        margin-bottom: 2px;
+    }
+    #editor_wrap .
+
+    /* Review List */
+    #review_list table {
+        width: 100%;
+    }
+    #review_list table th {
+        padding: 8px 5px;
+        font-size: 10px;
+    }
+    #review_list table td {
+        padding: 5px 10px;
+        font-size: 9px;
+    }
+    #review_list .list_time {
+        min-width: 90px;
+    }
+    #review_list .list_update_time {
+        min-width: 52px;
     }
 
-    .submit-button {
+
+    /* Review Detail */
+    #review_detail table {
+        margin-bottom: 50px;
+    }
+    #review_detail table td {
+        padding: 5px 5px;
+    }
+    #review_detail .detail_title {
+        text-align: left;
+        font-size: 20px;
+        font-weight: 800;
+        padding: 10px 5px;
+    }
+    #review_detail table th,
+    #review_detail .detail_parent {
+        padding: 5px 5px;
+        font-size: 11px;
+    }
+    #review_detail .detail_content,
+    #review_detail .detail_child {
+        padding: 10px;
+        font-size: 9px;
+    }
+    #review_detail .detail_child > span {
+        padding-left: 15px;
+        font-size: 8px;
+    }
+
+    /* Check Password */
+    #review_check_password .password_txt {
+        font-size: 13px;
+    }
+    #review_check_password .in_password {
+        font-size: 10px;
+    }
+
+
+    /* Button */
+    #review_wrap .submit-button {
+        font-size: 10px;
         margin-top: 5px;
-        font-size: 10px;
-    }
-    .list-button {
-        float:right;
-        margin: 5px 5px 4px 2px;
-        font-size: 10px;
-    }
-    .cancel-button {
-        margin: 5px 5px 0 0;
-        font-size: 10px;
-    }
-    .password_txt {
-        font-size: 13px;
-    }
-    .check-list-button {
-        font-size: 10px;
-        margin: 5px 0 6px 2px;
         padding: 5px 6px;
     }
-    .pass-check-button {
-        font-size: 10px;
-        margin: 5px 0 6px 2px;
-        padding: 5px 6px;
+    #review_wrap .cancel-button {
     }
-    .in_password {
-        font-size: 10px;
+    #review_wrap .modify-button {
     }
-
-    .editor_author {
-        width: 100%;
+    #review_wrap .register-button {
     }
-
-    .editor_password {
-        width: 100%;
+    #review_wrap .list-button {
+        margin-right: 5px;
     }
-
-    .editor_title {
-        font-size: 10px;
+    #review_wrap .check-list-button {
+        float: none;
+        margin: 0;
+    }
+    #review_wrap .pass-check-button {
+        float: none;
+        margin: 0 2px;
     }
 
-    .editor_author {
-        font-size: 10px;
-    }
-
-    .editor_password {
-        font-size: 10px;
-    }
-
-    .ck-content {
-        font-size: 10px;
-    }
-
-    .author {
-        font-size: 13px;
-    }
-    #review_wrap table td {
-        font-size: 10px;
-    }
-    #review_wrap table th {
-        font-size: 10px;
-    }
 }

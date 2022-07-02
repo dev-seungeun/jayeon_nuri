@@ -1,16 +1,16 @@
 const info = {};
 
 export function _commonGetCommonInfo(key) {
-    return info[key];
+    return info.hasOwnProperty(key) ? info[key] : localStorage.getItem(key) ? JSON.parse(localStorage.getItem(key)) : null;
 }
 export function _commonSetCommonInfo(key, value) {
     info[key] = value;
+    localStorage.setItem(key, JSON.stringify(value));
 }
 export function _commonTimestampToDate(timestamp) {
-    console.log(timestamp)
-    let date = new Intl.DateTimeFormat('ko-KR').format(timestamp);
-    // let time = new Intl.DateTimeFormat('ko-KR', {  hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }).format(timestamp);
-    return timestamp != "" ? date.slice(0, date.length-1) : "-";
+    let date = new Intl.DateTimeFormat('ko-KR', { year: 'numeric', month: '2-digit', day: '2-digit' }).format(timestamp);
+    // let date = new Intl.DateTimeFormat('ko-KR', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', hour12: false, minute: '2-digit'}).format(timestamp);
+    return timestamp != "" ? date.slice(0,date.length-1) : "-";
 }
 export function _commonGetToday() {
     const date = new Date();

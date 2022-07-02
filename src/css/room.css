@@ -22,11 +22,11 @@
 
 .weekday {
     color: #4D77FF;
-    font-weight: 500;
+    font-weight: 800;
 }
 .weekend {
     color: #FD5D5D;
-    font-weight: 500;
+    font-weight: 800;
 }
 
 /* PC 화면 */

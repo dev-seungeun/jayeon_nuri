@@ -1,13 +1,9 @@
 import React, {useState, useEffect} from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faApple } from "@fortawesome/free-brands-svg-icons";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { VscChevronDown, VscChevronUp } from "react-icons/vsc";
-import { FaLeaf } from "react-icons/fa";
-import { GiFallingLeaf, GiChestnutLeaf } from "react-icons/gi";
-import { IoLeafOutline, IoLeafSharp, IoLeaf } from "react-icons/io5";
 import { TbLeaf } from "react-icons/tb";
 import "../css/fonts.css";
 import "../css/header.css";
@@ -30,7 +26,7 @@ const changeToggleColor = (pathname) => {
     }
 }
 
-const openReervationLink = () => {
+const openReservationLink = () => {
     window.open("http://www.pensionlife.co.kr/asp/calendar/online_cal.php?jid=1395","","width=900px, location=no, titlebar=no, scrollbars=yes, menubar=no, status = no, left = 500, toolbar=no");
 }
 
@@ -38,9 +34,9 @@ function Header() {
 
     const navigate = useNavigate();
     const location = useLocation();
-    const [openedMenu, setOpenedMenu] = useState();
     const [isToggled, setIsToggled] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
+    const [selectedMenuCheck, setSelectedMenuCheck] = useState(true);
     const [showAboutChild, setShowAboutChild] = useState(false);
     const [showRoomChild, setShowRoomChild] = useState(false);
     const [showAroundChild, setShowAroundChild] = useState(false);
@@ -51,11 +47,9 @@ function Header() {
     const [mouseLeaveSubMenu, setMouseLeaveSubMenu] = useState(true);
 
     const changeMenuFontWeight = (parentId) => {
-        document.getElementById("ABOUT").style.fontWeight = "400";
-        document.getElementById("ROOM").style.fontWeight = "400";
-        document.getElementById("AROUND").style.fontWeight = "400";
-        document.getElementById("RESERVATION").style.fontWeight = "400";
-        document.getElementById("COMMUNITY").style.fontWeight = "400";
+        document.querySelectorAll(".parent_menu").forEach((el) => {
+            el.style.fontWeight = "400";
+        });
         if(parentId) document.getElementById(parentId).style.fontWeight = "700";
     }
 
@@ -63,10 +57,8 @@ function Header() {
 
         const childId = link.split("/")[1];
         if(childId == "reservation") {
-            openReervationLink();
-        }else if(document.getElementById(childId) != undefined) {
-            document.getElementById(childId).classList.add("selected");
-            setOpenedMenu(document.getElementById(childId).parentNode.parentNode.previousSibling.id+"-"+childId);
+            openReservationLink();
+        }else {
             changeMenuFontWeight(document.getElementById(childId).parentNode.parentNode.previousSibling.id);
         }
 
@@ -127,6 +119,9 @@ function Header() {
                 }
             }
         }
+
+        setSelectedMenuCheck(!selectedMenuCheck);
+
     }
 
     const handleResize = (e) => {
@@ -165,20 +160,15 @@ function Header() {
             // 토글 열릴때 오픈메뉴 셋팅
           let parentId = "";
           if(location.pathname != "/") {
-              if(openedMenu != undefined) {
-                  parentId = openedMenu.split("-")[0];
-              }else {
-                  // 메인 박스 아이콘 선택으로 들어왔을 경우 path보고 판단
-                  parentId = location.pathname.split("/")[location.pathname.split("/").length-1];
-                  setOpenedMenu(parentId+"-"+location.pathname.split("/")[location.pathname.split("/").length-2]);
-              }
+              // path보고 메뉴 판단
+              parentId = location.pathname.split("/")[location.pathname.split("/").length-1];
+              handleMenuOpenClick(null, null, false, true); // sub_ul 모두 닫기
               handleMenuOpenClick(null, parentId, true); // 특정 parentId 의 sub_ul 열기
           }
 
         }else {
           if(location.pathname == "/") {
-            setOpenedMenu();
-            handleMenuOpenClick(null, null, false, true); // sub_ul 모두닫기
+              handleMenuOpenClick(null, null, false, true); // sub_ul 모두닫기
           }
         }
 
@@ -188,12 +178,14 @@ function Header() {
     useEffect(() => {
         if(isMobile) {
             // 오픈메뉴 셋팅되면 색깔 채우기
-            if(openedMenu != undefined) {
-                if(showAboutChild || showRoomChild || showAroundChild || showReservationChild || showCommunityChild)
-                    document.getElementById(openedMenu.split("-")[1]).classList.add("selected");
+            if(location.pathname != "/") {
+                document.querySelectorAll(".child_ul_li").forEach((el) => {
+                    el.classList.remove("selected");
+                })
+                document.getElementById(location.pathname.split("/")[1]).classList.add("selected");
             }
         }
-    }, [showAboutChild, showRoomChild, showAroundChild, showReservationChild, showCommunityChild]);
+    }, [selectedMenuCheck]);
 
     useEffect(() => {
         if(!isMobile) {
@@ -221,9 +213,7 @@ function Header() {
                 <div className="name">
                     <span onClick={(e)=>{
                         changeToggleColor("/");
-                        const parentId = openedMenu ? openedMenu.split("-")[0] : null;
                         handleMenuOpenClick(null, null, false, true); // sub_ul 모두 닫고 이동
-                        setOpenedMenu();
                         navigate("/");
                     }}>JayeonNuri
                     </span>
@@ -235,6 +225,7 @@ function Header() {
                     </div>
                     <div className="logo" onClick={(e)=>{
                         changeToggleColor("/");
+                        changeMenuFontWeight();
                         location.pathname == "/" ? window.location.reload() : navigate("/")
                     }}>
                         <TbLeaf/>
@@ -242,7 +233,7 @@ function Header() {
                     <nav id="menu">
                         <ul className="header__menulist" onMouseEnter={() => setMouseLeaveMenu(false)} onMouseLeave={() => setMouseLeaveMenu(true)}>
                             <li>
-                                <div id="ABOUT" onClick={handleMenuOpenClick}>
+                                <div id="ABOUT" className="parent_menu" onClick={handleMenuOpenClick}>
                                     ABOUT
                                     {isMobile && <span className="btn_toggle">
                                         {!showAboutChild && <VscChevronDown onClick={(e)=>e.preventDefault()}/>}
@@ -253,13 +244,13 @@ function Header() {
                                 <div>
                                     {!isMobile && <span id="about_child_ul_title">ABOUT</span>}
                                     <ul id="about_child_ul" className="inner_ul">
-                                        <li id="introduce"><div onClick={(e)=>handleLinkMove(e, "/introduce/ABOUT")}>자연누리 소개</div></li>
-                                        <li id="way_to_come"><div onClick={(e)=>handleLinkMove(e, "/way_to_come/ABOUT")}>오시는 길</div></li>
+                                        <li id="introduce" className="child_ul_li"><div onClick={(e)=>handleLinkMove(e, "/introduce/ABOUT")}>자연누리 소개</div></li>
+                                        <li id="way_to_come" className="child_ul_li"><div onClick={(e)=>handleLinkMove(e, "/way_to_come/ABOUT")}>오시는 길</div></li>
                                     </ul>
                                 </div>}
                             </li>
                             <li>
-                                <div id="ROOM" onClick={handleMenuOpenClick}>
+                                <div id="ROOM" className="parent_menu" onClick={handleMenuOpenClick}>
                                     ROOM
                                     {isMobile && <span className="btn_toggle">
                                         {!showRoomChild && <VscChevronDown onClick={(e)=>e.preventDefault()}/>}
@@ -270,17 +261,17 @@ function Header() {
                                 <div>
                                     {!isMobile && <span id="room_child_ul_title">ROOM</span>}
                                     <ul id="room_child_ul" className="inner_ul">
-                                        <li id="room1"><div onClick={(e)=>handleLinkMove(e, "/room1/ROOM")}>객실 1,2,3호</div></li>
-                                        <li id="room5"><div onClick={(e)=>handleLinkMove(e, "/room5/ROOM")}>객실 5,6호</div></li>
-                                        <li id="caravan1"><div onClick={(e)=>handleLinkMove(e, "/caravan1/ROOM")}>카라반 1호</div></li>
-                                        <li id="caravan2"><div onClick={(e)=>handleLinkMove(e, "/caravan2/ROOM")}>카라반 2호</div></li>
-                                        <li id="caravan3"><div onClick={(e)=>handleLinkMove(e, "/caravan3/ROOM")}>카라반 3호</div></li>
-                                        <li id="caravan4"><div onClick={(e)=>handleLinkMove(e, "/caravan4/ROOM")}>카라반 4호</div></li>
+                                        <li id="room1" className="child_ul_li"><div onClick={(e)=>handleLinkMove(e, "/room1/ROOM")}>객실 1,2,3호</div></li>
+                                        <li id="room5" className="child_ul_li"><div onClick={(e)=>handleLinkMove(e, "/room5/ROOM")}>객실 5,6호</div></li>
+                                        {/*<li id="caravan1" className="child_ul_li"><div onClick={(e)=>handleLinkMove(e, "/caravan1/ROOM")}>카라반 1호</div></li>*/}
+                                        {/*<li id="caravan2" className="child_ul_li"><div onClick={(e)=>handleLinkMove(e, "/caravan2/ROOM")}>카라반 2호</div></li>*/}
+                                        {/*<li id="caravan3" className="child_ul_li"><div onClick={(e)=>handleLinkMove(e, "/caravan3/ROOM")}>카라반 3호</div></li>*/}
+                                        {/*<li id="caravan4" className="child_ul_li"><div onClick={(e)=>handleLinkMove(e, "/caravan4/ROOM")}>카라반 4호</div></li>*/}
                                     </ul>
                                 </div>}
                             </li>
                             <li>
-                                <div id="AROUND" onClick={handleMenuOpenClick}>
+                                <div id="AROUND" className="parent_menu" onClick={handleMenuOpenClick}>
                                     AROUND
                                     {isMobile && <span className="btn_toggle">
                                         {!showAroundChild && <VscChevronDown onClick={(e)=>e.preventDefault()}/>}
@@ -291,13 +282,13 @@ function Header() {
                                 <div>
                                     {!isMobile && <span id="around_child_ul_title">AROUND</span>}
                                     <ul id="around_child_ul" className="inner_ul" style={{ariaExpanded:"true"}}>
-                                        <li id="around"><div onClick={(e)=>handleLinkMove(e, "/around/AROUND")}>주변 여행지</div></li>
-                                        <li id="mountain"><div onClick={(e)=>handleLinkMove(e, "/mountain/AROUND")}>소백산 등산로</div></li>
+                                        <li id="around" className="child_ul_li"><div onClick={(e)=>handleLinkMove(e, "/around/AROUND")}>주변 여행지</div></li>
+                                        <li id="mountain" className="child_ul_li"><div onClick={(e)=>handleLinkMove(e, "/mountain/AROUND")}>소백산 등산로</div></li>
                                     </ul>
                                 </div>}
                             </li>
                             <li>
-                                <div id="RESERVATION" onClick={handleMenuOpenClick}>
+                                <div id="RESERVATION" className="parent_menu" onClick={handleMenuOpenClick}>
                                     RESERVATION
                                     {isMobile && <span className="btn_toggle">
                                         {!showReservationChild && <VscChevronDown onClick={(e)=>e.preventDefault()}/>}
@@ -308,14 +299,14 @@ function Header() {
                                 <div>
                                     {!isMobile && <span id="reservation_child_ul_title">RESERVATION</span>}
                                     <ul id="reservation_child_ul" className="inner_ul" style={{ariaExpanded:"true"}}>
-                                        <li id="reservation"><div onClick={(e)=>handleLinkMove(e, "/reservation")}>실시간 예약</div></li>
-                                        <li id="terms_of_use"><div onClick={(e)=>handleLinkMove(e, "/terms_of_use/RESERVATION")}>이용수칙</div></li>
-                                        <li id="use_price"><div onClick={(e)=>handleLinkMove(e, "/use_price/RESERVATION")}>이용가격</div></li>
+                                        <li id="reservation" className="child_ul_li"><div onClick={(e)=>handleLinkMove(e, "/reservation")}>실시간 예약</div></li>
+                                        <li id="terms_of_use" className="child_ul_li"><div onClick={(e)=>handleLinkMove(e, "/terms_of_use/RESERVATION")}>이용수칙</div></li>
+                                        <li id="use_price" className="child_ul_li"><div onClick={(e)=>handleLinkMove(e, "/use_price/RESERVATION")}>이용가격</div></li>
                                     </ul>
                                 </div>}
                             </li>
                             <li>
-                                <div id="COMMUNITY" onClick={handleMenuOpenClick}>
+                                <div id="COMMUNITY" className="parent_menu" onClick={handleMenuOpenClick}>
                                     COMMUNITY
                                     {isMobile && <span className="btn_toggle">
                                         {!showCommunityChild && <VscChevronDown onClick={(e)=>e.preventDefault()}/>}
@@ -326,8 +317,8 @@ function Header() {
                                 <div>
                                     {!isMobile && <span id="community_child_ul_title">COMMUNITY</span>}
                                     <ul id="community_child_ul" className="inner_ul" style={{ariaExpanded:"true"}}>
-                                        <li id="notice"><div onClick={(e)=>handleLinkMove(e, "/notice/COMMUNITY")}>공지사항</div></li>
-                                        <li id="reviews"><div onClick={(e)=>handleLinkMove(e, "/reviews/COMMUNITY")}>이용후기</div></li>
+                                        <li id="notice" className="child_ul_li"><div onClick={(e)=>handleLinkMove(e, "/notice/COMMUNITY")}>공지사항</div></li>
+                                        <li id="reviews" className="child_ul_li"><div onClick={(e)=>handleLinkMove(e, "/reviews/COMMUNITY")}>이용후기</div></li>
                                     </ul>
                                 </div>}
                             </li>
@@ -341,4 +332,4 @@ function Header() {
 }
 
 export default Header;
-export { changeToggleColor, openReervationLink };
+export { changeToggleColor, openReservationLink };

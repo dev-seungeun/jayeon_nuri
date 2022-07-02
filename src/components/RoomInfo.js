@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import "../css/room.css";
 import { getEtcInfoJson } from "../components/FetchData";
-import { openReervationLink } from "../pages/Header";
+import { openReservationLink } from "../pages/Header";
 
 function RoomInfo(props) {
 
@@ -29,7 +29,7 @@ function RoomInfo(props) {
             <div className="hrr"></div>
 
             <div className="room_bottom_btn" onClick={(e)=>{
-                openReervationLink();
+                openReservationLink();
             }}>실시간예약</div>
         </>
     );

@@ -13,6 +13,13 @@ a {
     width:100%;
 }
 
+#etc_info_notice table th {
+    padding: 0;
+    height: 10px;
+}
+#etc_info_notice table td {
+    padding: 0;
+}
 /* PC 화면 */
 @media screen and (min-width: 1000px) {
 

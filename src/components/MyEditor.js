@@ -36,7 +36,7 @@ function MyEditor(props) {
 
                 await _databaseUpdateReview(props.id, review)
                     .then(() => {
-                        window.location.reload();
+                        window.history.back();
                     });
             } catch (error) {
                 console.log(error);
@@ -65,7 +65,7 @@ function MyEditor(props) {
 
                 await _databaseRegistReview(review)
                     .then(() => {
-                        window.location.reload();
+                        window.history.back();
                     });
             } catch (error) {
                 console.log(error);
@@ -84,22 +84,24 @@ function MyEditor(props) {
     return (
         <>
             <div className="add_wrap" id="editor_wrap">
-                {props.id == null && <p style={{fontWeight:"800"}}>후기 작성하기</p>}
-                {props.id != null && <p style={{fontWeight:"800"}}>후기 수정하기</p>}
+                {props.id == null && <p className="menu_title">후기 작성하기</p>}
+                {props.id != null && <p className="menu_title">후기 수정하기</p>}
                 
-                {props.id == null && <input className="editor_author" placeholder="작성자" value={reviewAuthor}/>}
-                {props.id != null && <div className="author">작성자 : {reviewAuthor}</div>}
+                <input className="editor_author" placeholder="작성자 이름" value={reviewAuthor || ""} onChange={(e) => setReviewAuthor(e.target.value)} disabled={props.id != null ? true : false} />
                 {props.id == null && <input className="editor_password" placeholder="비밀번호" />}
-                <input className="editor_title" placeholder="제목" value={reviewTitle} onChange={(e) => setReviewTitle(e.target.value)} />
+                <input className="editor_title" placeholder="제목" value={reviewTitle || ""} onChange={(e) => setReviewTitle(e.target.value)} />
                 <CKEditor
                     editor={ ClassicEditor }
                     data={ reviewContent }
                     onReady={ editor => {
-                        // You can store the "editor" and use when it is needed.
-                        document.querySelector(".ck-file-dialog-button").style.display = "none";
-                        document.querySelector(".ck-file-dialog-button").nextSibling.style.display = "none";
-                        document.querySelector(".ck-file-dialog-button").nextSibling.nextSibling.style.display = "none";
-                        document.querySelector(".ck-file-dialog-button").nextSibling.nextSibling.nextSibling.style.display = "none";
+                        if(document.querySelector(".ck-file-dialog-button"))
+                            document.querySelector(".ck-file-dialog-button").style.display = "none";
+                        if(document.querySelector(".ck-file-dialog-button").nextSibling)
+                            document.querySelector(".ck-file-dialog-button").nextSibling.style.display = "none";
+                        if(document.querySelector(".ck-file-dialog-button").nextSibling.nextSibling)
+                            document.querySelector(".ck-file-dialog-button").nextSibling.nextSibling.style.display = "none";
+                        if(document.querySelector(".ck-file-dialog-button").nextSibling.nextSibling.nextSibling)
+                            document.querySelector(".ck-file-dialog-button").nextSibling.nextSibling.nextSibling.style.display = "none";
                     } }
                     onChange={ ( event, editor ) => {
                         const data = editor.getData();
@@ -112,10 +114,13 @@ function MyEditor(props) {
                         // console.log( 'Focus.', editor );
                     } }
                 />
-                {props.id == null && <button className="submit-button" onClick={registReview}>등록</button>}
-                {props.id != null && <button className="submit-button" onClick={registReview}>수정</button>}
+                {props.id == null && <button className="submit-button" onClick={registReview}>등록하기</button>}
+                {props.id != null && <button className="submit-button" onClick={registReview}>수정하기</button>}
                 
-                <button className="cancel-button" onClick={(e)=>window.location.reload()}>취소</button>
+                <button className="submit-button cancel-button" onClick={(e)=>{
+                    if(props.id != null) props.setViewName("detail");
+                    else window.history.back();
+                }}>취소</button>
             </div>
         </>
     );
