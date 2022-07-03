@@ -1,0 +1,79 @@
+{
+  "room1": [
+      "/main/room/room1/1.jpg",
+      "/main/room/room1/2.jpg",
+      "/main/room/room1/3.jpg",
+      "/main/room/room1/4.jpg",
+      "/main/room/room1/5.jpg",
+      "/main/room/room1/6.jpg",
+      "/main/room/room1/7.jpg",
+      "/main/room/room1/8.jpg",
+      "/main/room/room1/9.jpg",
+      "/main/room/room1/10.jpg"
+  ],
+  "room5": [
+      "/main/room/room5/1.jpg",
+      "/main/room/room5/2.jpg",
+      "/main/room/room5/3.jpg",
+      "/main/room/room5/4.jpg",
+      "/main/room/room5/5.jpg",
+      "/main/room/room5/6.jpg",
+      "/main/room/room5/7.jpg",
+      "/main/room/room5/8.jpg",
+      "/main/room/room5/9.jpg"
+  ],
+  "caravan1": [
+      "/main/room/caravan1/1.jpg",
+      "/main/room/caravan1/2.jpg",
+      "/main/room/caravan1/3.jpg",
+      "/main/room/caravan1/4.jpg",
+      "/main/room/caravan1/5.jpg",
+      "/main/room/caravan1/6.jpg",
+      "/main/room/caravan1/7.jpg",
+      "/main/room/caravan1/9.jpg",
+      "/main/room/caravan1/10.jpg",
+      "/main/room/caravan1/11.jpg",
+      "/main/room/caravan1/11.jpg"
+  ],
+  "caravan2": [
+      "/main/room/caravan2/1.jpg",
+      "/main/room/caravan2/2.jpg",
+      "/main/room/caravan2/3.JPG",
+      "/main/room/caravan2/4.JPG",
+      "/main/room/caravan2/5.JPG",
+      "/main/room/caravan2/6.JPG",
+      "/main/room/caravan2/7.JPG",
+      "/main/room/caravan2/8.JPG",
+      "/main/room/caravan2/9.jpg",
+      "/main/room/caravan2/10.jpg",
+      "/main/room/caravan2/11.jpg"
+  ],
+  "caravan3": [
+      "/main/room/caravan3/1.JPG",
+      "/main/room/caravan3/2.JPG",
+      "/main/room/caravan3/3.JPG",
+      "/main/room/caravan3/4.JPG",
+      "/main/room/caravan3/5.JPG",
+      "/main/room/caravan3/6.JPG",
+      "/main/room/caravan3/7.JPG",
+      "/main/room/caravan3/8.JPG",
+      "/main/room/caravan3/9.JPG",
+      "/main/room/caravan3/10.JPG",
+      "/main/room/caravan3/11.JPG",
+      "/main/room/caravan3/12.JPG"
+  ],
+  "caravan4": [
+      "/main/room/caravan4/1.png",
+      "/main/room/caravan4/2.png",
+      "/main/room/caravan4/3.JPG",
+      "/main/room/caravan4/4.JPG",
+      "/main/room/caravan4/5.JPG",
+      "/main/room/caravan4/6.JPG",
+      "/main/room/caravan4/7.JPG",
+      "/main/room/caravan4/8.JPG",
+      "/main/room/caravan4/9.JPG",
+      "/main/room/caravan4/10.JPG",
+      "/main/room/caravan4/11.JPG",
+      "/main/room/caravan4/12.JPG"
+  ]
+}

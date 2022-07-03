@@ -17,7 +17,7 @@ function Notice(props) {
     return (
         <>
             <div className="top_img">
-                <img src="/main/top/flower3.jpg" />
+                <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjY5/MDAxNjU2ODM5NjUxNjA3.4mOxop3SbpnaVdQezanvynyvT-u4Z5iJ5WjgiXzExwMg.zy8YBUORf8G0KLPVuTgI45YXOLxtMy-TEvKXjVOgWPkg.JPEG.bse14/flower3.jpg?type=w966" />
             </div>
 
             <div id="notice_wrap">

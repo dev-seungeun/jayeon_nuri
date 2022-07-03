@@ -19,7 +19,7 @@ function UsePrice(props) {
     return (
         <>
             <div className="top_img">
-                <img src="/main/top/leaf3.jpg" />
+                <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfNjIg/MDAxNjU2ODM5NjUxOTAy.l9pawtssymJlNIadtL2Q3GgTzsR1h0Soq3YCemlfyXQg.9PmcC-AXy1Bi4AFKOO34HB0zzjhenIqNbODd83r4QBcg.JPEG.bse14/leaf3.jpg?type=w966" />
             </div>
 
             <div id="use_price_wrap">

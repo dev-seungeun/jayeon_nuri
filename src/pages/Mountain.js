@@ -8,7 +8,7 @@ function Mountain(props) {
     return (
         <>
             <div className="top_img">
-                <img src="/main/top/leaf2.jpg" />
+                <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfOTMg/MDAxNjU2ODM5NjUxMjkx.tVNsR_Ft2ttrkCn4r_oM6WGtDPncmWrVhIwvvMuKj1gg.CXfNaVRY3YfC4zx7ZYjcQ3uDpkvXeUOIk23OAjKxENUg.JPEG.bse14/leaf2.jpg?type=w966" />
             </div>
 
             <div id="mountain_wrap">
@@ -32,7 +32,7 @@ function Mountain(props) {
                             <div className="row">
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                                 <div className="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                                    <img src="/main/around/mountain/samgadong.jpg" onClick={openImageModal} />
+                                    <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfNzAg/MDAxNjU2ODQwODk0Nzk5.8cnSqXh_UUubpfrEGYGB3JY4_i--1QtDHzKKShQZkDAg.tjshrRbo74M3WgZIUkluPMBEaY9xgCHD72Jn4-DfiUEg.JPEG.bse14/samgadong.jpg?type=w966" onClick={openImageModal} />
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                             </div>
@@ -49,7 +49,7 @@ function Mountain(props) {
                             <div className="row">
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                                 <div className="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                                    <img src="/main/around/mountain/yu.jpg" onClick={openImageModal} />
+                                    <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjAg/MDAxNjU2ODQwODk0ODMz.-1ow34If2p6xwKGLajcYUsuTF0EH264Q_E7F9_m3A4Ag.lPclS8owBE94z0QYlAGNZCe2KrqpdVRGxuofMJM7Mxkg.JPEG.bse14/yu.jpg?type=w966" onClick={openImageModal} />
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                             </div>
@@ -66,7 +66,7 @@ function Mountain(props) {
                             <div className="row">
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                                 <div className="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                                    <img src="/main/around/mountain/chundong.jpg" onClick={openImageModal} />
+                                    <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfNzkg/MDAxNjU2ODQwODk0NTA4.35gLQpw5_YSJDBkFQ9Ct0Tai-JLA4EEYZtLvxnk5t7Ug.RjKOQD9WmRnVEw5k8GpuD_zcaX4Hn6MaQElUmxERmKcg.JPEG.bse14/chundong.jpg?type=w966" onClick={openImageModal} />
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                             </div>
@@ -81,7 +81,7 @@ function Mountain(props) {
                             <div className="row">
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                                 <div className="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                                    <img src="/main/around/mountain/juckryung.JPG" onClick={openImageModal} />
+                                    <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjUw/MDAxNjU2ODQwODk0Nzc3.tO9h0TAjgYZhDIqbYvWmtmZTEmK0QRGd_8w3_7qBAUkg.JYa4r2f-HmZEAxDNKkBhM4Qvp1_eH5M3bKUWNDPZ5EAg.JPEG.bse14/juckryung.JPG?type=w966" onClick={openImageModal} />
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                             </div>
@@ -96,7 +96,7 @@ function Mountain(props) {
                             <div className="row">
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                                 <div className="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                                    <img src="/main/around/mountain/dosolbong.JPG" onClick={openImageModal} />
+                                    <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMTg4/MDAxNjU2ODQwODk0NTM3.etNtTPlWmEPG9QmJGwUP_EbinuUockwuKmV5u_HvB_4g.gWbeLXNqKSFyIm-BilnttupjVG-tv1Lst8RCi5KY7Gcg.JPEG.bse14/dosolbong.JPG?type=w966" onClick={openImageModal} />
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                             </div>
@@ -111,7 +111,7 @@ function Mountain(props) {
                             <div className="row">
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                                 <div className="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                                    <img src="/main/around/mountain/backdu2.JPG" onClick={openImageModal} />
+                                    <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjQy/MDAxNjU2ODQwODk0NTIy.Wu2fEMDTwwmsJSR-CPE3nit3Tdrv42bkz53SNlzMyQkg.s-v5OPeXg7GNZqoIakUVZ1AiRT1L2hGHEP0W_GKfsqMg.JPEG.bse14/backdu2.JPG?type=w966" onClick={openImageModal} />
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                             </div>
@@ -126,7 +126,7 @@ function Mountain(props) {
                             <div className="row">
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                                 <div className="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                                    <img src="/main/around/mountain/backdu3.JPG" onClick={openImageModal} />
+                                    <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMzQg/MDAxNjU2ODQwODk0NTI4.SQv_OnOwtiG2Hfs0Yy5jvZtYwvW_0fCazDkLeThSr1Yg.AGD029EnomiytZenISkjidybUJolm8PBQCPxtO4qZdog.JPEG.bse14/backdu3.JPG?type=w966" onClick={openImageModal} />
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                             </div>
@@ -141,7 +141,7 @@ function Mountain(props) {
                             <div className="row">
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                                 <div className="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                                    <img src="/main/around/mountain/chundong_gyegok.JPG" onClick={openImageModal} />
+                                    <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMTQ4/MDAxNjU2ODQwODk0NTM1.OuyGvApEtudm3w5PpL7njL_HmHVziK4qg2R3DRC_Dawg.2gNXtPF4Ruxkm_KOAhhGFX8veiPp3j89QRm3rmMzV9Eg.JPEG.bse14/chundong_gyegok.JPG?type=w966" onClick={openImageModal} />
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                             </div>

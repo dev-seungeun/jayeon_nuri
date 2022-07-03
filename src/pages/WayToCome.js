@@ -12,7 +12,7 @@ function WayToCome(props) {
     return (
         <>
             <div className="top_img">
-                <img src="/main/top/leaf1.jpg" />
+                <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjQ1/MDAxNjU2ODM5NjUxNTcx.mzkExMxX01lwaBe7vA-GqMJBbQsXlQCBOxWglZ-pJWkg.ZNCAZR8qTizHKH0pvZYjQigYTaZZXVvCDPIAMIqrxBQg.JPEG.bse14/leaf1.jpg?type=w966" />
             </div>
 
             <div id="way_wrap">
@@ -93,11 +93,11 @@ function WayToCome(props) {
                         <div className="text_center">
                           <div style={{fontWeight: "800"}}>승차 정류소 (풍기역) 위치</div>
                           <br/>
-                          <img src="/main/way_to_come/station_bus_stop_map.png" />
+                          <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMTI1/MDAxNjU2ODQxMDc0NzE3.HR91OF6_8BZMZ_H0xf2ttO6qPky3rS4-xoxZCsdxAqYg.k9fwoJ6hJ4x0eoHNXtXbd0O4QDScoYqYjypXii3Z0AAg.PNG.bse14/station_bus_stop_map.png?type=w966" />
                           <br/><br/><br/>
                           <div style={{fontWeight: "800"}}>하차 정류소 (삼가리-삼가교 입구 방면) 위치</div>
                           <br/>
-                          <img src="/main/way_to_come/bus_stop_map.png" />
+                          <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjIz/MDAxNjU2ODQxMDc0Njk3.R1yQs2F_raPIbjpJsVD22X3B3jr92FR6ggGhN6_5L-og.tlSdNyGhM5wg6Nrh6nkTNtB55J5iHLRtgzAIzU6DeTYg.PNG.bse14/bus_stop_map.png?type=w966" />
                         </div>
                     </div>
                 </div>

@@ -21,7 +21,7 @@ function Caravan1(props) {
     return (
         <>
             <div className="top_img">
-                <img src="/main/top/flower2.jpg" />
+                <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjA1/MDAxNjU2ODM5NjUxMzU5.2weC5MRPU-9s4DQjv7_Tf-LfE1htWj9px83twvItVWkg.vBxM2YW26EaC0NGitfn6Hxcz65-9-qUXADigMSFdAoog.JPEG.bse14/flower2.jpg?type=w966" />
             </div>
 
             {/*<div id="room_title"><FcLikePlaceholder />&nbsp;카라반 1호&nbsp;<FcLikePlaceholder /></div>*/}

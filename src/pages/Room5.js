@@ -21,7 +21,7 @@ function Room5(props) {
     return (
         <>
             <div className="top_img">
-                <img src="/main/top/flower1.jpg" />
+                <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfODMg/MDAxNjU2ODM5NjUxMzc1.Bf77I8cMLxmrjY95b7_t0NhUu-C3Qf_roEiwC3E-a2cg.xYKrDWXlh3To30H-yhnyXH9lS45BJcVp4OVFFnJk4Z4g.JPEG.bse14/flower1.jpg?type=w966" />
             </div>
 
             {/*<div id="room_title"><FcLike />&nbsp;객실 5,6 호&nbsp;<FcLike /></div>*/}

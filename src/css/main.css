@@ -56,7 +56,7 @@ a {
         text-align: center;
         font-weight: 700;
         z-index: 2;
-        font-family: "Referi-Regular";
+        font-family: "Oneprettynight";
     }
 
     /* 메뉴박스 */
@@ -90,13 +90,13 @@ a {
         position: relative;
         bottom:57%;
         font-size: 20px;
-        font-family: "Referi-Regular";
+        font-family: "Oneprettynight";
     }
     .menu_box  .menu_box_kor {
         position: relative;
         bottom: 122%;
-        font-size: 13px;
-        font-family: "Referi";
+        font-size: 16px;
+        font-family: "Oneprettynight";
     }
 
     /* 메인 작은 이미지 그리드 */
@@ -130,7 +130,7 @@ a {
     }
 
     /* 그 외 정보 */
-    .etc_info { margin: 30px 5%; position: relative; font-family: "Referi"; }
+    .etc_info { margin: 30px 5%; position: relative; font-family: "Oneprettynight"; }
 
     .etc_info > table { width: 100%; position: relative; top: -40px; }
     #etc_info_intro { width: 50%; height: 400px; padding-right: 10px; }
@@ -191,7 +191,7 @@ a {
         text-align: center;
         font-weight: 700;
         z-index: 2;
-        font-family: "Referi-Regular";
+        font-family: "Oneprettynight";
     }
     .carousel_left, .carousel_right {
         display: none !important;
@@ -228,13 +228,13 @@ a {
         position: relative;
         bottom: 110px;
         font-size: 26px;
-        font-family: "Referi-Regular";
+        font-family: "Oneprettynight";
     }
     .menu_box  .menu_box_kor {
         position: relative;
         bottom: 260px;
-        font-size: 15px;
-        font-family: "Referi";
+        font-size: 17px;
+        font-family: "Oneprettynight";
     }
 
     /* 메인 작은 이미지 그리드 */
@@ -268,7 +268,7 @@ a {
     .etc_info {
         margin: 100px 1% 50px 1%;
         position: relative;
-        font-family: "Referi";
+        font-family: "Oneprettynight";
     }
     .etc_info > table {
         width: 100%;
@@ -332,7 +332,7 @@ a {
     .menu_box  .menu_box_kor {
         position: relative;
         bottom: 165px;
-        font-size: 13px;
+        font-size: 15px;
     }
     .main_img .row div {
         padding-right: 0px !important;

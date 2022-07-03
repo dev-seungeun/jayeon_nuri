@@ -1,3 +1,6 @@
+#footer {
+    font-family: "Oneprettynight";
+}
 
 /* PC 화면 */
 @media screen and (min-width: 1000px) {
@@ -9,7 +12,7 @@
     #footer {
         margin-bottom: 15px;
         text-align: center;
-        font-size: 14px;
+        font-size: 16px;
     }
 
     #footer span {
@@ -27,7 +30,7 @@
     #footer {
         margin-bottom: 10px;
         text-align: center;
-        font-size: 12px;
+        font-size: 15px;
     }
 
     #footer span {
@@ -41,6 +44,6 @@
         width: 100%;
     }
     #footer {
-        font-size: 10px;
+        font-size: 13px;
     }
 }

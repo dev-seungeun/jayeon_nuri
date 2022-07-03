@@ -1,5 +1,5 @@
 #way_wrap{
-    font-family: "Referi";
+    font-family: "Oneprettynight";
 }
 #map_wrap {
     width: 100%;
@@ -10,7 +10,7 @@
 }
 .text_center {
     text-align: center;
-    font-family: "Referi";
+    font-family: "Oneprettynight";
 }
 #way_wrap table {
     width: 100%;
@@ -18,7 +18,7 @@
 }
 #way_wrap table th {
     font-weight: 800;
-    font-size: 11px;
+    font-size: 20px;
     color: #333;
     background-color: #f7f7f7;
     border: 1px solid #dfdfdf;
@@ -27,7 +27,7 @@
 }
 #way_wrap table td{
     border: 1px solid #dfdfdf;
-    font-size: 10px;
+    font-size: 18px;
     padding: 10px 5px;
     text-align: center;
 }
@@ -50,6 +50,12 @@
         font-size: 16px;
         font-weight: 400;
     }
+    #way_wrap table th {
+        font-size: 20px;
+    }
+    #way_wrap table td {
+        font-size: 18px;
+    }
 }
 
 
@@ -64,12 +70,18 @@
       width: 90%;
     }
     .time_title {
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 800;
     }
     .address {
         font-size: 16px;
         font-weight: 400;
+    }
+    #way_wrap table th {
+        font-size: 18px;
+    }
+    #way_wrap table td {
+        font-size: 16px;
     }
 }
 
@@ -90,6 +102,12 @@
     .address {
         font-size: 15px;
         font-weight: 400;
+    }
+    #way_wrap table th {
+        font-size: 16px;
+    }
+    #way_wrap table td {
+        font-size: 14px;
     }
 }
 

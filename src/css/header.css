@@ -59,9 +59,9 @@ a {
 
     .header__menulist > li {
         width: 90px;
-        font-size: 15px;
+        font-size: 18px;
         text-align: left;
-        font-family: "Referi";
+        font-family: "Oneprettynight";
     }
 
     .header__menulist > li:nth-child(1),
@@ -86,7 +86,7 @@ a {
         position: relative;
         top: -13px;
         color:#EEBB4D;
-        font-family: "Referi-Regular";
+        font-family: "Oneprettynight";
         z-index: 11;
     }
 
@@ -114,12 +114,12 @@ a {
     ul .inner_ul > li {
         padding: 0;
         margin: 15px 0 0 0;
-        font-size: 12px;
+        font-size: 15px;
         font-weight: 400;
         background: none;
         line-height: 12px;
         color: #F9F3F3;
-        font-family: "Referi";
+        font-family: "Oneprettynight";
     }
 
     #submenu_background {
@@ -149,7 +149,7 @@ a {
         font-size: 25px;
         width: 100%;
         text-align: center;
-        font-family: "Referi";
+        font-family: "Oneprettynight";
     }
     .name span {
         cursor: pointer;
@@ -187,7 +187,7 @@ a {
 
     #menu {
         width: 250px;
-        font-family: "Referi";
+        font-family: "Oneprettynight";
     }
 
     .header__menulist {
@@ -198,7 +198,7 @@ a {
     }
 
     .header__menulist > li {
-        font-size: 14px;
+        font-size: 16px;
         text-align: left;
         border-top: 1px solid #f3f3f3;
     }
@@ -233,7 +233,7 @@ a {
 
     ul .inner_ul li > div {
         padding: 8px 50px 8px 40px;
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .menuwrap svg {

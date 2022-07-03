@@ -11,7 +11,7 @@ function Introduce(props) {
     return (
         <>
             <div className="top_img">
-                <img src="/main/top/leaf1.jpg" />
+                <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjQ1/MDAxNjU2ODM5NjUxNTcx.mzkExMxX01lwaBe7vA-GqMJBbQsXlQCBOxWglZ-pJWkg.ZNCAZR8qTizHKH0pvZYjQigYTaZZXVvCDPIAMIqrxBQg.JPEG.bse14/leaf1.jpg?type=w966" />
             </div>
 
             <div id="introduce_title"><FcCloseUpMode />&nbsp;자연누리를 소개합니다&nbsp;<FcCloseUpMode /></div>
@@ -23,7 +23,7 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-12 col-xl-8">
-                            <img src="/main/introduce/1.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfODAg/MDAxNjU2ODQwNDQxNjk0.ahlAI8OqzgM8-CL50w1qGaoXcg9fwel-q-YBPqhXZSgg.GenvyBh61jiLnldBs9a3FpyuZcuav6Rh7VZKUALWIgcg.JPEG.bse14/1.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
                     </div>
@@ -35,10 +35,11 @@ function Introduce(props) {
                         동과동 사이에는 데크와 거실이 연결되어 있으므로 펀리하게 바베큐와 옥외식사가 가능합니다^^
                     </div>
 
+{/*
                     <div className="row">
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-12 col-xl-8">
-                            <img src="/main/introduce/2.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjM4/MDAxNjU2ODQwNDQxODE4.ndpa-qDXR05VYC8ui9Ea6_j6DEFbQkcjXHM_W8yJw5Mg.j6QwxWU_87a77hZnZivlCW-ezdI4ipGF8ixY3H1nqbEg.JPEG.bse14/2.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
                     </div>
@@ -50,14 +51,15 @@ function Introduce(props) {
                         커플, 그리고 아이들이 있는 가족분들도 많이 이용하신답니다^^ <br/>
                         그리고 침대를 이용하고 싶으신 분들은 카라반을 선택해주세요~
                     </div>
+*/}
 
                     <div className="row">
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/3.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjA2/MDAxNjU2ODQwNDQxODM5.15-AyBDlbS9i2iKb_qpnRnjrcbf5DyDWqLIwnQQ2cfIg.d1023tnC6V35LwNS6Pl_Abuh_9sHq40JBP0D6tAwV8cg.JPEG.bse14/3.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/4.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfNjMg/MDAxNjU2ODQwNDQxOTM2.Ujx3UD6kpWJ8dNkwrhFc_w58x37pT3F8lpBBzfS7F60g.NZaQ1WOAzMFfTi2jlbsyna48qCcc7dvua9fP1A1-ui4g.JPEG.bse14/4.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
                     </div>
@@ -71,10 +73,10 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/5.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfNTkg/MDAxNjU2ODQwNDQyMjIw.DE9sU_nb_BQEtkgBbpRrs3a5A-qx5qcEcMa1nl8CBTAg.OAKQ_jOcP9w5FYWYBfnM673rmlbBJn9n5Yu17FtcyHMg.JPEG.bse14/5.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/6.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjgy/MDAxNjU2ODQwNDQxNzIz.KecwIKo7022Bo53FbaZPzEf54h2WAREcjENkiQXl0qAg.kXPzT_L0oywGj2QJPQKy2jHMeNBjDsGCg-aT14hb3Log.JPEG.bse14/6.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
                     </div>
@@ -86,28 +88,28 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/7.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjcz/MDAxNjU2ODQwNDQzMzUw.lE25ZqoIyxIclc2CXGowEyU35XwO9ha9DN1eMKAaiS4g.EplV9jPpYtPgFKqYvSJPnA6TrqDHi9VbZYKTIaJxBQMg.JPEG.bse14/7.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/8.jpg" onClick={openImageModal} />
-                        </div>
-                        <div className="col-lg-0 col-xl-2"></div>
-
-                        <div className="col-lg-0 col-xl-2"></div>
-                        <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/9.jpg" onClick={openImageModal} />
-                        </div>
-                        <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/10.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjk3/MDAxNjU2ODQwNDQzNjkw.nmW1oxK-jmXZSwxz0O69wMm3gDK5P2ziCb3NVy_hK-0g.yEJs1tDSxawA3P3Bk045csPjM0EhHzAgt7zqqmNqd2gg.JPEG.bse14/8.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
 
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/11.JPG" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjIw/MDAxNjU2ODQwNDQ0MDIz.Wa3-GZXgsE-x8z9zxjvqThjstsNTwzjAIUIS9hBvIgYg.QjZ7-NpRZCsaq2Xn_HdkUCL8LXlcpumKqpMBABQ-KYQg.JPEG.bse14/9.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/12.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjA5/MDAxNjU2ODQwNDQ1Mzgy.VgOCWmGLm3j9lZadKJb4BHLTZmaZGVExz6nG5EOsB4Eg.k9-pb397v8HWYtNtpAEKU-6Vb3hqvHiwIc_iw0In5wog.JPEG.bse14/10.jpg?type=w966" onClick={openImageModal} />
+                        </div>
+                        <div className="col-lg-0 col-xl-2"></div>
+
+                        <div className="col-lg-0 col-xl-2"></div>
+                        <div className="col-lg-6 col-xl-4">
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMTYx/MDAxNjU2ODQwNDQzMjI2.MydqbZamLBu_RS4wdQjRkDvtBLqZ2T_LWuazv0KEk4Qg.bGE0NbL60WrT2bHd9a9KrcbTRDunUOVapZN7UZg5Tr0g.JPEG.bse14/11.JPG?type=w966" onClick={openImageModal} />
+                        </div>
+                        <div className="col-lg-6 col-xl-4">
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMTUw/MDAxNjU2ODQwNjUwMTUw.5o13EDxk9m33V3tB91KtIqiIXOaYYeYAr-5t94tD2-sg.War070voFA-XRaTlq_PF5iJ2bdMmd78sS1xpjWCtUQMg.JPEG.bse14/12.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
                     </div>
@@ -121,7 +123,7 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-xl-2"></div>
                         <div className="col-xl-8">
-                            <img src="/main/introduce/13.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjY3/MDAxNjU2ODQwNDQ1MjIy.BvPhnUlXxAmBMFS3SQ5JloWPusErdSdg2Bva_tAP0ZQg.WcBwlbDhMEpC0VHegNKU3L8d9hzmZkMWhVCkj3a0OYAg.JPEG.bse14/13.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-xl-2"></div>
                     </div>
@@ -129,10 +131,10 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/14.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMTgx/MDAxNjU2ODQwNDQ0NTgy.RtKs1RBBItxj9_MrIkiovT2XtirPRfB92BzoXBdwASgg.OtFB8KIFFljSeVxrpHhp7r83tJX-b270FJZK0Zqumdcg.JPEG.bse14/14.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/15.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjky/MDAxNjU2ODQwNDQ0MzY4.lmpjlpU5yV2PWVVKt7F-tQ_-XYEauAaD6Spr7vG4yf4g._SAwjhkcQnHi9ctCQSP5AFjdMd5hMNJObZ30f8yFB1Yg.JPEG.bse14/15.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
                     </div>
@@ -146,10 +148,10 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/16.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjI0/MDAxNjU2ODQwNzM3MjM4.yLHcN4g3xofDbg-Wh1ybhqWzVWOSdUpQw9X9MhmkwNEg.sjy9QPnCVjS31mosy__Ts0RbUW3icLazWp3sG6sVDqcg.JPEG.bse14/16.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/17.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfOSAg/MDAxNjU2ODQwNzM3MTYy.LU9YISpxJW7Kx_sNQaIddFZqSc0h7YYao8oXBdmLvWkg.nYp-0RONWMDMPNt3NeBzuqgRKbkabq__SmMZiAwhNoQg.JPEG.bse14/17.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
                     </div>
@@ -164,7 +166,7 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-xl-2"></div>
                         <div className="col-xl-8">
-                            <img src="/main/introduce/18.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjAz/MDAxNjU2ODQwNzM2NjAw.yyIZWeh6pjRN-cwxPyESZVLc2qBsmW3L7JInalnapcAg.jRqoqQzz7dMGLst2FdMz1j4J0ejTyTUct_zM4EacW0sg.JPEG.bse14/18.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-xl-2"></div>
                     </div>
@@ -176,7 +178,7 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-xl-2"></div>
                         <div className="col-xl-8">
-                            <img src="/main/introduce/19.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjUw/MDAxNjU2ODQwNzM3MDc2.HpRp2CNH9fULah85FvazkuhZa1K4WwQUPz0Olurxdswg.r8Y6Nq2mvlvoiXp4q4R3TwYBs2zqzcFxJh4Jh5jZdyog.JPEG.bse14/19.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-xl-2"></div>
                     </div>
@@ -188,10 +190,10 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/20.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMTIy/MDAxNjU2ODQwNDQ3MzEx.TB2pY2me1tyLAZz5A-omc5CN4k2-x67Fl1pHYEo7x4Mg.hZTgVzI6z7HYy_mcNhotKw5uebbbMM6RPLs01_mNDQwg.JPEG.bse14/20.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/21.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjc2/MDAxNjU2ODQwNzQ2NTM2.A1rXuTCTmYYhYiNNry7AWTtKogd_8WA85Gxdl4QO9mkg.m25JY7x48S7P3ZB-rbBTOBlF2-W7S_lOinMiGUyOzj8g.JPEG.bse14/21.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
                     </div>
@@ -204,10 +206,10 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-lg-0 col-xl-2"></div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/22.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMTY2/MDAxNjU2ODQwNzUxNDg5.tGhhnIZ0Ryww3e-nX4OGozuTWDlWTOGzycUoUCOdt7Yg.3StkP0UaRel-h4Qc4WTQbdpP2G7_a8tNl-hDKyDd36Yg.JPEG.bse14/22.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-6 col-xl-4">
-                            <img src="/main/introduce/23.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMTQ4/MDAxNjU2ODQwNzUwNjE2.Z2TWnz17VUOWJfwu3uIonztGohIiVbamfVkyaO9QrZ0g.XpBRzPGUYYdHRsSPkPAihEcAUYzvI-W7KGrxa21vsvkg.JPEG.bse14/23.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-lg-0 col-xl-2"></div>
                     </div>
@@ -222,7 +224,7 @@ function Introduce(props) {
                     <div className="row">
                         <div className="col-xl-2"></div>
                         <div className="col-xl-8">
-                            <img src="/main/introduce/24.jpg" onClick={openImageModal} />
+                            <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfNjYg/MDAxNjU2ODQwNzQ4NDE3.jZL4ChpSdfRwBCfmBg3nfvEt5QoayP2ADnD-ltADI3Ag.2w62QqO5t1TUmn0_D4Td8e9tGc3gsb_9DperRvNWJP4g.JPEG.bse14/24.jpg?type=w966" onClick={openImageModal} />
                         </div>
                         <div className="col-xl-2"></div>
                     </div>

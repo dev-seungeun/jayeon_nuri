@@ -1,39 +1,23 @@
 #use_price_wrap {
-    font-family: "Referi";
+    font-family: "Oneprettynight";
 }
 
 /* PC 화면 */
 @media screen and (min-width: 1200px) {
-    .use_cont {
-        border: 1px solid #dfdfdf;
-        padding: 35px 30px;
-        font-size: 14px;
-    }
+
 }
 
 /* Tablet 화면 */
 @media screen and (max-width: 1200px) and (min-width: 1000px) {
-    .use_cont {
-        border: 1px solid #dfdfdf;
-        padding: 30px 25px;
-        font-size: 14px;
-    }
+
 }
 
 /* Mobile 화면 */
 @media screen and (max-width: 1000px) {
-    .use_cont {
-        border: 1px solid #dfdfdf;
-        padding: 20px 15px;
-        font-size: 13px;
-    }
+
 }
 
 /* Tiny Mobile 화면 */
 @media screen and (max-width: 550px) {
-    .use_cont {
-        border: 1px solid #dfdfdf;
-        padding: 17px 12px;
-        font-size: 11px;
-    }
+
 }

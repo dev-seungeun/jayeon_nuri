@@ -182,8 +182,11 @@ function Header() {
                 document.querySelectorAll(".child_ul_li").forEach((el) => {
                     el.classList.remove("selected");
                 })
+
                 const selectedMenuID = location.pathname.split("/")[1].includes("_steps") ? location.pathname.split("/")[1].split("_steps")[0]: location.pathname.split("/")[1];
-                document.getElementById(selectedMenuID).classList.add("selected");
+                if(document.getElementById(selectedMenuID)) {
+                    document.getElementById(selectedMenuID).classList.add("selected");
+                }
             }
         }
     }, [selectedMenuCheck]);

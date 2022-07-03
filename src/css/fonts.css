@@ -1,4 +1,45 @@
 @font-face {
+    font-family: "Oneprettynight";
+    font-display: fallback;
+
+    src: url("/public/fonts/Cafe24Oneprettynight.ttf") format("truetype"),
+    url("/public/fonts/Cafe24Oneprettynight.woff") format("woff"),
+    url("/public/fonts/Cafe24Oneprettynight.eot?iefix") format("embedded-opentype");
+
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+
+
+
+@font-face {
+    font-family: "Ohsquareair";
+    font-display: fallback;
+
+    src: url("/public/fonts/Cafe24Ohsquareair.ttf") format("truetype"),
+    url("/public/fonts/Cafe24Ohsquareair.woff") format("woff"),
+    url("/public/fonts/Cafe24Ohsquareair.eot?iefix") format("embedded-opentype");
+
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SsurroundAir";
+    font-display: fallback;
+
+    src: url("/public/fonts/Cafe24SsurroundAir.ttf") format("truetype"),
+    url("/public/fonts/Cafe24SsurroundAir.woff") format("woff"),
+    url("/public/fonts/Cafe24SsurroundAir.eot?iefix") format("embedded-opentype");
+
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@font-face {
     font-family: "Referi";
     font-display: fallback;
 

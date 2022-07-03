@@ -1,5 +1,5 @@
 #bottom_info{
-    font-family: "Referi";
+    font-family: "Oneprettynight";
 }
 
 .control-arrow {
@@ -39,7 +39,7 @@
         font-size: 30px;
         font-weight: 800;
         margin: 0 auto;
-        font-family: "Referi-Regular";
+        font-family: "Oneprettynight";
         position: relative;
         top:-40px;
         padding: 30px 0;
@@ -50,7 +50,7 @@
         font-size: 30px !important;
     }
     #room_title p {
-        font-size: 15px;
+        font-size: 22px;
         padding-top: 30px;
         margin-bottom: 10px;
     }
@@ -64,13 +64,13 @@
     }
     .stuff {
         font-weight: 100;
-        font-size: 15px;
+        font-size: 20px;
         width: 99%;
     }
     .add_price {
         margin: 10px 0 0 0;
         text-align: right;
-        font-size: 15px;
+        font-size: 20px;
         font-weight: 600;
     }
     #room_price table {
@@ -79,14 +79,14 @@
     }
     #room_price table th {
         font-weight: 800;
-        font-size: 14px;
+        font-size: 18px;
         color: #333;
         background-color: #f7f7f7;
         border: 1px solid #dfdfdf;
     }
     #room_price table td{
         border: 1px solid #dfdfdf;
-        font-size: 13px;
+        font-size: 18px;
     }
     .room_bottom_btn {
         position: relative;
@@ -95,12 +95,12 @@
         height: 50px;
         margin: 40px 0 70px 0;
         border-radius: 100px;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 50px;
         background-color: #333;
         color: white;
         cursor: pointer;
-        font-family: "Referi-Regular";
+        font-family: "Oneprettynight";
     }
     .hrr {
         width: 80%;
@@ -116,7 +116,7 @@
         font-size: 27px;
         font-weight: 800;
         margin: 0 auto;
-        font-family: "Referi-Regular";
+        font-family: "Oneprettynight";
         position: relative;
         top:-40px;
         padding: 30px 0;
@@ -127,7 +127,7 @@
         font-size: 25px !important;
     }
     #room_title p {
-        font-size: 14px;
+        font-size: 18px;
         padding-top: 30px;
         margin-bottom: 10px;
     }
@@ -141,13 +141,13 @@
     }
     .stuff {
         font-weight: 100;
-        font-size: 15px;
+        font-size: 18px;
         width: 99%;
     }
     .add_price {
         margin: 10px 0 0 0;
         text-align: right;
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 600;
     }
     #room_price table {
@@ -156,14 +156,14 @@
     }
     #room_price table th {
         font-weight: 800;
-        font-size: 14px;
+        font-size: 18px;
         color: #333;
         background-color: #f7f7f7;
         border: 1px solid #dfdfdf;
     }
     #room_price table td{
         border: 1px solid #dfdfdf;
-        font-size: 13px;
+        font-size: 16px;
     }
     .room_bottom_btn {
         position: relative;
@@ -172,12 +172,12 @@
         height: 50px;
         margin: 40px 0 70px 0;
         border-radius: 100px;
-        font-size: 15px;
+        font-size: 16px;
         line-height: 50px;
         background-color: #333;
         color: white;
         cursor: pointer;
-        font-family: "Referi-Regular";
+        font-family: "Oneprettynight";
     }
     .hrr {
         width: 90%;
@@ -191,7 +191,7 @@
     #room_title {
         font-size: 25px;
         margin: 0;
-        font-family: "Referi-Regular";
+        font-family: "Oneprettynight";
         position: relative;
         top:-20px;
     }
@@ -202,7 +202,7 @@
         padding-bottom: 5px !important;
     }
     #room_title p {
-        font-size: 13px;
+        font-size: 16px;
         padding: 30px 0 20px 0;
     }
     .price_title {
@@ -215,14 +215,14 @@
     }
     .stuff {
         font-weight: 100;
-        font-size: 13px;
+        font-size: 16px;
         width: 99%;
     }
     .add_price,
     .price_color {
         margin: 5px 5px 0 0;
         text-align: right;
-        font-size: 13px;
+        font-size: 16px;
         font-weight: 600;
     }
     #room_price table {
@@ -231,14 +231,14 @@
     }
     #room_price table th {
         font-weight: 800;
-        font-size: 11px;
+        font-size: 16px;
         color: #333;
         background-color: #f7f7f7;
         border: 1px solid #dfdfdf;
     }
     #room_price table td{
         border: 1px solid #dfdfdf;
-        font-size: 10px;
+        font-size: 16px;
     }
     .room_bottom_btn {
         position: relative;
@@ -247,12 +247,12 @@
         height: 50px;
         margin: 40px 0 50px 0;
         border-radius: 100px;
-        font-size: 12px;
+        font-size: 15px;
         line-height: 50px;
         background-color: #333;
         color: white;
         cursor: pointer;
-        font-family: "Referi-Regular";
+        font-family: "Oneprettynight";
     }
     .hrr {
         width: 97%;
@@ -266,7 +266,7 @@
     #room_title {
         font-size: 20px;
         margin: 0;
-        font-family: "Referi-Regular";
+        font-family: "Oneprettynight";
         position: relative;
         top:-20px;
     }
@@ -277,7 +277,7 @@
         padding-bottom: 5px !important;
     }
     #room_title p {
-        font-size: 10px;
+        font-size: 15px;
         padding: 20px 0 20px 0;
     }
     .price_title {
@@ -290,7 +290,7 @@
     }
     .stuff {
         font-weight: 100;
-        font-size: 13px;
+        font-size: 15px;
         margin : 0 auto;
         width: 99%;
     }
@@ -298,7 +298,7 @@
     .price_color {
         margin: 5px 5px 0 0;
         text-align: right;
-        font-size: 13px;
+        font-size: 15px;
         font-weight: 600;
     }
     #room_price table {
@@ -308,7 +308,7 @@
     #room_price table th {
         padding: 5px !important;
         font-weight: 800;
-        font-size: 9px;
+        font-size: 15px;
         color: #333;
         background-color: #f7f7f7;
         border: 1px solid #dfdfdf;
@@ -316,7 +316,7 @@
     #room_price table td{
         padding: 5px !important;
         border: 1px solid #dfdfdf;
-        font-size: 9px;
+        font-size: 14px;
     }
     .room_bottom_btn {
         position: relative;
@@ -325,12 +325,12 @@
         height: 40px;
         margin: 20px 0 30px 0;
         border-radius: 100px;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 40px;
         background-color: #333;
         color: white;
         cursor: pointer;
-        font-family: "Referi-Regular";
+        font-family: "Oneprettynight";
     }
     .hrr {
         width: 97%;

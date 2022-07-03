@@ -33,7 +33,7 @@ function Reviews(props) {
     return (
         <>
             <div className="top_img">
-                <img src="/main/top/cloud1.jpg" />
+                <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMTcg/MDAxNjU2ODM5NjUxMjIx.tBL8Bluy0GyMKNJIZ2dFrDepVhKr88ZwCdUquE8VGqYg.aFqnyShVwkrdbjnObBLaK-wh5eqCaTm6Aman-3qQDuMg.JPEG.bse14/cloud1.jpg?type=w966" />
             </div>
 
             <div id="review_wrap">
