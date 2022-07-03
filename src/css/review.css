@@ -1,5 +1,5 @@
 #review_wrap {
-    font-family: "Oneprettynight";
+    font-family: "NanumGothic";
 }
 #review_wrap button {
     color: black;
@@ -22,7 +22,7 @@
     height: 100%;
 }
 #review_wrap {
-    font-family: "Oneprettynight";
+    font-family: "NanumGothic";
     height: auto;
 }
 #editor_wrap {
@@ -194,13 +194,13 @@
         height: 300px;
     }
     #editor_wrap .ck-content .ck-editor__editable{
-        font-size: 16px;
+        /*font-size: 16px;*/
     }
     .menu_title {
-        font-size: 16px;
+        /*font-size: 16px;*/
     }
     #editor_wrap {
-        font-size: 16px;
+        /*font-size: 16px;*/
     }
     #editor_wrap .editor_title {
         margin-bottom: 10px;
@@ -218,11 +218,11 @@
     }
     #review_list table th {
         padding: 8px 5px;
-        font-size: 16px;
+        font-size: 17px;
     }
     #review_list table td {
         padding: 5px 10px;
-        font-size: 16px;
+        font-size: 14px;
     }
     #review_list .list_time {
         min-width: 95px;

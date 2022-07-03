@@ -9,7 +9,17 @@
     font-weight: 900;
     font-style: normal;
 }
+@font-face {
+    font-family: "NanumGothic";
+    font-display: fallback;
 
+    src: url("/public/fonts/NanumGothic.ttf") format("truetype");
+    /*url("/public/fonts/Cafe24NanumGothic.woff") format("woff"),*/
+    /*url("/public/fonts/Cafe24NanumGothic.eot?iefix") format("embedded-opentype");*/
+
+    /*font-weight: 900;*/
+    font-style: normal;
+}
 
 
 
@@ -38,39 +48,3 @@
     font-style: normal;
 }
 
-
-@font-face {
-    font-family: "Referi";
-    font-display: fallback;
-
-    src: url("/public/fonts/LeferiPointWhite.ttf") format("truetype"),
-         url("/public/fonts/LeferiPointWhite.woff") format("woff"),
-         url("/public/fonts/LeferiPointWhite.eot?iefix") format("embedded-opentype");
-
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Referi-Regular";
-    font-display: fallback;
-
-    src: url("/public/fonts/LeferiBaseRegular.ttf") format("truetype"),
-         url("/public/fonts/LeferiBaseRegular.woff") format("woff"),
-         url("/public/fonts/LeferiBaseRegular.eot?iefix") format("embedded-opentype");
-
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Ilsan-Lite";
-    font-display: fallback;
-
-    src: url("/public/fonts/Ilsan-Lite.ttf") format("truetype"),
-         url("/public/fonts/Ilsan-Lite.woff") format("woff"),
-         url("/public/fonts/Ilsan-Lite.eot?iefix") format("embedded-opentype");
-
-    font-weight: 700;
-    font-style: normal;
-}

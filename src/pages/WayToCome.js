@@ -21,7 +21,7 @@ function WayToCome(props) {
                     <div className="info_title">지도</div>
                     <div className="info_cont">
                          <div id="map_wrap">
-                            <div className="address">경상북도 영주시 풍기읍 삼가로 288 [소백산 자연누리펜션]</div>
+                            <div className="address">경상북도 영주시 풍기읍 삼가로 288<br/>[소백산 자연누리펜션]</div>
                             <br/>
                             <div className="hrr"/><br/>
                             <div id='map'></div>

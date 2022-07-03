@@ -32,6 +32,14 @@ a {
     cursor: pointer;
     vertical-align: top;
 }
+
+.main_title {
+    font-size: 80px;
+}
+.menu_box_wrap > div {
+    font-size: 100px;
+}
+
 /* PC 화면 */
 @media screen and (min-width: 1000px) {
 
@@ -51,12 +59,12 @@ a {
         /* line-height: 700px; */
         position: relative;
         top: -420px;
-        font-size: 80px;
+        /*font-size: 80px;*/
         color: white;
         text-align: center;
         font-weight: 700;
         z-index: 2;
-        font-family: "Oneprettynight";
+        font-family: "NanumGothic";
     }
 
     /* 메뉴박스 */
@@ -69,7 +77,7 @@ a {
         width: 16.66%;
         height: 100%;
         float: left;
-        font-size: 100px;
+        /*font-size: 100px;*/
         cursor: pointer;
     }
     .menu_box_wrap > div:nth-child(2),
@@ -90,13 +98,13 @@ a {
         position: relative;
         bottom:57%;
         font-size: 20px;
-        font-family: "Oneprettynight";
+        font-family: "NanumGothic";
     }
     .menu_box  .menu_box_kor {
         position: relative;
         bottom: 122%;
         font-size: 16px;
-        font-family: "Oneprettynight";
+        font-family: "NanumGothic";
     }
 
     /* 메인 작은 이미지 그리드 */
@@ -130,7 +138,7 @@ a {
     }
 
     /* 그 외 정보 */
-    .etc_info { margin: 30px 5%; position: relative; font-family: "Oneprettynight"; }
+    .etc_info { margin: 30px 5%; position: relative; font-family: "NanumGothic"; }
 
     .etc_info > table { width: 100%; position: relative; top: -40px; }
     #etc_info_intro { width: 50%; height: 400px; padding-right: 10px; }
@@ -150,13 +158,13 @@ a {
     #etc_info_call { width: 25%; height: 150px; padding: 5px 5px 5px 10px; }
     #etc_info_call > div { height: 100%; text-align: left; background-color: #9EDE73; padding: 10px 20px; }
     #etc_info_call > div > div:nth-child(1) { color: black; font-size: 20px; font-weight: 600; padding-bottom: 15px; }
-    #etc_info_call > div > div:nth-child(2) { font-size: 25px; color: white; font-weight: 600; }
+    #etc_info_call > div > div:nth-child(2) { font-size: 25px; color: black; font-weight: 600; }
 
     #etc_info_account { width: 25%; height: 150px; padding: 5px 5px 5px 10px; }
     #etc_info_account > div { height: 100%; text-align: left; background-color: #FFC93C; padding: 10px 20px; }
     #etc_info_account > div > div:nth-child(1) { color: black; font-size: 20px; font-weight: 600; padding-bottom: 15px; }
-    #etc_info_account > div > div:nth-child(2) { font-size: 22px; color: white; font-weight: 600; }
-    #etc_info_account > div > div:nth-child(3) { font-size: 17px; color: white; font-weight: 600; }
+    #etc_info_account > div > div:nth-child(2) { font-size: 22px; color: black; font-weight: 600; }
+    #etc_info_account > div > div:nth-child(3) { font-size: 17px; color: black; font-weight: 600; }
 
 }
 
@@ -191,7 +199,7 @@ a {
         text-align: center;
         font-weight: 700;
         z-index: 2;
-        font-family: "Oneprettynight";
+        font-family: "NanumGothic";
     }
     .carousel_left, .carousel_right {
         display: none !important;
@@ -228,13 +236,13 @@ a {
         position: relative;
         bottom: 110px;
         font-size: 26px;
-        font-family: "Oneprettynight";
+        font-family: "NanumGothic";
     }
     .menu_box  .menu_box_kor {
         position: relative;
         bottom: 260px;
         font-size: 17px;
-        font-family: "Oneprettynight";
+        font-family: "NanumGothic";
     }
 
     /* 메인 작은 이미지 그리드 */
@@ -268,7 +276,7 @@ a {
     .etc_info {
         margin: 100px 1% 50px 1%;
         position: relative;
-        font-family: "Oneprettynight";
+        font-family: "NanumGothic";
     }
     .etc_info > table {
         width: 100%;
@@ -290,14 +298,14 @@ a {
 
     #etc_info_call { width: 50%; height: 120px; }
     #etc_info_call > div { height: 100%; text-align: left; background-color: #9EDE73; padding: 10px 20px; }
-    #etc_info_call > div > div:nth-child(1) { color: black; font-weight: 600; padding-bottom: 15px; }
-    #etc_info_call > div > div:nth-child(2) { font-size: 20px; color: white; font-weight: 600; }
+    #etc_info_call > div > div:nth-child(1) { font-size:18px; color: black; font-weight: 600; padding-bottom: 15px; }
+    #etc_info_call > div > div:nth-child(2) { font-size: 20px; color: black; font-weight: 600; }
 
     #etc_info_account { width: 50%; height: 120px; }
     #etc_info_account > div { height: 100%;  text-align: left; background-color: #FFC93C; padding: 10px 20px; }
-    #etc_info_account > div > div:nth-child(1) { color: black; font-weight: 600; padding-bottom: 15px; }
-    #etc_info_account > div > div:nth-child(2) { font-size: 20px; color: white; font-weight: 600; }
-    #etc_info_account > div > div:nth-child(3) { font-size: 15px; color: white; font-weight: 400; }
+    #etc_info_account > div > div:nth-child(1) { font-size:18px; color: black; font-weight: 600; padding-bottom: 15px; }
+    #etc_info_account > div > div:nth-child(2) { font-size: 20px; color: black; font-weight: 600; }
+    #etc_info_account > div > div:nth-child(3) { font-size: 15px; color: black; font-weight: 400; }
 }
 
 
@@ -327,30 +335,32 @@ a {
     .menu_box  .menu_box_eng {
         position: relative;
         bottom: 70px;
-        font-size: 20px;
+        font-size: 22px;
     }
     .menu_box  .menu_box_kor {
         position: relative;
         bottom: 165px;
-        font-size: 15px;
+        font-size: 18px;
     }
     .main_img .row div {
         padding-right: 0px !important;
     }
 
     #etc_info_call > div { height: 100%; text-align: left; background-color: #9EDE73; padding: 10px 20px; }
-    #etc_info_call > div > div:nth-child(2) { font-size: 16px; color: white; font-weight: 600; }
+    #etc_info_call > div > div:nth-child(1) { font-size: 18px; color: black; font-weight: 600; }
+    #etc_info_call > div > div:nth-child(2) { font-size: 16px; color: black; font-weight: 600; }
 
-    #etc_info_account > div > div:nth-child(2) { font-size: 16px; color: white; font-weight: 600; }
-    #etc_info_account > div > div:nth-child(3) { font-size: 12px; color: white; font-weight: 400; }
+    #etc_info_account > div > div:nth-child(1) { font-size: 18px; color: black; font-weight: 600; }
+    #etc_info_account > div > div:nth-child(2) { font-size: 16px; color: black; font-weight: 600; }
+    #etc_info_account > div > div:nth-child(3) { font-size: 15px; color: black; font-weight: 400; }
 
     #etc_info_intro > div > div:nth-child(3) { font-size: 12px; color: gray; }
 }
 
 /* Tiny Tiny Mobile 화면 */
 @media screen and (max-device-width: 400px) {
-    #etc_info_call > div > div:nth-child(2) { font-size: 14px; color: white; font-weight: 600; }
+    #etc_info_call > div > div:nth-child(2) { font-size: 16px; color: black; font-weight: 600; }
 
-    #etc_info_account > div > div:nth-child(2) { font-size: 12px; color: white; font-weight: 600; }
-    #etc_info_account > div > div:nth-child(3) { font-size: 10px; color: white; font-weight: 400; }
+    #etc_info_account > div > div:nth-child(2) { font-size: 16px; color: black; font-weight: 600; }
+    #etc_info_account > div > div:nth-child(3) { font-size: 15px; color: black; font-weight: 400; }
 }

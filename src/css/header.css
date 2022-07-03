@@ -18,13 +18,24 @@ a {
     color: #354259;
 }
 
+.logo {
+    font-size: 50px;
+}
+.header__menulist > li {
+    font-size: 17px;
+}
+ul .inner_ul > li {
+    font-size: 15px;
+}
+
+
 /* PC 화면 */
 @media screen and (min-width: 1000px) {
     .logo {
         position: relative;
         z-index: 120;
         float: left;
-        font-size: 50px;
+        /*font-size: 50px;*/
         text-align: center;
         padding: 5px 17px 12px 25px;
         cursor: pointer;
@@ -59,9 +70,9 @@ a {
 
     .header__menulist > li {
         width: 90px;
-        font-size: 18px;
+        /*font-size: 18px;*/
         text-align: left;
-        font-family: "Oneprettynight";
+        font-family: "NanumGothic";
     }
 
     .header__menulist > li:nth-child(1),
@@ -86,18 +97,18 @@ a {
         position: relative;
         top: -13px;
         color:#EEBB4D;
-        font-family: "Oneprettynight";
+        font-family: "NanumGothic";
         z-index: 11;
     }
 
     #about_child_ul { left: -80px; }
-    #about_child_ul_title { left: -72px; }
+    #about_child_ul_title { left: -63px; }
     #room_child_ul { left: -10px; }
-    #room_child_ul_title { left: -5px; }
+    #room_child_ul_title { left: 2px; }
     #around_child_ul { left: 60px; }
-    #around_child_ul_title { left: 62px; }
+    #around_child_ul_title { left: 68px; }
     #reservation_child_ul { left: 130px; }
-    #reservation_child_ul_title { left: 110px; }
+    #reservation_child_ul_title { left: 115px; }
     #community_child_ul { left: 140px; }
     #community_child_ul_title { left: 120px; }
 
@@ -114,12 +125,12 @@ a {
     ul .inner_ul > li {
         padding: 0;
         margin: 15px 0 0 0;
-        font-size: 15px;
+        /*font-size: 15px;*/
         font-weight: 400;
         background: none;
         line-height: 12px;
         color: #F9F3F3;
-        font-family: "Oneprettynight";
+        font-family: "NanumGothic";
     }
 
     #submenu_background {
@@ -149,7 +160,7 @@ a {
         font-size: 25px;
         width: 100%;
         text-align: center;
-        font-family: "Oneprettynight";
+        font-family: "NanumGothic";
     }
     .name span {
         cursor: pointer;
@@ -187,7 +198,7 @@ a {
 
     #menu {
         width: 250px;
-        font-family: "Oneprettynight";
+        font-family: "NanumGothic";
     }
 
     .header__menulist {
@@ -198,7 +209,7 @@ a {
     }
 
     .header__menulist > li {
-        font-size: 16px;
+        /*font-size: 16px;*/
         text-align: left;
         border-top: 1px solid #f3f3f3;
     }
@@ -233,7 +244,7 @@ a {
 
     ul .inner_ul li > div {
         padding: 8px 50px 8px 40px;
-        font-size: 14px;
+        /*font-size: 14px;*/
     }
 
     .menuwrap svg {

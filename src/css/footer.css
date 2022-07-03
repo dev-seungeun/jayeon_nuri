@@ -1,5 +1,8 @@
 #footer {
-    font-family: "Oneprettynight";
+    font-family: "NanumGothic";
+}
+#footer {
+    font-size: 13px;
 }
 
 /* PC 화면 */
@@ -12,7 +15,7 @@
     #footer {
         margin-bottom: 15px;
         text-align: center;
-        font-size: 16px;
+        /*font-size: 16px;*/
     }
 
     #footer span {
@@ -30,7 +33,7 @@
     #footer {
         margin-bottom: 10px;
         text-align: center;
-        font-size: 15px;
+        /*font-size: 15px;*/
     }
 
     #footer span {
@@ -44,6 +47,6 @@
         width: 100%;
     }
     #footer {
-        font-size: 13px;
+        /*font-size: 13px;*/
     }
 }

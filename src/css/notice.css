@@ -1,5 +1,5 @@
 #notice_wrap {
-    font-family: "Oneprettynight";
+    font-family: "NanumGothic";
 }
 #notice_wrap button {
     color: black;
@@ -117,17 +117,17 @@
     }
     #notice_list table th {
         padding: 8px 5px;
-        font-size: 18px;
+        font-size: 17px;
     }
     #notice_list table td {
         padding: 5px 10px;
-        font-size: 15px;
+        font-size: 14px;
     }
     #notice_list .list_time {
         min-width: 95px;
     }
     #notice_list .notice_author {
-        min-width: 100px;
+        min-width: 90px;
     }
 
 
@@ -137,32 +137,32 @@
     }
     #notice_detail .detail_title {
         text-align: left;
-        font-size: 22px;
+        /*font-size: 22px;*/
         font-weight: 800;
         padding: 10px 5px;
     }
     #notice_detail table th,
     #notice_detail .detail_parent {
         padding: 5px 5px;
-        font-size: 18px;
+        /*font-size: 18px;*/
     }
     #notice_detail .detail_content {
         padding: 10px 10px 50px 10px;
-        font-size: 16px;
+        /*font-size: 16px;*/
     }
     #notice_detail .detail_child {
         padding: 10px;
-        font-size: 16px;
+        /*font-size: 16px;*/
     }
     #notice_detail .detail_child > span {
         padding-left: 15px;
-        font-size: 15px;
+        /*font-size: 15px;*/
     }
 
 
     /* Button */
     #notice_wrap .submit-button {
-        font-size: 15px;
+        /*font-size: 15px;*/
         margin-top: 5px;
         padding: 5px 6px;
     }

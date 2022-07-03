@@ -70,7 +70,7 @@ function RoomPriceTable(props) {
                 return (
                     <tr key={"price_data_"+index}>
                         <td>{priceDataMap[roomName].title}</td>
-                        <td>{priceDataMap[roomName].people}</td>
+                        <td style={{minWidth:"50px"}}>{priceDataMap[roomName].people}</td>
                         <td>
                             <div className="weekday">{priceDataMap[roomName].off_season.weekday.toLocaleString()}</div>
                             <div className="weekend">{priceDataMap[roomName].off_season.weekend.toLocaleString()}</div>
