@@ -59,7 +59,7 @@ function Notice(props) {
                             })}
                             </tbody>
                             }
-                            {noticeList.length == 0 &&
+                            {noticeList.length === 0 &&
                             <tbody>
                             <tr>
                                 <td colSpan="3" style={{height:"200px"}}>공지사항이 없습니다.</td>

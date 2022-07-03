@@ -13,7 +13,7 @@ function Reviews(props) {
 
     const checkPassword = (in_password) => {
 
-        if(in_password == selectedData.password) {
+        if(in_password === selectedData.password) {
             setViewName("editor");
         }else {
             alert("비밀번호가 맞지 않습니다.");
@@ -22,7 +22,7 @@ function Reviews(props) {
     }
 
     const checkPasswordEnter = (e) => {
-        if(window.event.keyCode == 13) {
+        if(window.event.keyCode === 13) {
             checkPassword(document.querySelector(".in_password").value)
         }
     }
@@ -45,8 +45,8 @@ function Reviews(props) {
 
             <div id="review_wrap">
                 <div className="add_wrap">
-                    {viewName == "editor" && <MyEditor id={selectedId} data={selectedData} setViewName={setViewName} />}
-                    {viewName == "password" &&
+                    {viewName === "editor" && <MyEditor id={selectedId} data={selectedData} setViewName={setViewName} />}
+                    {viewName === "password" &&
                     <div id="review_check_password">
                         <p className="password_txt">비밀번호 확인</p>
                         <input className="in_password" onKeyUp={(e) => checkPasswordEnter(e)} />
@@ -54,7 +54,7 @@ function Reviews(props) {
                         <button className="submit-button check-list-button" onClick={(e)=>window.history.back()}>목록으로</button>
                     </div>
                     }
-                    {selectedData && viewName == "detail" &&
+                    {selectedData && viewName === "detail" &&
                         <div id="review_detail">
                             <p className="menu_title">후기 상세보기</p>
                             <table>
@@ -81,7 +81,7 @@ function Reviews(props) {
                                         {/*<td className="detail_parent">후기 내용</td>*/}
                                         <td className="detail_content" colSpan="2" dangerouslySetInnerHTML={{__html: selectedData.content}}></td>
                                     </tr>
-                                    {selectedData.reply != "" &&
+                                    {selectedData.reply !== "" &&
                                         <tr>
                                             <td className="detail_parent">자연누리<br/>답글</td>
                                             <td className="detail_content" dangerouslySetInnerHTML={{__html: selectedData.reply}}></td>
