@@ -42,9 +42,9 @@ function Header() {
     const [showAroundChild, setShowAroundChild] = useState(false);
     const [showReservationChild, setShowReservationChild] = useState(false);
     const [showCommunityChild, setShowCommunityChild] = useState(false);
-    const [showSubMenu, setShowSubMenu] = useState(true);
-    const [mouseLeaveMenu, setMouseLeaveMenu] = useState(false);
-    const [mouseLeaveSubMenu, setMouseLeaveSubMenu] = useState(false);
+    const [showSubMenu, setShowSubMenu] = useState(false);
+    const [mouseLeaveMenu, setMouseLeaveMenu] = useState(true);
+    const [mouseLeaveSubMenu, setMouseLeaveSubMenu] = useState(true);
 
     const changeMenuFontWeight = (parentId) => {
         document.querySelectorAll(".parent_menu").forEach((el) => {
