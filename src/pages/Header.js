@@ -19,7 +19,7 @@ const HeaderStyle = styled.div`
 `;
 
 const changeToggleColor = (pathname) => {
-    if(pathname != "/") {
+    if(pathname !== "/") {
         document.querySelector(".toggle").style.color = "black";
     }else {
         document.querySelector(".toggle").style.color = "white";
@@ -56,7 +56,7 @@ function Header() {
     const handleLinkMove = (e, link) => {
 
         const childId = link.split("/")[1];
-        if(childId == "reservation") {
+        if(childId === "reservation") {
             openReservationLink();
         }else {
             changeMenuFontWeight(document.getElementById(childId).parentNode.parentNode.previousSibling.id);
@@ -76,7 +76,7 @@ function Header() {
 
         changeToggleColor(link);
 
-        if(childId != "reservation") {
+        if(childId !== "reservation") {
             navigate(link);
         }
     }
@@ -159,7 +159,7 @@ function Header() {
 
             // 토글 열릴때 오픈메뉴 셋팅
           let parentId = "";
-          if(location.pathname != "/") {
+          if(location.pathname !== "/") {
               // path보고 메뉴 판단
               parentId = location.pathname.split("/")[location.pathname.split("/").length-1];
               handleMenuOpenClick(null, null, false, true); // sub_ul 모두 닫기
@@ -167,7 +167,7 @@ function Header() {
           }
 
         }else {
-          if(location.pathname == "/") {
+          if(location.pathname === "/") {
               handleMenuOpenClick(null, null, false, true); // sub_ul 모두닫기
           }
         }
@@ -178,11 +178,12 @@ function Header() {
     useEffect(() => {
         if(isMobile) {
             // 오픈메뉴 셋팅되면 색깔 채우기
-            if(location.pathname != "/") {
+            if(location.pathname !== "/") {
                 document.querySelectorAll(".child_ul_li").forEach((el) => {
                     el.classList.remove("selected");
                 })
-                document.getElementById(location.pathname.split("/")[1]).classList.add("selected");
+                const selectedMenuID = location.pathname.split("/")[1].includes("_steps") ? location.pathname.split("/")[1].split("_steps")[0]: location.pathname.split("/")[1];
+                document.getElementById(selectedMenuID).classList.add("selected");
             }
         }
     }, [selectedMenuCheck]);
@@ -209,7 +210,7 @@ function Header() {
                 <div className="toggle" onClick={() => { setIsToggled(!isToggled); }}>
                     <FontAwesomeIcon icon={faBars}/>
                 </div>
-                {isMobile && location.pathname != "/" &&
+                {isMobile && location.pathname !== "/" &&
                 <div className="name">
                     <span onClick={(e)=>{
                         changeToggleColor("/");
@@ -226,7 +227,7 @@ function Header() {
                     <div className="logo" onClick={(e)=>{
                         changeToggleColor("/");
                         changeMenuFontWeight();
-                        location.pathname == "/" ? window.location.reload() : navigate("/")
+                        location.pathname === "/" ? window.location.reload() : navigate("/")
                     }}>
                         <TbLeaf/>
                     </div>
