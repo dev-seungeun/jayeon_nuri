@@ -27,7 +27,7 @@ function Notice(props) {
     return (
         <>
             <div className="top_img">
-                <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Ftop%2Fflower3.jpg?alt=media&token=9315a1f7-a128-4887-b873-e1d69637682d" />
+                <img src="/main/top/flower3.jpg" />
             </div>
 
             <div id="notice_wrap">
@@ -62,7 +62,7 @@ function Notice(props) {
                             {noticeList.length == 0 &&
                             <tbody>
                             <tr>
-                                <td colSpan="3">공지사항이 없습니다.</td>
+                                <td colSpan="3" style={{height:"200px"}}>공지사항이 없습니다.</td>
                             </tr>
                             </tbody>
                             }

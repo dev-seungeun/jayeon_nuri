@@ -8,7 +8,7 @@ function Mountain(props) {
     return (
         <>
             <div className="top_img">
-                <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Ftop%2Fleaf2.jpg?alt=media&token=cc7772eb-ce5b-4d35-8d51-1732b09a73a7" />
+                <img src="/main/top/leaf2.jpg" />
             </div>
 
             <div id="mountain_wrap">
@@ -32,7 +32,7 @@ function Mountain(props) {
                             <div className="row">
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                                 <div className="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Faround%2Fmountain%2Fsamgadong.jpg?alt=media&token=f13e06c9-c0de-498e-ab66-e34c5db5d7fd" onClick={openImageModal} />
+                                    <img src="/main/around/mountain/samgadong.jpg" onClick={openImageModal} />
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                             </div>
@@ -49,7 +49,7 @@ function Mountain(props) {
                             <div className="row">
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                                 <div className="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Faround%2Fmountain%2Fyu.jpg?alt=media&token=5d1d40f6-ccb2-453b-ba91-5c7cd10f1260" onClick={openImageModal} />
+                                    <img src="/main/around/mountain/yu.jpg" onClick={openImageModal} />
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                             </div>
@@ -66,7 +66,7 @@ function Mountain(props) {
                             <div className="row">
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                                 <div className="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Faround%2Fmountain%2Fchundong.jpg?alt=media&token=b794c9f4-49e2-4625-9f23-3f37af02aba7" onClick={openImageModal} />
+                                    <img src="/main/around/mountain/chundong.jpg" onClick={openImageModal} />
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                             </div>
@@ -81,7 +81,7 @@ function Mountain(props) {
                             <div className="row">
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                                 <div className="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Faround%2Fmountain%2Fjuckryung.JPG?alt=media&token=53dc9aee-39d7-4b70-b4fb-87e328310974" onClick={openImageModal} />
+                                    <img src="/main/around/mountain/juckryung.JPG" onClick={openImageModal} />
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                             </div>
@@ -96,7 +96,7 @@ function Mountain(props) {
                             <div className="row">
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                                 <div className="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Faround%2Fmountain%2Fdosolbong.JPG?alt=media&token=b2eaa1cc-f88b-4207-9e2a-5956d071f4d3" onClick={openImageModal} />
+                                    <img src="/main/around/mountain/dosolbong.JPG" onClick={openImageModal} />
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                             </div>
@@ -111,7 +111,7 @@ function Mountain(props) {
                             <div className="row">
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                                 <div className="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Faround%2Fmountain%2Fbackdu2.JPG?alt=media&token=02945d18-5547-4ff6-bf2c-8eff31bbbd8e" onClick={openImageModal} />
+                                    <img src="/main/around/mountain/backdu2.JPG" onClick={openImageModal} />
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                             </div>
@@ -126,7 +126,7 @@ function Mountain(props) {
                             <div className="row">
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                                 <div className="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Faround%2Fmountain%2Fbackdu3.JPG?alt=media&token=a8cabf86-7a85-4604-8959-2429cdf8b6a3" onClick={openImageModal} />
+                                    <img src="/main/around/mountain/backdu3.JPG" onClick={openImageModal} />
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                             </div>
@@ -141,7 +141,7 @@ function Mountain(props) {
                             <div className="row">
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                                 <div className="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Faround%2Fmountain%2Fchundong_gyegok.JPG?alt=media&token=d01fba10-3524-4a5e-8bae-2f4c160cba31" onClick={openImageModal} />
+                                    <img src="/main/around/mountain/chundong_gyegok.JPG" onClick={openImageModal} />
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-lg-3 col-xl-3"></div>
                             </div>

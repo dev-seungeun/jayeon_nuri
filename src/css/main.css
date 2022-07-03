@@ -13,12 +13,24 @@ a {
     width:100%;
 }
 
+#etc_info_notice table {
+    width: 100%;
+}
+#etc_info_notice .notice_cont_title {
+    width: 50%;
+    text-align: left;
+}
 #etc_info_notice table th {
     padding: 0;
     height: 10px;
+    text-align: center;
+    border-bottom: 1px solid #c4c4c4;
 }
 #etc_info_notice table td {
     padding: 0;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: top;
 }
 /* PC 화면 */
 @media screen and (min-width: 1000px) {
@@ -133,6 +145,7 @@ a {
     #etc_info_notice > div { height: 100%; text-align: left; }
     #etc_info_notice > div > div:nth-child(1) { color: black; font-size: 23px; font-weight: 600; }
     #etc_info_notice > div > div:nth-child(2) { height:200px; line-height: 200px; text-align: center; font-size: 16px; }
+    #etc_info_notice table { font-size: 16px; }
 
     #etc_info_call { width: 25%; height: 150px; padding: 5px 5px 5px 10px; }
     #etc_info_call > div { height: 100%; text-align: left; background-color: #9EDE73; padding: 10px 20px; }
@@ -273,6 +286,7 @@ a {
     #etc_info_notice > div { height: 100%; text-align: left; }
     #etc_info_notice > div > div:nth-child(1) { color: black; font-weight: 600; }
     #etc_info_notice > div > div:nth-child(2) { height:150px; line-height: 150px; text-align: center; font-size: 14px; }
+    #etc_info_notice table { font-size: 14px; }
 
     #etc_info_call { width: 50%; height: 120px; }
     #etc_info_call > div { height: 100%; text-align: left; background-color: #9EDE73; padding: 10px 20px; }

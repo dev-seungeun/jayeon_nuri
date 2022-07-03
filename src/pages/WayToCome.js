@@ -12,7 +12,7 @@ function WayToCome(props) {
     return (
         <>
             <div className="top_img">
-                <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Ftop%2Fleaf1.jpg?alt=media&token=cac64197-4772-4c8e-8e0f-637d7a914e02" />
+                <img src="/main/top/leaf1.jpg" />
             </div>
 
             <div id="way_wrap">
@@ -93,11 +93,11 @@ function WayToCome(props) {
                         <div className="text_center">
                           <div style={{fontWeight: "800"}}>승차 정류소 (풍기역) 위치</div>
                           <br/>
-                          <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fway_to_come%2Fstation_bus_stop_map.png?alt=media&token=5db39d93-2fd8-49e5-a6ad-6ad6ae5fde6f" />
+                          <img src="/main/way_to_come/station_bus_stop_map.png" />
                           <br/><br/><br/>
                           <div style={{fontWeight: "800"}}>하차 정류소 (삼가리-삼가교 입구 방면) 위치</div>
                           <br/>
-                          <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fway_to_come%2Fbus_stop_map.png?alt=media&token=eb124ba8-b071-412f-8c6b-c6bd5a377709" />
+                          <img src="/main/way_to_come/bus_stop_map.png" />
                         </div>
                     </div>
                 </div>

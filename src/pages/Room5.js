@@ -21,7 +21,7 @@ function Room5(props) {
     return (
         <>
             <div className="top_img">
-                <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Ftop%2Fflower1.jpg?alt=media&token=80e5da73-8f94-4ba6-8777-5513c8ecd379" />
+                <img src="/main/top/flower1.jpg" />
             </div>
 
             {/*<div id="room_title"><FcLike />&nbsp;객실 5,6 호&nbsp;<FcLike /></div>*/}

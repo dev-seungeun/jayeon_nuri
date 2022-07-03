@@ -21,7 +21,7 @@ function Caravan3(props) {
     return (
         <>
             <div className="top_img">
-                <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Ftop%2Fflower2.jpg?alt=media&token=d130b841-3898-4c40-aa93-269db0a9b4c7" />
+                <img src="/main/top/flower2.jpg" />
             </div>
 
             {/*<div id="room_title"><FcLikePlaceholder />&nbsp;카라반 3호&nbsp;<FcLikePlaceholder /></div>*/}

@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { _databaseGetNotice } from "../helpers/database";
+import { _commonSetCommonInfo, _commonTimestampToDate } from "../helpers/common";
 import { openImageModal } from "../App";
 import { changeToggleColor } from "./Header";
 import platform from 'platform';
@@ -12,17 +14,16 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import { HiOutlineHome } from "react-icons/hi";
 import { TbListCheck, TbPencil } from "react-icons/tb";
-import { RiHome4Line } from "react-icons/ri";
-import { GrHome, GrHomeRounded, GrNotes, GrLocation, GrMapLocation } from "react-icons/gr";
-import { BiHome, BiBed, BiNotepad, BiCalendar } from "react-icons/bi";
-import { GoLocation } from "react-icons/go";
-import { IoHomeOutline, IoBed, IoCheckmarkOutline, IoCheckmarkCircleOutline, IoCalendarNumberOutline, IoCalendarOutline, IoLocationOutline } from "react-icons/io5";
-import { ImFileText, ImFileText2 } from "react-icons/im";
+import { GrMapLocation } from "react-icons/gr";
+import { BiBed } from "react-icons/bi";
+import { IoCalendarOutline } from "react-icons/io5";
 
 const Main = (props) => {
 
+    let noticeListTemp = [];
     const navigate = useNavigate();
     const videoRef = useRef();
+    const [noticeList, setNoticeList] = useState([]);
 
     useEffect(()=>{
         window.addEventListener('resize', handleResize);
@@ -37,6 +38,14 @@ const Main = (props) => {
         }else {
             videoRef.current.play();
         }
+
+        _databaseGetNotice(function (id, notice) {
+            notice.key = id;
+            noticeListTemp = [notice].concat(noticeListTemp);
+            setNoticeList(noticeListTemp);
+        });
+        _commonSetCommonInfo("selected_notice_id", null);
+        _commonSetCommonInfo("selected_notice", null);
 
         return () => {
             window.removeEventListener('resize', handleResize);
@@ -76,10 +85,10 @@ const Main = (props) => {
             <div className="main_wrap">
                 <div className="main_carousel_wrap">
                     <Carousel loop auto widgets={[IndicatorDots, Buttons]}>
-                        <img className="main_carousel_img" src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fcarousel%2F1.jpg?alt=media&token=fd6a42cb-2ca6-45e3-b6f7-c1b1e74a30ee" />
-                        <img className="main_carousel_img" src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fcarousel%2F2.jpg?alt=media&token=0fff63df-11c3-41e3-b024-7e6e6b753444" />
-                        <img className="main_carousel_img" src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fcarousel%2F3.jpg?alt=media&token=e0979a08-affc-4182-8b8a-da9177ff7a9b" />
-                        <img className="main_carousel_img" src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fcarousel%2F4.jpg?alt=media&token=17ee9d23-13b0-4921-8283-a180d660e639" />
+                        <img className="main_carousel_img" src="/main/carousel/1.jpg" />
+                        <img className="main_carousel_img" src="/main/carousel/2.jpg" />
+                        <img className="main_carousel_img" src="/main/carousel/3.jpg" />
+                        <img className="main_carousel_img" src="/main/carousel/4.jpg" />
                     </Carousel>
                     <div className="main_title">JAYEONNURI PENSION</div>
                 </div>
@@ -109,39 +118,39 @@ const Main = (props) => {
                     <div className="tz-gallery">
                         <div className="row">
                             <div className="col-xs-12 col-sm-6 col-lg-6 col-xl-6" style={{paddingTop:"0px !important"}}>
-                                <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fmain_list%2F1.jpg?alt=media&token=40fe08e2-633b-4c26-8c2b-b2124c015215" onClick={openImageModal} />
+                                <img src="/main/main_list/1.jpg" onClick={openImageModal} />
                             </div>
                             <div className="col-xs-12 col-sm-6 col-lg-6 col-xl-6" style={{paddingTop:"0px !important"}}>
-                                <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fmain_list%2F2.jpg?alt=media&token=321097fe-a2cc-435b-a1da-f252380c01e1" onClick={openImageModal} />
+                                <img src="/main/main_list/2.jpg" onClick={openImageModal} />
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-xs-12 col-sm-4 col-lg-4 col-xl-4">
-                                <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fmain_list%2F3.jpg?alt=media&token=1f59e794-5600-4ae1-b17d-1862888f723c" onClick={openImageModal} />
+                                <img src="/main/main_list/3.jpg" onClick={openImageModal} />
                             </div>
                             <div className="col-xs-12 col-sm-4 col-lg-4 col-xl-4">
-                                <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fmain_list%2F4.jpg?alt=media&token=715a99ec-c568-4683-b64f-e506b94b7a8e" onClick={openImageModal} />
+                                <img src="/main/main_list/4.jpg" onClick={openImageModal} />
                             </div>
                             <div className="col-xs-12 col-sm-4 col-lg-4 col-xl-4">
-                                <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fmain_list%2F5.jpg?alt=media&token=54756f29-d605-4242-b177-797a92ec346e" onClick={openImageModal} />
+                                <img src="/main/main_list/5.jpg" onClick={openImageModal} />
                             </div>
                         </div>
                         <div className='row'>
                             <div className="col-xs-12">
                                 <video id="summer_video" ref={videoRef} autoPlay controls muted loop>
-                                    <source src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fmain_list%2Fsummer_video1.mp4?alt=media&token=ea95d2af-113a-4c81-9463-bea328aa2a39" type="video/mp4" />
+                                    <source src="/main/main_list/summer_video1.mp4" type="video/mp4" />
                                 </video>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-xs-12 col-sm-4 col-lg-4 col-xl-4">
-                                <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fmain_list%2F6.jpg?alt=media&token=b30793e7-72ae-4a81-9926-0d1be4f5e445" onClick={openImageModal} />
+                                <img src="/main/main_list/6.jpg" onClick={openImageModal} />
                             </div>
                             <div className="col-xs-12 col-sm-4 col-lg-4 col-xl-4">
-                                <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fmain_list%2F7.jpg?alt=media&token=decd0c97-cb83-4d0f-8aae-9dc1a1716e3c" onClick={openImageModal} />
+                                <img src="/main/main_list/7.jpg" onClick={openImageModal} />
                             </div>
                             <div className="col-xs-12 col-sm-4 col-lg-4 col-xl-4">
-                                <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fmain_list%2F8.jpg?alt=media&token=7a120372-df70-4e46-bb91-7e737d704875" onClick={openImageModal} />
+                                <img src="/main/main_list/8.jpg" onClick={openImageModal} />
                             </div>
                         </div>
                     </div>
@@ -158,16 +167,44 @@ const Main = (props) => {
                                     <div>Happiness & Comfort</div>
                                     <div>여러분의 행복한 여행을 위해<br/>항상 쾌적하고 안락한 휴식처를 제공하기 위해 노력하겠습니다</div>
                                     <div>
-                                        <img src="https://firebasestorage.googleapis.com/v0/b/jayeon-nuri.appspot.com/o/public%2Fmain%2Fmain_list%2Fbottom.jpg?alt=media&token=360becab-b233-4a73-b5db-b057500b8e91" />
+                                        <img src="/main/main_list/bottom.jpg" />
                                     </div>
                                 </div>
                             </td>
                             <td id="etc_info_notice" colSpan={2}>
                                 <div>
                                     <div>Notice</div>
+                                    {noticeList.length > 0 &&
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th className="notice_title">제목</th>
+                                            <th className="notice_author">작성자</th>
+                                            <th>등록일</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {noticeList.map((data, index) => {
+                                            return <tr key={index}
+                                                       id={data.key}
+                                                       onClick={(e) => {
+                                                           _commonSetCommonInfo("selected_notice_id", data.key);
+                                                           _commonSetCommonInfo("selected_notice", data);
+                                                           navigate("/notice_steps/COMMUNITY?detail");
+                                                       }} >
+                                                <td className="notice_cont_title">{data.title}</td>
+                                                <td>{data.author}</td>
+                                                <td className="list_time">{_commonTimestampToDate(data.time)}</td>
+                                            </tr>
+                                        })}
+                                        </tbody>
+                                    </table>
+                                    }
+                                    {noticeList.length == 0 &&
                                     <div>
                                         공지사항이 없습니다.
                                     </div>
+                                    }
                                 </div>
                             </td>
                         </tr>
