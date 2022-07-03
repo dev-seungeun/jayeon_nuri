@@ -50,7 +50,7 @@ function UsePrice(props) {
                     <div className="info_cont">
                         · 준성수기 기간&nbsp; - { season && season.semi_peak }
                         <br/>
-                        · 성수기 기간&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - { season && season.peak }
+                        · 성수기 기간&nbsp;&nbsp;&nbsp;&nbsp; - { season && season.peak }
                         <br/>
                         · 극성수기 기간&nbsp; - { season && season.high_peak }
                         <br/>

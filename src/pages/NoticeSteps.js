@@ -24,7 +24,7 @@ function Notice(props) {
                 <div className="add_wrap">
                     {selectedData &&
                     <div id="notice_detail">
-                        <p className="menu_title">공지사항 상세보기</p>
+                        {/*<p className="menu_title">공지사항 상세보기</p>*/}
                         <table>
                             <thead>
                             <tr>

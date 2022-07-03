@@ -353,6 +353,7 @@
         padding: 5px !important;
         border: 1px solid #dfdfdf;
         font-size: 14px;
+        font-weight: 800;
     }
     .room_bottom_btn {
         position: relative;

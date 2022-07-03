@@ -56,7 +56,7 @@ function Reviews(props) {
                     }
                     {selectedData && viewName === "detail" &&
                         <div id="review_detail">
-                            <p className="menu_title">후기 상세보기</p>
+                            {/*<p className="menu_title">후기 상세보기</p>*/}
                             <table>
                                 <thead>
                                     <tr>

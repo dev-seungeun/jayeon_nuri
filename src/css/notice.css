@@ -121,16 +121,13 @@
     }
     #notice_list table td {
         padding: 5px 10px;
-        font-size: 16px;
+        font-size: 15px;
     }
     #notice_list .list_time {
-        min-width: 90px;
-    }
-    #notice_list .list_update_time {
-        min-width: 52px;
+        min-width: 95px;
     }
     #notice_list .notice_author {
-        min-width: 66px;
+        min-width: 100px;
     }
 
 

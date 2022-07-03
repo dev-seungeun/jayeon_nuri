@@ -53,7 +53,7 @@ function Notice(props) {
                                                navigate("/notice_steps/COMMUNITY?detail");
                                            }} >
                                     <td className="notice_title">{data.title}</td>
-                                    <td>{data.author}</td>
+                                    <td className="notice_author">{data.author}</td>
                                     <td className="list_time">{_commonTimestampToDate(data.time)}</td>
                                 </tr>
                             })}
