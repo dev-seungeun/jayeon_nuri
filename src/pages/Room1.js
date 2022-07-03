@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import "../css/room.css";
 import { getPriceJson, getImageJson } from "../components/FetchData";
@@ -8,6 +9,7 @@ import RoomInfo from "../components/RoomInfo";
 
 function Room1(props) {
 
+    const navigate = useNavigate();
     const [priceJson, setPriceJson] = useState();
     const [imageJson, setImageJson] = useState();
 
@@ -25,6 +27,20 @@ function Room1(props) {
             </div>
 
             {/*<div id="room_title"><FcLike />&nbsp;객실 1,2,3 호&nbsp;<FcLike /></div>*/}
+
+            <table id="room_tab">
+                <tbody>
+                    <tr>
+                        <td id="tab_room1" style={{backgroundColor: "black", color:"white"}}>객실 1,2,3호</td>
+                        <td id="tab_room5" onClick={(e)=>navigate("/room5/ROOM")}>객실 5,6호</td>
+                        {/*<td id="tab_caravan1" onClick={(e)=>navigate("/caravan1/ROOM")}>카라반 1호</td>*/}
+                        {/*<td id="tab_caravan2" onClick={(e)=>navigate("/caravan2/ROOM")}>카라반 2호</td>*/}
+                        {/*<td id="tab_caravan3" onClick={(e)=>navigate("/caravan3/ROOM")}>카라반 3호</td>*/}
+                        {/*<td id="tab_caravan4" onClick={(e)=>navigate("/caravan4/ROOM")}>카라반 4호</td>*/}
+                    </tr>
+                </tbody>
+            </table>
+
             <div id="room_title">
                 {priceJson && priceJson.title}
                 <p>여유로운 Healing을 위한 독채 Room</p>

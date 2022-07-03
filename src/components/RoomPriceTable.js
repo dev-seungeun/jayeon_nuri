@@ -196,7 +196,7 @@ function RoomPriceTable(props) {
                         {priceRowPC}
                         </tbody>
                     </table>
-                    <div className="add_price"> 인당 추가요금 (4세 이상) : {addPersonPrice && addPersonPrice.toLocaleString()}원 </div>
+                    <div className="add_price"> 인당 추가요금 (7세 이상) : {addPersonPrice && addPersonPrice.toLocaleString()}원 </div>
                     <div className="add_price" style={{color:"orangered"}}> 숯불 제공 : 4인기준 {grilledPrice && grilledPrice.toLocaleString()}원 </div>
                 </div>
                 }
@@ -240,7 +240,7 @@ function RoomPriceTable(props) {
                         { priceHighPeakMobile }
                         </tbody>
                     </table>
-                    <div className="add_price"> 인당 추가요금 (4세 이상) : {addPersonPrice && addPersonPrice.toLocaleString()}원 </div>
+                    <div className="add_price"> 인당 추가요금 (7세 이상) : {addPersonPrice && addPersonPrice.toLocaleString()}원 </div>
                     <div className="add_price" style={{color:"orangered"}}> 숯불 제공 : 4인기준 {grilledPrice && grilledPrice.toLocaleString()}원 </div>
                 </div>
                 }
@@ -262,7 +262,7 @@ function RoomPriceTable(props) {
                         </tbody>
                     </table>
                     <div className="price_color"> <span className="weekday">* 주중요금</span> <span className="weekend">&nbsp;&nbsp;* 주말(금,토) 요금</span> </div>
-                    <div className="add_price"> 인당 추가요금 (4세 이상) : {addPersonPrice && addPersonPrice.toLocaleString()}원 </div>
+                    <div className="add_price"> 인당 추가요금 (7세 이상) : {addPersonPrice && addPersonPrice.toLocaleString()}원 </div>
                     <div className="add_price" style={{color:"orangered"}}> 숯불 제공 : 4인기준 {grilledPrice && grilledPrice.toLocaleString()}원 </div>
                 </div>
                 }

@@ -32,7 +32,7 @@ function TermsOfUse(props) {
                         <br/><br/>
                         - 각 호실 마다 객실 바로 앞에 개별 바베큐 시설 완비되어있습니다! (따뜻한 화목난로가 설치되어있는 별도의 바베큐장도 있습니다)
                         <br/><br/>
-                        - 4세 이상부터는 추가인원에 해당되며, 또한 숙박을 하지 않더라도 추가 인원에 해당 됩니다. (추가요금 : 1인 <span className="orangered">{addPersonPrice && addPersonPrice.toLocaleString()}원</span>)
+                        - 7세 이상부터는 추가인원에 해당되며, 또한 숙박을 하지 않더라도 추가 인원에 해당 됩니다. (추가요금 : 1인 <span className="orangered">{addPersonPrice && addPersonPrice.toLocaleString()}원</span>)
                         <br/><br/>
                         - 혹시라도 물건이 파손 되었을 시, 주저하지 마시고 저희에게 말씀해 주세요~
                         <br/><br/>

@@ -29,6 +29,12 @@
     font-weight: 800;
 }
 
+#room_tab td {
+    font-family: "Oneprettynight";
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
 /* PC 화면 */
 @media screen and (min-width: 1200px) {
     #room_image_wrap .row > div {
@@ -41,10 +47,10 @@
         margin: 0 auto;
         font-family: "Oneprettynight";
         position: relative;
-        top:-40px;
+        /*top:-40px;*/
         padding: 30px 0;
         border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
+        /*border-bottom: 1px solid #ddd;*/
     }
     #room_title svg {
         font-size: 30px !important;
@@ -107,6 +113,16 @@
         margin: 0 auto;
         border-top: 1px solid #ddd;
     }
+    #room_tab {
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        top:-50px;
+    }
+    #room_tab td {
+        padding: 15px 0;
+        font-size: 18px;
+    }
 }
 
 /* Tablet 화면 */
@@ -118,10 +134,10 @@
         margin: 0 auto;
         font-family: "Oneprettynight";
         position: relative;
-        top:-40px;
+        /*top:-40px;*/
         padding: 30px 0;
         border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
+        /*border-bottom: 1px solid #ddd;*/
     }
     #room_title svg {
         font-size: 25px !important;
@@ -184,6 +200,16 @@
         margin: 0 auto;
         border-top: 1px solid #ddd;
     }
+    #room_tab {
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        top:-50px;
+    }
+    #room_tab td {
+        padding: 15px 0;
+        font-size: 18px;
+    }
 }
 
 /* Mobile 화면 */
@@ -193,7 +219,7 @@
         margin: 0;
         font-family: "Oneprettynight";
         position: relative;
-        top:-20px;
+        /*top:-20px;*/
     }
     #room_title svg {
         font-size: 20px !important;
@@ -259,6 +285,16 @@
         margin: 0 auto;
         border-top: 1px solid #ddd;
     }
+    #room_tab {
+        width: 98%;
+        margin: 0 auto;
+        position: relative;
+        top:-30px;
+    }
+    #room_tab td {
+        font-size: 15px;
+        padding: 10px 0 ;
+    }
 }
 
 /* Tiny Mobile 화면 */
@@ -268,7 +304,7 @@
         margin: 0;
         font-family: "Oneprettynight";
         position: relative;
-        top:-20px;
+        /*top:-20px;*/
     }
     #room_title svg {
         font-size: 20px !important;
@@ -336,5 +372,15 @@
         width: 97%;
         margin: 0 auto;
         border-top: 1px solid #ddd;
+    }
+    #room_tab {
+        width: 98%;
+        margin: 0 auto;
+        position: relative;
+        top:-30px;
+    }
+    #room_tab td {
+        font-size: 13px;
+        padding: 6px 0;
     }
 }
