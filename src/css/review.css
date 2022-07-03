@@ -81,13 +81,13 @@
     /*border-top: 1px solid #c4c4c4;*/
     /*border-bottom: 1px solid #c4c4c4;*/
     padding: 10px 10px;
-    font-size: 20px;
+    /*font-size: 18px;*/
 }
 #review_detail table td {
     font-weight: 400;
     /*border-bottom: 1px solid #c4c4c4;*/
     padding: 10px 10px;
-    font-size: 20px;
+    font-size: 16px;
 }
 #review_detail .detail_title {
     text-align: left;
@@ -108,7 +108,7 @@
     text-align: left;
     padding-left: 20px;
     color: gray;
-    font-size: 18px;
+    font-size: 14px;
 }
 #review_detail .detail_content {
     text-align: left;
@@ -132,13 +132,13 @@
     border-top: 1px solid #c4c4c4;
     border-bottom: 1px solid #c4c4c4;
     padding: 8px 5px;
-    font-size: 20px;
+    font-size: 17px;
 }
 #review_list table td {
     font-weight: 400;
     border-bottom: 1px solid #c4c4c4;
     padding: 5px 10px;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
 }
 #review_list td {
@@ -157,6 +157,7 @@
 /* Button */
 #review_wrap .submit-button {
     float: right;
+    font-size: 15px;
     padding: 5px 15px;
     border: 1px solid #c4c4c4;
     background-color: white;
@@ -218,17 +219,17 @@
     }
     #review_list table th {
         padding: 8px 5px;
-        font-size: 17px;
+        /*font-size: 17px;*/
     }
     #review_list table td {
         padding: 5px 10px;
-        font-size: 14px;
+        /*font-size: 14px;*/
     }
     #review_list .list_time {
-        min-width: 95px;
+        min-width: 120px;
     }
-    #review_list .list_update_time {
-        min-width: 52px;
+    #notice_list .notice_author {
+        min-width: 90px;
     }
 
 
@@ -241,23 +242,23 @@
     }
     #review_detail .detail_title {
         text-align: left;
-        font-size: 20px;
+        /*font-size: 20px;*/
         font-weight: 800;
         padding: 10px 5px;
     }
     #review_detail table th,
     #review_detail .detail_parent {
         padding: 5px 5px;
-        font-size: 18px;
+        /*font-size: 18px;*/
     }
     #review_detail .detail_content,
     #review_detail .detail_child {
         padding: 10px;
-        font-size: 16px;
+        /*font-size: 16px;*/
     }
     #review_detail .detail_child > span {
         padding-left: 15px;
-        font-size: 15px;
+        /*font-size: 15px;*/
     }
 
     /* Check Password */
@@ -271,7 +272,7 @@
 
     /* Button */
     #review_wrap .submit-button {
-        font-size: 15px;
+        /*font-size: 15px;*/
         margin-top: 5px;
         padding: 5px 6px;
     }

@@ -20,13 +20,13 @@
     /*border-top: 1px solid #c4c4c4;*/
     /*border-bottom: 1px solid #c4c4c4;*/
     padding: 10px 10px;
-    font-size: 20px;
+    /*font-size: 20px;*/
 }
 #notice_detail table td {
     font-weight: 400;
     /*border-bottom: 1px solid #c4c4c4;*/
     padding: 10px 10px;
-    font-size: 20px;
+    font-size: 16px;
 }
 #notice_detail .detail_title {
     text-align: left;
@@ -42,7 +42,7 @@
     text-align: left;
     padding-left: 20px;
     color: gray;
-    font-size: 18px;
+    font-size: 14px;
 }
 #notice_detail .detail_content {
     border-top: 1px solid #c4c4c4;
@@ -65,13 +65,14 @@
     border-top: 1px solid #c4c4c4;
     border-bottom: 1px solid #c4c4c4;
     padding: 8px 5px;
-    font-size: 20px;
+    font-size: 17px;
+    text-align: center;
 }
 #notice_list table td {
     font-weight: 400;
     border-bottom: 1px solid #c4c4c4;
     padding: 5px 10px;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
 }
 #notice_list td {
@@ -86,15 +87,13 @@
 #notice_list .list_update_time {
     min-width: 60px;
 }
-#notice_list .notice_title {
-    width: 50%;
-}
+
 
 
 /* Button */
 #notice_wrap .submit-button {
     float: right;
-    font-size: 16px;
+    font-size: 15px;
     padding: 5px 15px;
     border: 1px solid #c4c4c4;
     background-color: white;
@@ -117,17 +116,17 @@
     }
     #notice_list table th {
         padding: 8px 5px;
-        font-size: 17px;
+        /*font-size: 17px;*/
     }
     #notice_list table td {
         padding: 5px 10px;
-        font-size: 14px;
+        /*font-size: 14px;*/
     }
     #notice_list .list_time {
-        min-width: 95px;
+        min-width: 120px;
     }
-    #notice_list .notice_author {
-        min-width: 90px;
+    #notice_list .list_author {
+        min-width: 130px;
     }
 
 

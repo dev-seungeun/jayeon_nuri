@@ -61,7 +61,7 @@ function Reviews(props) {
                                                         navigate("/reviews_steps/COMMUNITY?detail");
                                                     }} >
                                                     <td className="list_title">{data.title}</td>
-                                                    <td>{data.author}</td>
+                                                    <td className="list_author">{data.author}</td>
                                                     <td className="list_time">{_commonTimestampToDate(data.time)}</td>
                                                     {/*<td className="list_update_time">{_commonTimestampToDate(data.update_time)}</td>*/}
                                                 </tr>

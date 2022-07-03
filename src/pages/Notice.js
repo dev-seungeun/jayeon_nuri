@@ -37,8 +37,8 @@ function Notice(props) {
                         <table>
                             <thead>
                             <tr>
-                                <th className="notice_title">제목</th>
-                                <th className="notice_author">작성자</th>
+                                <th>제목</th>
+                                <th>작성자</th>
                                 <th>등록일</th>
                             </tr>
                             </thead>
@@ -52,8 +52,8 @@ function Notice(props) {
                                                _commonSetCommonInfo("selected_notice", data);
                                                navigate("/notice_steps/COMMUNITY?detail");
                                            }} >
-                                    <td className="notice_title">{data.title}</td>
-                                    <td className="notice_author">{data.author}</td>
+                                    <td className="list_title">{data.title}</td>
+                                    <td className="list_author">{data.author}</td>
                                     <td className="list_time">{_commonTimestampToDate(data.time)}</td>
                                 </tr>
                             })}
