@@ -134,10 +134,10 @@ function Around(props) {
                         <div className="tz-gallery">
                             <div className="row">
                                 <div className="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                                    <img src="/main/around/around/busuksa.jpg" onClick={openImageModal} />
+                                    <img src="/main/around/around/sunbi2.jpg" onClick={openImageModal} />
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                                    <img src="/main/around/around/sunbi2.jpg" onClick={openImageModal} />
+                                    <img src="/main/around/around/sunbi1.jpg" onClick={openImageModal} />
                                 </div>
                             </div>
                         </div>
