@@ -131,9 +131,7 @@ a {
     }
 
     /* 그 외 정보 */
-    .etc_info { margin: 30px 5%; position: relative;
-      /* font-family: "NanumGothic";  */
-    }
+    .etc_info { margin: 30px 5%; position: relative; }
 
     .etc_info > table { width: 100%; position: relative; top: -40px; }
     #etc_info_intro { width: 50%; height: 400px; padding-right: 10px; }
@@ -185,8 +183,6 @@ a {
         object-fit: cover;
     }
     .main_title {
-        /* height: 400px; */
-        /* line-height: 400px; */
         position: relative;
         top: -225px;
         font-size: 40px;
@@ -194,11 +190,9 @@ a {
         text-align: center;
         font-weight: 700;
         z-index: 2;
-        /* font-family: "NanumGothic"; */
     }
     .carousel_left, .carousel_right {
         display: none !important;
-        /* bottom: -50px !important;  */
     }
 
     /* 메뉴박스 */
@@ -231,13 +225,11 @@ a {
         position: relative;
         bottom: 110px;
         font-size: 26px;
-        /* font-family: "NanumGothic"; */
     }
     .menu_box  .menu_box_kor {
         position: relative;
         bottom: 260px;
         font-size: 17px;
-        /* font-family: "NanumGothic"; */
     }
 
     /* 메인 작은 이미지 그리드 */
@@ -271,7 +263,6 @@ a {
     .etc_info {
         margin: 100px 1% 50px 1%;
         position: relative;
-        /* font-family: "NanumGothic"; */
     }
     .etc_info > table {
         width: 100%;

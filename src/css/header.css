@@ -84,7 +84,6 @@ ul .inner_ul > li {
     .header__menulist > li {
         width: 90px;
         text-align: left;
-        font-family: "NanumGothic";
     }
 
     .header__menulist > li:nth-child(1),
@@ -106,7 +105,6 @@ ul .inner_ul > li {
         position: relative;
         top: -13px;
         color:#EEBB4D;
-        font-family: "NanumGothic";
         z-index: 11;
     }
 
@@ -138,7 +136,6 @@ ul .inner_ul > li {
         background: none;
         line-height: 12px;
         color: #F9F3F3;
-        font-family: "NanumGothic";
     }
 
     #submenu_background {
@@ -168,7 +165,6 @@ ul .inner_ul > li {
         line-height: 55px;
         width: 100%;
         text-align: center;
-        font-family: "NanumGothic";
     }
     .name span {
         cursor: pointer;
@@ -203,8 +199,7 @@ ul .inner_ul > li {
     }
 
     #menu {
-        width: 250px;
-        font-family: "NanumGothic";
+        width: 250px; 
     }
 
     .header__menulist {
