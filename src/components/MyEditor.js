@@ -15,11 +15,11 @@ function MyEditor(props) {
 
     const registReview = async(e) => {
 
-        if(document.querySelector(".editor_title").value.trim() == "") {
+        if(document.querySelector(".editor_title").value.trim() === "") {
             alert("제목을 입력해주세요.");
             return;
         }
-        if(reviewContent.trim() == "") {
+        if(reviewContent.trim() === "") {
             alert("내용을 입력해주세요.");
             return;
         }
@@ -44,11 +44,11 @@ function MyEditor(props) {
 
         }else {
 
-            if(document.querySelector(".editor_author").value.trim() == "") {
+            if(document.querySelector(".editor_author").value.trim() === "") {
                 alert("작성자 성함을 입력해주세요.");
                 return;
             }
-            if(document.querySelector(".editor_password").value.trim() == "") {
+            if(document.querySelector(".editor_password").value.trim() === "") {
                 alert("비밀번호를 입력해주세요.");
                 return;
             }

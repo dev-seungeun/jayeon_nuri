@@ -36,7 +36,7 @@ const Main = (props) => {
         // platform.name //
         // PC : Chrome, Electron, Firefox, Firefox for iOS, IE, Microsoft Edge, PhantomJS, Safari, SeaMonkey, Silk, Opera Mini, Opera
         // Mobile : Chrome Mobile, Firefox Mobile, IE Mobile, Opera Mobile
-        if(platform.name.toLowerCase() == "safari") {
+        if(platform.name.toLowerCase() === "safari") {
             videoRef.current.pause();
         }else {
             videoRef.current.play();
@@ -203,7 +203,7 @@ const Main = (props) => {
                                         </tbody>
                                     </table>
                                     }
-                                    {noticeList.length == 0 &&
+                                    {noticeList.length === 0 &&
                                     <div>
                                         공지사항이 없습니다.
                                     </div>
