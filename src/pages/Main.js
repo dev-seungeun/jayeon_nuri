@@ -65,6 +65,7 @@ const Main = (props) => {
                 document.getElementById("etc_info_intro").insertAdjacentElement("afterend", document.getElementById("etc_info_notice"));
                 document.getElementById("temp_tr").remove();
             }
+            
         }else {
             document.getElementById("etc_info_intro").setAttribute("colSpan", 2);
             document.getElementById("etc_info_intro").removeAttribute("rowSpan", 2);
@@ -74,6 +75,20 @@ const Main = (props) => {
                 tr.setAttribute("id", "temp_tr");
                 tr.appendChild(document.getElementById("etc_info_notice"));
                 document.getElementById("etc_info_intro").parentNode.insertAdjacentElement("afterend", tr);
+            }
+
+            if(innerWidth < 520) {
+                if(document.getElementById("temp_account_tr") == undefined) {
+                    var tr = document.createElement("tr");
+                    tr.setAttribute("id", "temp_account_tr");
+                    tr.appendChild(document.getElementById("etc_info_account"));
+                    document.getElementById("etc_info_call").parentNode.insertAdjacentElement("afterend", tr);
+                }
+            }else {
+              if(document.getElementById("temp_account_tr") != null) {
+                  document.getElementById("etc_info_call").insertAdjacentElement("afterend", document.getElementById("etc_info_account"));
+                  document.getElementById("temp_account_tr").remove();
+              }
             }
         }
     }
@@ -214,15 +229,15 @@ const Main = (props) => {
                         <tr>
                             <td id="etc_info_call">
                                 <div>
-                                    <div>문의사항</div>
+                                    <div>[문의사항]</div>
                                     <div>010-4382-0056</div>
                                 </div>
                             </td>
                             <td id="etc_info_account">
                                 <div>
-                                    <div>입금계좌</div>
-                                    <div>351-7557-4935-03</div>
-                                    <div>농협은행 / 예금주 : 정정희</div>
+                                    <div>[입금계좌] </div>
+                                    <div>농협은행 351-7557-4935-03</div>
+                                    <div>예금주 : 정정희</div>
                                 </div>
                             </td>
                         </tr>
