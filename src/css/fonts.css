@@ -1,50 +1,65 @@
 @font-face {
-    font-family: "Oneprettynight";
+    font-family: "lefthand";
     font-display: fallback;
 
-    src: url("/public/fonts/Cafe24Oneprettynight.ttf") format("truetype"),
-    url("/public/fonts/Cafe24Oneprettynight.woff") format("woff"),
-    url("/public/fonts/Cafe24Oneprettynight.eot?iefix") format("embedded-opentype");
-
-    font-weight: 900;
-    font-style: normal;
+    src: url("/public/fonts/lefthand.ttf") format("truetype");
 }
+
+@font-face {
+    font-family: "amsterdam";
+    font-display: fallback;
+
+    src: url("/public/fonts/amsterdam.ttf") format("truetype");
+}
+
+
+
+
+
 @font-face {
     font-family: "NanumGothic";
     font-display: fallback;
 
     src: url("/public/fonts/NanumGothic.ttf") format("truetype");
-    /*url("/public/fonts/Cafe24NanumGothic.woff") format("woff"),*/
-    /*url("/public/fonts/Cafe24NanumGothic.eot?iefix") format("embedded-opentype");*/
-
-    /*font-weight: 900;*/
-    font-style: normal;
 }
+
+
+
 
 
 
 
 @font-face {
-    font-family: "Ohsquareair";
+    font-family: "MaruBuri-ExtraLight";
     font-display: fallback;
 
-    src: url("/public/fonts/Cafe24Ohsquareair.ttf") format("truetype"),
-    url("/public/fonts/Cafe24Ohsquareair.woff") format("woff"),
-    url("/public/fonts/Cafe24Ohsquareair.eot?iefix") format("embedded-opentype");
-
-    font-weight: 700;
-    font-style: normal;
+    src: url("/public/fonts/MaruBuri-Light.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "SsurroundAir";
+    font-family: "MaruBuri-Light";
     font-display: fallback;
 
-    src: url("/public/fonts/Cafe24SsurroundAir.ttf") format("truetype"),
-    url("/public/fonts/Cafe24SsurroundAir.woff") format("woff"),
-    url("/public/fonts/Cafe24SsurroundAir.eot?iefix") format("embedded-opentype");
-
-    font-weight: 700;
-    font-style: normal;
+    src: url("/public/fonts/MaruBuri-Light.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "MaruBuri-Regular";
+    font-display: fallback;
+
+    src: url("/public/fonts/MaruBuri-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "MaruBuri-SemiBold";
+    font-display: fallback;
+
+    src: url("/public/fonts/MaruBuri-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "MaruBuri-Bold";
+    font-display: fallback;
+
+    src: url("/public/fonts/MaruBuri-Bold.ttf") format("truetype");
+}
