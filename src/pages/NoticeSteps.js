@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {_commonGetCommonInfo, _commonTimestampToDate} from "../helpers/common";
-import "../css/notice.css";
+import "../css/board.css";
 
 function Notice(props) {
 
@@ -20,10 +20,10 @@ function Notice(props) {
                 <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjY5/MDAxNjU2ODM5NjUxNjA3.4mOxop3SbpnaVdQezanvynyvT-u4Z5iJ5WjgiXzExwMg.zy8YBUORf8G0KLPVuTgI45YXOLxtMy-TEvKXjVOgWPkg.JPEG.bse14/flower3.jpg?type=w966" />
             </div>
 
-            <div id="notice_wrap">
+            <div id="board_wrap">
                 <div className="add_wrap">
                     {selectedData &&
-                    <div id="notice_detail">
+                    <div id="board_detail">
                         {/*<p className="menu_title">공지사항 상세보기</p>*/}
                         <table>
                             <thead>
@@ -33,7 +33,7 @@ function Notice(props) {
                             </thead>
                             <tbody>
                             <tr>
-                                <td className="detail_child">{selectedData.author}
+                                <td className="detail_author">{selectedData.author}
                                     <span>{_commonTimestampToDate(selectedData.time)}</span>
                                 </td>
                             </tr>

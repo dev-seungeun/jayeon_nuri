@@ -1,0 +1,147 @@
+
+/* Notice List */
+#board_list .menu_title {
+     font-size: 18px;
+     font-weight: 800;
+     text-align: left;
+}
+ #board_list table {
+     width: 100%;
+ }
+ #board_list table th {
+     font-weight: 800;
+     border-top: 1px solid #c4c4c4;
+     border-bottom: 1px solid #c4c4c4;
+     padding: 8px 5px;
+     font-size: 14px;
+     text-align: center;
+ }
+ #board_list table td {
+     font-weight: 400;
+     border-bottom: 1px solid #c4c4c4;
+     padding: 5px 10px;
+     font-size: 12px;
+     color: gray;
+     cursor: pointer;
+ }
+ #board_list .list_title {
+     text-align: left;
+ }
+ #board_list .list_author {
+     min-width: 70px;
+ }
+ #board_list .list_time {
+     min-width: 50px;
+ }
+
+
+
+/* Notice Detail */
+#board_detail table {
+    width: 100%;
+}
+#board_detail table th {
+    font-weight: 400;
+    padding: 10px 10px;
+    font-size: 14px;
+}
+#board_detail table td {
+    font-weight: 400;
+    padding: 10px 10px;
+    font-size: 12px;
+}
+#board_detail .detail_title {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 20px 10px;
+}
+#board_detail .detail_author {
+    text-align: left;
+    padding: 5px 10px;
+}
+#board_detail .detail_author > span {
+    text-align: left;
+    padding-left: 20px;
+    color: gray;
+    font-size: 10px;
+}
+#board_detail .detail_content {
+    border-top: 1px solid #c4c4c4;
+    text-align: left;
+    padding: 20px 10px 100px 10px;
+    vertical-align: top;
+    height: auto;
+}
+#board_detail img {
+    max-width: 100%;
+}
+
+
+
+/* Button */
+#board_wrap button {
+    color: black;
+}
+#board_wrap .submit-button {
+    float: right;
+    font-size: 12px;
+    padding: 5px 15px;
+    border: 1px solid #c4c4c4;
+    background-color: white;
+    border-radius: 2px;
+    margin-top: 5px;
+    vertical-align: middle;
+}
+#board_wrap .list-button {
+    margin-right: 5px;
+}
+
+
+
+/* Tiny Mobile 화면 */
+@media screen and (max-width: 620px) {
+
+    /* Notice List */
+    #board_list table {
+        width: 100%;
+    }
+    #board_list table th {
+        padding: 6px 0;
+    }
+    #board_list table td {
+        padding: 4px 0;
+    }
+
+
+    /* Review Detail */
+    #board_detail table td,
+    #board_detail table th {
+        padding: 5px 5px;
+    }
+    #board_detail .detail_title {
+        text-align: left;
+        font-weight: 800;
+        padding: 10px 5px;
+    }
+    #board_detail .detail_author {
+        padding: 10px;
+    }
+    #board_detail .detail_author > span {
+        padding-left: 15px;
+    }
+    #board_detail .detail_content {
+        padding: 10px 10px 50px 10px;
+    }
+
+
+    /* Button */
+    #board_wrap .submit-button {
+        margin-top: 5px;
+        padding: 5px 6px;
+    }
+    #board_wrap .list-button {
+        margin-right: 5px;
+    }
+
+}

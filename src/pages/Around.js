@@ -1,7 +1,8 @@
 import React from 'react';
-import {openImageModal} from "../App";
-import "../css/around.css";
+import { openImageModal } from "../App";
+
 import "../css/common.css";
+import "../css/around.css";
 import "../css/fluid-gallery.css";
 
 function Around(props) {

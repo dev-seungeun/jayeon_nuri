@@ -1,11 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
-import "../css/room.css";
+
 import { getPriceJson, getImageJson } from "../components/FetchData";
 import RoomPhotos from "../components/RoomPhotos";
 import RoomPriceTable from "../components/RoomPriceTable";
 import RoomInfo from "../components/RoomInfo";
+
+import "../css/room.css";
 
 function Caravan2(props) {
 

@@ -1,34 +1,18 @@
-#review_wrap {
-    font-family: "NanumGothic";
-}
-#review_wrap button {
-    color: black;
-}
-#editor_wrap button {
-    color: black;
-}
-.menu_title {
-    font-size: 22px;
-    font-weight: 800;
-    text-align: left;
-}
-
 
 /* Editor */
 #editor_wrap .ck-editor__main {
     height: 400px;
+    font-size: 12px;
 }
 #editor_wrap .ck-content {
     height: 100%;
-}
-#review_wrap {
-    font-family: "NanumGothic";
-    height: auto;
+    font-size: 12px;
 }
 #editor_wrap {
     text-align: left;
 }
 #editor_wrap .editor_title {
+    font-size: 12px;
     width: 100%;
     height: 30px;
     line-height: 30px;
@@ -38,6 +22,7 @@
     border-radius: 2px;
 }
 #editor_wrap .editor_author {
+    font-size: 12px;
     position: relative;
     left: 0;
     width: 51%;
@@ -49,6 +34,7 @@
     border-radius: 2px;
 }
 #editor_wrap .editor_password {
+    font-size: 12px;
     position: relative;
     left: 0;
     width: 51%;
@@ -62,124 +48,35 @@
 
 
 /* Check Password */
+#review_check_password .password_txt {
+    font-size: 14px;
+}
 #review_check_password .in_password {
     width: 51%;
-    /*margin-bottom: 10px;*/
     padding: 5px 15px;
     border: 1px solid #c4c4c4;
     border-radius: 2px;
+    font-size: 14px;
 }
 
 
-/* Review Detail */
-#review_detail table {
-    width: 100%;
-    margin-bottom: 100px;
-}
-#review_detail table th {
-    font-weight: 400;
-    /*border-top: 1px solid #c4c4c4;*/
-    /*border-bottom: 1px solid #c4c4c4;*/
-    padding: 10px 10px;
-    /*font-size: 18px;*/
-}
-#review_detail table td {
-    font-weight: 400;
-    /*border-bottom: 1px solid #c4c4c4;*/
-    padding: 10px 10px;
-    font-size: 16px;
-}
-#review_detail .detail_title {
-    text-align: left;
-    font-size: 25px;
-    font-weight: 800;
-    padding: 20px 10px;
-}
-#review_detail .detail_parent {
+#board_detail .detail_reply_title {
     width:25%;
     font-weight: 800;
     border-bottom: 1px solid #c4c4c4;
 }
-#review_detail .detail_child {
-    text-align: left;
-    padding: 5px 10px;
-}
-#review_detail .detail_child > span {
-    text-align: left;
-    padding-left: 20px;
-    color: gray;
-    font-size: 14px;
-}
-#review_detail .detail_content {
-    text-align: left;
-    padding: 20px 10px;
-    vertical-align: top;
-    height: auto;
-    border-bottom: 1px solid #c4c4c4;
-    border-top: 1px solid #c4c4c4;
-}
-#review_detail img {
-    max-width: 100%;
-}
 
 
-/* Review List */
-#review_list table {
-    width: 100%;
-}
-#review_list table th {
-    font-weight: 800;
-    border-top: 1px solid #c4c4c4;
-    border-bottom: 1px solid #c4c4c4;
-    padding: 8px 5px;
-    font-size: 17px;
-}
-#review_list table td {
-    font-weight: 400;
-    border-bottom: 1px solid #c4c4c4;
-    padding: 5px 10px;
-    font-size: 16px;
-    cursor: pointer;
-}
-#review_list td {
-    color: gray;
-}
-#review_list .list_title {
-    text-align: left;
-}
-#review_list .list_time {
-    min-width: 120px;
-}
-#review_list .list_update_time {
-    min-width: 60px;
-}
 
 /* Button */
-#review_wrap .submit-button {
-    float: right;
-    font-size: 15px;
-    padding: 5px 15px;
-    border: 1px solid #c4c4c4;
-    background-color: white;
-    border-radius: 2px;
-    margin-top: 5px;
-    vertical-align: middle;
-}
-#review_wrap .cancel-button {
+#board_wrap .cancel-button {
     margin-right: 5px;
 }
-#review_wrap .modify-button {
-}
-#review_wrap .register-button {
-}
-#review_wrap .list-button {
-    margin-right: 5px;
-}
-#review_wrap .check-list-button {
+#board_wrap .check-list-button {
     float: none;
     margin: 0 0 5px 0;
 }
-#review_wrap .pass-check-button {
+#board_wrap .pass-check-button {
     float: none;
     margin: 0 5px 5px 5px;
 }
@@ -194,15 +91,6 @@
     #editor_wrap .ck-editor__main {
         height: 300px;
     }
-    #editor_wrap .ck-content .ck-editor__editable{
-        /*font-size: 16px;*/
-    }
-    .menu_title {
-        /*font-size: 16px;*/
-    }
-    #editor_wrap {
-        /*font-size: 16px;*/
-    }
     #editor_wrap .editor_title {
         margin-bottom: 10px;
     }
@@ -213,83 +101,20 @@
         margin-bottom: 10px;
     }
 
-    /* Review List */
-    #review_list table {
-        width: 100%;
-    }
-    #review_list table th {
-        padding: 8px 5px;
-        /*font-size: 17px;*/
-    }
-    #review_list table td {
-        padding: 5px 10px;
-        /*font-size: 14px;*/
-    }
-    #review_list .list_time {
-        min-width: 120px;
-    }
-    #notice_list .notice_author {
-        min-width: 90px;
-    }
 
 
-    /* Review Detail */
-    #review_detail table {
-        margin-bottom: 50px;
-    }
-    #review_detail table td {
+    #board_detail .detail_reply_title {
         padding: 5px 5px;
     }
-    #review_detail .detail_title {
-        text-align: left;
-        /*font-size: 20px;*/
-        font-weight: 800;
-        padding: 10px 5px;
-    }
-    #review_detail table th,
-    #review_detail .detail_parent {
-        padding: 5px 5px;
-        /*font-size: 18px;*/
-    }
-    #review_detail .detail_content,
-    #review_detail .detail_child {
-        padding: 10px;
-        /*font-size: 16px;*/
-    }
-    #review_detail .detail_child > span {
-        padding-left: 15px;
-        /*font-size: 15px;*/
-    }
 
-    /* Check Password */
-    #review_check_password .password_txt {
-        font-size: 15px;
-    }
-    #review_check_password .in_password {
-        font-size: 15px;
-    }
 
 
     /* Button */
-    #review_wrap .submit-button {
-        /*font-size: 15px;*/
-        margin-top: 5px;
-        padding: 5px 6px;
-    }
-    #review_wrap .cancel-button {
-    }
-    #review_wrap .modify-button {
-    }
-    #review_wrap .register-button {
-    }
-    #review_wrap .list-button {
-        margin-right: 5px;
-    }
-    #review_wrap .check-list-button {
+    #board_wrap .check-list-button {
         float: none;
         margin: 0;
     }
-    #review_wrap .pass-check-button {
+    #board_wrap .pass-check-button {
         float: none;
         margin: 0 2px;
     }

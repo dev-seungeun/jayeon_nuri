@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { _databaseGetReview } from "../helpers/database";
 import { _commonTimestampToDate, _commonSetCommonInfo } from "../helpers/common";
-import "../css/review.css";
+import "../css/board.css";
 
 function Reviews(props) {
 
@@ -36,10 +36,10 @@ function Reviews(props) {
                 <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMTcg/MDAxNjU2ODM5NjUxMjIx.tBL8Bluy0GyMKNJIZ2dFrDepVhKr88ZwCdUquE8VGqYg.aFqnyShVwkrdbjnObBLaK-wh5eqCaTm6Aman-3qQDuMg.JPEG.bse14/cloud1.jpg?type=w966" />
             </div>
 
-            <div id="review_wrap">
+            <div id="board_wrap">
                 <div className="add_wrap">
                     {show &&
-                        <div id="review_list">
+                        <div id="board_list">
                             <p className="menu_title">이용후기</p>
                             <table>
                                 <thead>

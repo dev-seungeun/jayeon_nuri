@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { VscChevronDown, VscChevronUp } from "react-icons/vsc";
 import { TbLeaf } from "react-icons/tb";
+
+// import "../css/common.css"; 
 import "../css/fonts.css";
 import "../css/header.css";
 

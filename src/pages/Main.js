@@ -1,22 +1,25 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { _databaseGetNotice } from "../helpers/database";
-import { _commonSetCommonInfo, _commonTimestampToDate } from "../helpers/common";
-import { openImageModal } from "../App";
-import { changeToggleColor } from "./Header";
 import platform from 'platform';
 import Carousel from 're-carousel';
+
+import { openImageModal } from "../App";
+import { changeToggleColor } from "./Header";
+import { _databaseGetNotice } from "../helpers/database";
+import { _commonSetCommonInfo, _commonTimestampToDate } from "../helpers/common";
 import IndicatorDots from '../components/CarouselIndicatorDots';
 import Buttons from '../components/CarouselButtons';
-import "../css/main.css";
-import "../css/fluid-gallery.css";
-import 'bootstrap/dist/css/bootstrap.css';
 
 import { HiOutlineHome } from "react-icons/hi";
 import { TbListCheck, TbPencil } from "react-icons/tb";
 import { GrMapLocation } from "react-icons/gr";
 import { BiBed } from "react-icons/bi";
 import { IoCalendarOutline } from "react-icons/io5";
+
+// import "../css/common.css";
+import "../css/main.css";
+import "../css/fluid-gallery.css";
+import 'bootstrap/dist/css/bootstrap.css';
 
 const Main = (props) => {
 
@@ -82,7 +85,7 @@ const Main = (props) => {
 
     return (
         <>
-            <div className="main_wrap">
+            <div id="main_wrap">
                 <div className="main_carousel_wrap">
                     <Carousel loop auto widgets={[IndicatorDots, Buttons]}>
                         <img className="main_carousel_img" src="/main/carousel/1.jpg" />

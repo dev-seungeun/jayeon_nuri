@@ -7,23 +7,19 @@
 }
 
 .explain {
-    font-size: 17px;
+    font-size: 16px;
 }
 #introduce_title {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /* PC 화면 */
 @media screen and (min-width: 1200px) {
     .explain {
         margin: 10px 17% 50px 17%;
-        /*font-size: 20px;*/
-        /*line-height: 40px;*/
     }
     #introduce_title {
-        /*font-size: 22px;*/
         margin: 0;
-        font-family: "NanumGothic";
         position: relative;
         top:-40px;
     }
@@ -33,7 +29,6 @@
     #intro_image_wrap {
         width: 100%;
         text-align: left;
-        font-family: "NanumGothic";
     }
 }
 
@@ -41,13 +36,9 @@
 @media screen and (max-width: 1200px) {
     .explain {
         margin: 10px 20px 50px 20px;
-        /*font-size: 18px;*/
-        /*line-height: 30px;*/
     }
     #introduce_title {
-        /*font-size: 20px;*/
         margin: 0;
-        font-family: "NanumGothic";
         position: relative;
         top:-40px;
     }
@@ -65,13 +56,9 @@
 @media screen and (max-width: 1000px) {
     .explain {
         margin: 10px 20px 50px 20px;
-        /*font-size: 16px;*/
-        /*line-height: 30px;*/
     }
     #introduce_title {
-        /*font-size: 18px;*/
         margin: 0;
-        font-family: "NanumGothic";
         position: relative;
         top:-20px;
     }
@@ -81,7 +68,6 @@
     #intro_image_wrap {
         width: 100%;
         text-align: left;
-        font-family: "NanumGothic";
     }
 }
 
@@ -89,13 +75,9 @@
 @media screen and (max-width: 500px) {
     .explain {
         margin: 10px 20px 40px 20px;
-        /*font-size: 14px;*/
-        /*line-height: 25px;*/
     }
     #introduce_title {
-        /*font-size: 16px;*/
         margin: 0;
-        font-family: "NanumGothic";
         position: relative;
         top:-20px;
     }
@@ -105,6 +87,5 @@
     #intro_image_wrap {
         width: 100%;
         text-align: left;
-        font-family: "NanumGothic";
     }
 }

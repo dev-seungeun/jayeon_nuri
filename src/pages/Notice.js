@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { _databaseGetNotice } from "../helpers/database";
 import "../App.css";
-import "../css/notice.css";
+import "../css/board.css";
 import {_commonSetCommonInfo, _commonTimestampToDate} from "../helpers/common";
 import {useNavigate} from "react-router-dom";
 
@@ -30,9 +30,9 @@ function Notice(props) {
                 <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjY5/MDAxNjU2ODM5NjUxNjA3.4mOxop3SbpnaVdQezanvynyvT-u4Z5iJ5WjgiXzExwMg.zy8YBUORf8G0KLPVuTgI45YXOLxtMy-TEvKXjVOgWPkg.JPEG.bse14/flower3.jpg?type=w966" />
             </div>
 
-            <div id="notice_wrap">
+            <div id="board_wrap">
                 <div className="add_wrap">
-                    <div id="notice_list">
+                    <div id="board_list">
                         <p className="menu_title">공지사항</p>
                         <table>
                             <thead>

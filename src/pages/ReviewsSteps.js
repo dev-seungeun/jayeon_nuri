@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { _commonTimestampToDate, _commonGetCommonInfo } from "../helpers/common";
 import MyEditor from "../components/MyEditor";
+import "../css/board.css";
 import "../css/review.css";
 
 function Reviews(props) {
@@ -43,7 +44,7 @@ function Reviews(props) {
                 <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMTcg/MDAxNjU2ODM5NjUxMjIx.tBL8Bluy0GyMKNJIZ2dFrDepVhKr88ZwCdUquE8VGqYg.aFqnyShVwkrdbjnObBLaK-wh5eqCaTm6Aman-3qQDuMg.JPEG.bse14/cloud1.jpg?type=w966" />
             </div>
 
-            <div id="review_wrap">
+            <div id="board_wrap">
                 <div className="add_wrap">
                     {viewName === "editor" && <MyEditor id={selectedId} data={selectedData} setViewName={setViewName} />}
                     {viewName === "password" &&
@@ -55,36 +56,26 @@ function Reviews(props) {
                     </div>
                     }
                     {selectedData && viewName === "detail" &&
-                        <div id="review_detail">
-                            {/*<p className="menu_title">후기 상세보기</p>*/}
+                        <div id="board_detail">
                             <table>
                                 <thead>
                                     <tr>
-                                        {/*<th className="detail_parent">제목</th>*/}
                                         <th className="detail_title" colSpan="2">{selectedData.title}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        {/*<td className="detail_parent">작성자</td>*/}
-                                        <td className="detail_child" colSpan="2">{selectedData.author}
+                                        <td className="detail_author" colSpan="2">{selectedData.author}
                                             <span>{_commonTimestampToDate(selectedData.time)}</span>
                                         </td>
                                     </tr>
-                                    {/*<tr>*/}
-                                        {/*<td className="detail_parent">등록일</td>*/}
-                                        {/*<td className="detail_child">{_commonTimestampToDate(selectedData.time)}</td>*/}
-                                        {/*{selectedData.update_time != "" && <td className="detail_parent">수정일</td>}*/}
-                                        {/*{selectedData.update_time != "" && <td className="detail_child">{_commonTimestampToDate(selectedData.update_time)}</td>}*/}
-                                    {/*</tr>*/}
                                     <tr>
-                                        {/*<td className="detail_parent">후기 내용</td>*/}
                                         <td className="detail_content" colSpan="2" dangerouslySetInnerHTML={{__html: selectedData.content}}></td>
                                     </tr>
                                     {selectedData.reply !== "" &&
                                         <tr>
-                                            <td className="detail_parent">자연누리<br/>답글</td>
-                                            <td className="detail_content" dangerouslySetInnerHTML={{__html: selectedData.reply}}></td>
+                                            <td className="detail_reply_title">자연누리<br/>답글</td>
+                                            <td className="detail_reply_content" dangerouslySetInnerHTML={{__html: selectedData.reply}}></td>
                                         </tr>
                                     }
                                 </tbody>

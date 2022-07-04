@@ -86,7 +86,7 @@ function MyEditor(props) {
             <div className="add_wrap" id="editor_wrap">
                 {props.id == null && <p className="menu_title">후기 작성하기</p>}
                 {props.id != null && <p className="menu_title">후기 수정하기</p>}
-                
+
                 <input className="editor_author" placeholder="작성자 이름" value={reviewAuthor || ""} onChange={(e) => setReviewAuthor(e.target.value)} disabled={props.id != null ? true : false} />
                 {props.id == null && <input className="editor_password" placeholder="비밀번호" />}
                 <input className="editor_title" placeholder="제목" value={reviewTitle || ""} onChange={(e) => setReviewTitle(e.target.value)} />
@@ -116,7 +116,7 @@ function MyEditor(props) {
                 />
                 {props.id == null && <button className="submit-button" onClick={registReview}>등록하기</button>}
                 {props.id != null && <button className="submit-button" onClick={registReview}>수정하기</button>}
-                
+
                 <button className="submit-button cancel-button" onClick={(e)=>{
                     if(props.id != null) props.setViewName("detail");
                     else window.history.back();

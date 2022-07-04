@@ -1,5 +1,5 @@
 #bottom_info{
-    font-family: "NanumGothic";
+    /* font-family: "NanumGothic"; */
 }
 
 .control-arrow {
@@ -30,7 +30,6 @@
 }
 
 #room_tab td {
-    font-family: "NanumGothic";
     cursor: pointer;
     border: 1px solid #ddd;
 }
@@ -45,12 +44,9 @@
         font-size: 30px;
         font-weight: 800;
         margin: 0 auto;
-        font-family: "NanumGothic";
         position: relative;
-        /*top:-40px;*/
         padding: 30px 0;
         border-top: 1px solid #ddd;
-        /*border-bottom: 1px solid #ddd;*/
     }
     #room_title svg {
         font-size: 30px !important;
@@ -106,7 +102,6 @@
         background-color: #333;
         color: white;
         cursor: pointer;
-        font-family: "NanumGothic";
     }
     .hrr {
         width: 80%;
@@ -132,12 +127,9 @@
         font-size: 27px;
         font-weight: 800;
         margin: 0 auto;
-        font-family: "NanumGothic";
         position: relative;
-        /*top:-40px;*/
         padding: 30px 0;
         border-top: 1px solid #ddd;
-        /*border-bottom: 1px solid #ddd;*/
     }
     #room_title svg {
         font-size: 25px !important;
@@ -193,7 +185,6 @@
         background-color: #333;
         color: white;
         cursor: pointer;
-        font-family: "NanumGothic";
     }
     .hrr {
         width: 90%;
@@ -217,9 +208,7 @@
     #room_title {
         font-size: 25px;
         margin: 0;
-        font-family: "NanumGothic";
         position: relative;
-        /*top:-20px;*/
     }
     #room_title svg {
         font-size: 20px !important;
@@ -278,7 +267,6 @@
         background-color: #333;
         color: white;
         cursor: pointer;
-        font-family: "NanumGothic";
     }
     .hrr {
         width: 97%;
@@ -300,11 +288,9 @@
 /* Tiny Mobile 화면 */
 @media screen and (max-width: 500px) {
     #room_title {
-        font-size: 20px;
+        font-size: 18px;
         margin: 0;
-        font-family: "NanumGothic";
         position: relative;
-        /*top:-20px;*/
     }
     #room_title svg {
         font-size: 20px !important;
@@ -319,14 +305,14 @@
     .price_title {
         margin: 0 0 10px 0;
         text-align: left;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 800;
         width: 100%;
         text-align: left;
     }
     .stuff {
         font-weight: 100;
-        font-size: 15px;
+        font-size: 12px;
         margin : 0 auto;
         width: 99%;
     }
@@ -334,7 +320,7 @@
     .price_color {
         margin: 5px 5px 0 0;
         text-align: right;
-        font-size: 15px;
+        font-size: 12px;
         font-weight: 600;
     }
     #room_price table {
@@ -344,7 +330,7 @@
     #room_price table th {
         padding: 5px !important;
         font-weight: 800;
-        font-size: 15px;
+        font-size: 14px;
         color: #333;
         background-color: #f7f7f7;
         border: 1px solid #dfdfdf;
@@ -352,7 +338,7 @@
     #room_price table td{
         padding: 5px !important;
         border: 1px solid #dfdfdf;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 800;
     }
     .room_bottom_btn {
@@ -362,12 +348,11 @@
         height: 40px;
         margin: 20px 0 30px 0;
         border-radius: 100px;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 40px;
         background-color: #333;
         color: white;
         cursor: pointer;
-        font-family: "NanumGothic";
     }
     .hrr {
         width: 97%;
