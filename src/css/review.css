@@ -63,6 +63,13 @@
 #board_detail .detail_reply_title {
     width:25%;
     font-weight: 800;
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+}
+#board_detail .detail_reply_content {
+    text-align: left;
+    padding-top: 1.5rem;
+    border-top: 1px solid #c4c4c4;
     border-bottom: 1px solid #c4c4c4;
 }
 
@@ -99,12 +106,6 @@
     }
     #editor_wrap .editor_password {
         margin-bottom: 10px;
-    }
-
-
-
-    #board_detail .detail_reply_title {
-        padding: 5px 5px;
     }
 
 
