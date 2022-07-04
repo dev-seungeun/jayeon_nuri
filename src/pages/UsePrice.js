@@ -32,14 +32,18 @@ function UsePrice(props) {
                     <div className="info_cont">
                         · 당일 취소 : <span className="orangered">환불 불가</span>
                         <br/>
-                        · 입실일 기준 1 일전 - 취소 위약금 : <span className="orangered">70%</span>, 환불금액 : <span className="orangered">30%</span>
+                        · 입실일 기준 1 일전 <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp; - 취소 위약금 : <span className="orangered">70%</span>, 환불금액 : <span className="orangered">30%</span>
                         <br/>
-                        · 입실일 기준 2 일전 - 취소 위약금 : <span className="orangered">30%</span>, 환불금액 : <span className="orangered">70%</span>
+                        · 입실일 기준 2 일전 <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp; - 취소 위약금 : <span className="orangered">30%</span>, 환불금액 : <span className="orangered">70%</span>
                         <br/>
-                        · 입실일 기준 3 ~ 6 일전 - 취소 위약금 : <span className="orangered">20%</span>, 환불금액 : <span className="orangered">80%</span>
+                        · 입실일 기준 3 ~ 6 일전 <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp; - 취소 위약금 : <span className="orangered">20%</span>, 환불금액 : <span className="orangered">80%</span>
                         <br/>
-                        · 입실일 기준 7 일전 - 취소 위약금 : <span className="orangered">10%</span>, 환불금액 : <span className="orangered">90%</span>
-                        <br/>
+                        · 입실일 기준 7 일전 <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp; - 취소 위약금 : <span className="orangered">10%</span>, 환불금액 : <span className="orangered">90%</span>
+                        <br/><br/>
                         · 이용일 당일 예약 후 <span className="orangered">당일 취소시 환불이 불가</span> 합니다.
                     </div>
                 </div>
@@ -48,12 +52,15 @@ function UsePrice(props) {
                     <div className="info_title">성수기 안내 <span className="orangered">{ season && "("+season.year+")" }</span></div>
 
                     <div className="info_cont">
-                        · 준성수기 기간&nbsp; - { season && season.semi_peak }
+                        · 준성수기 기간 <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp; - { season && season.semi_peak }
                         <br/>
-                        · 성수기 기간&nbsp;&nbsp;&nbsp;&nbsp; - { season && season.peak }
+                        · 성수기 기간 <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp; - { season && season.peak }
                         <br/>
-                        · 극성수기 기간&nbsp; - { season && season.high_peak }
-                        <br/>
+                        · 극성수기 기간 <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp; - { season && season.high_peak }
+                        <br/><br/>
                         · 공휴일 전날은 주말요금이 적용됩니다.
                     </div>
                 </div>
@@ -66,9 +73,9 @@ function UsePrice(props) {
                         <br/>
                         · 입금은 꼭 예약자명으로 해주세요~ 만약 입금자명이 다를 경우 꼭 전화주세요
                         <br/>
-                        · 예약전화 - 010-4382-0056
+                        · 예약전화 - <b>010-4382-0056</b>
                         <br/>
-                        · 예약계좌 - [농협] 351-7557-4935-03 (예금주 정정희)
+                        · 예약계좌 - <b>[농협] 351-7557-4935-03 (예금주 정정희)</b>
                     </div>
                 </div>
 

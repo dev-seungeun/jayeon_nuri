@@ -325,7 +325,7 @@
         width: 100%;
     }
     #room_price table th {
-        padding: 5px !important;
+        padding: 2px;
         font-weight: 800;
         font-size: 14px;
         color: #333;
@@ -333,7 +333,7 @@
         border: 1px solid #dfdfdf;
     }
     #room_price table td{
-        padding: 5px !important;
+        padding: 2px;
         border: 1px solid #dfdfdf;
         font-size: 12px;
         font-weight: 800;

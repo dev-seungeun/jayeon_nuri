@@ -78,7 +78,7 @@ function WayToCome(props) {
                                     <td>18:00</td>
                                 </tr>
                                 <tr>
-                                    <td><span className="orangered">풍기역</span> 버스 탑승 예상 시각<br/>(교통상황에 따라 달라질 수 있습니다)</td>
+                                    <td><span className="orangered">풍기역<br/></span> 버스 탑승 예상 시각<br/>(교통상황에 따라 달라질 수 있습니다)</td>
                                     <td>7:50</td>
                                     <td>8:45</td>
                                     <td>9:50</td>
