@@ -38,6 +38,9 @@
 
 /* Tiny Mobile 화면 */
 @media screen and (max-width: 500px) {
+  #footer {
+      font-size: 10px;
+  }
     hr {
         width: 100%;
     }

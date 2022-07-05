@@ -13,14 +13,14 @@
      border-top: 1px solid #c4c4c4;
      border-bottom: 1px solid #c4c4c4;
      padding: 8px 5px;
-     font-size: 14px;
+     font-size: 16px;
      text-align: center;
  }
  #board_list table td {
      font-weight: 400;
      border-bottom: 1px solid #c4c4c4;
      padding: 5px 10px;
-     font-size: 12px;
+     font-size: 14px;
      color: gray;
      cursor: pointer;
  }
@@ -31,7 +31,7 @@
      min-width: 70px;
  }
  #board_list .list_time {
-     min-width: 70px;
+     min-width: 90px;
  }
 
 
@@ -48,7 +48,7 @@
 #board_detail table td {
     font-weight: 400;
     padding: 10px 10px;
-    font-size: 12px;
+    font-size: 14px;
 }
 #board_detail .detail_title {
     text-align: left;
@@ -64,7 +64,7 @@
     text-align: left;
     padding-left: 20px;
     color: gray;
-    font-size: 10px;
+    font-size: 12px;
 }
 #board_detail .detail_content {
     border-top: 1px solid #c4c4c4;
