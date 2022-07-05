@@ -61,7 +61,7 @@ const Main = (props) => {
             document.getElementById("etc_info_intro").setAttribute("rowSpan", 2);
             document.getElementById("etc_info_intro").removeAttribute("colSpan", 2);
 
-            if(document.getElementById("temp_tr") != null) {
+            if(document.getElementById("temp_tr") !== null) {
                 document.getElementById("etc_info_intro").insertAdjacentElement("afterend", document.getElementById("etc_info_notice"));
                 document.getElementById("temp_tr").remove();
             }
@@ -70,7 +70,7 @@ const Main = (props) => {
             document.getElementById("etc_info_intro").setAttribute("colSpan", 2);
             document.getElementById("etc_info_intro").removeAttribute("rowSpan", 2);
 
-            if(document.getElementById("temp_tr") == undefined) {
+            if(document.getElementById("temp_tr") === undefined) {
                 var tr = document.createElement("tr");
                 tr.setAttribute("id", "temp_tr");
                 tr.appendChild(document.getElementById("etc_info_notice"));
@@ -78,14 +78,14 @@ const Main = (props) => {
             }
 
             if(innerWidth < 520) {
-                if(document.getElementById("temp_account_tr") == undefined) {
-                    var tr = document.createElement("tr");
-                    tr.setAttribute("id", "temp_account_tr");
-                    tr.appendChild(document.getElementById("etc_info_account"));
-                    document.getElementById("etc_info_call").parentNode.insertAdjacentElement("afterend", tr);
+                if(document.getElementById("temp_account_tr") === undefined) {
+                    var account_tr = document.createElement("tr");
+                    account_tr.setAttribute("id", "temp_account_tr");
+                    account_tr.appendChild(document.getElementById("etc_info_account"));
+                    document.getElementById("etc_info_call").parentNode.insertAdjacentElement("afterend", account_tr);
                 }
             }else {
-              if(document.getElementById("temp_account_tr") != null) {
+              if(document.getElementById("temp_account_tr") !== null) {
                   document.getElementById("etc_info_call").insertAdjacentElement("afterend", document.getElementById("etc_info_account"));
                   document.getElementById("temp_account_tr").remove();
               }
