@@ -45,9 +45,7 @@ const App = () => {
       <div className='App'>
         <div id="my_modal" className="my_modal" onClick={closeImageModal}>
           <button onClick={closeImageModal}><HiX /></button>
-          <div id="modalBox" className="modalBox">
             <img id="modalBoxImg" src="" />
-          </div>
         </div>
           {getDataDone &&
           <HashRouter>

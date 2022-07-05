@@ -65,7 +65,7 @@ const Main = (props) => {
                 document.getElementById("etc_info_intro").insertAdjacentElement("afterend", document.getElementById("etc_info_notice"));
                 document.getElementById("temp_tr").remove();
             }
-            
+
         }else {
             document.getElementById("etc_info_intro").setAttribute("colSpan", 2);
             document.getElementById("etc_info_intro").removeAttribute("rowSpan", 2);

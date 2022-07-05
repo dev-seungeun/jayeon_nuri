@@ -33,8 +33,9 @@ a {
     vertical-align: top;
 }
 
-#etc_info_call > div { font-weight: 600; background-color: #F7E8E4; } /* #B5C1CC  */
-#etc_info_account > div { font-weight: 600; background-color: #E2E5EA; }
+#etc_info_call > div { font-weight: 800; background-color: #F7E8E4; } /* #B5C1CC  */
+
+#etc_info_account > div { font-weight: 800; background-color: #E2E5EA; }
 
 .main_title {
     font-size: 80px;
@@ -152,12 +153,12 @@ a {
     #etc_info_notice table { font-size: 16px; }
 
     #etc_info_call { width: 25%; height: 100px; padding: 5px 5px 5px 10px; }
-    #etc_info_call > div { height: 100%; text-align: left;  padding: 10px 20px; }
+    #etc_info_call > div { height: 100%; text-align: left;  padding: 20px 20px; }
     #etc_info_call > div > div:nth-child(1) { font-size: 20px; padding-bottom: 15px; }
     #etc_info_call > div > div:nth-child(2) { font-size: 18px; }
 
     #etc_info_account { width: 25%; height: 100px; padding: 5px 5px 5px 10px; }
-    #etc_info_account > div { height: 100%; text-align: left; padding: 10px 20px; }
+    #etc_info_account > div { height: 100%; text-align: left; padding: 20px 20px; }
     #etc_info_account > div > div:nth-child(1) { font-size: 20px; padding-bottom: 15px; }
     #etc_info_account > div > div:nth-child(2) { font-size: 18px; }
     #etc_info_account > div > div:nth-child(3) { font-size: 18px; }
@@ -286,12 +287,12 @@ a {
     #etc_info_notice table { font-size: 14px; }
 
     #etc_info_call { width: 50%; height: 120px; }
-    #etc_info_call > div { height: 100%; text-align: left; padding: 10px 20px; }
+    #etc_info_call > div { height: 100%; text-align: left; padding: 15px 20px; }
     #etc_info_call > div > div:nth-child(1) { font-size:18px; padding-bottom: 15px; }
     #etc_info_call > div > div:nth-child(2) { font-size: 16px; }
 
     #etc_info_account { width: 50%; height: 120px; }
-    #etc_info_account > div { height: 100%;  text-align: left; padding: 10px 20px; }
+    #etc_info_account > div { height: 100%;  text-align: left; padding: 15px 20px; }
     #etc_info_account > div > div:nth-child(1) { font-size:18px; padding-bottom: 15px; }
     #etc_info_account > div > div:nth-child(2) { font-size: 16px; }
     #etc_info_account > div > div:nth-child(3) { font-size: 16px; }
@@ -336,10 +337,16 @@ a {
 
 
     #etc_info_intro > div > div:nth-child(3) { font-size: 13px; }
-    #etc_info_call { width: 100%; height: 130px; }
-    #etc_info_account { width: 100%; height: 130px;
-        position: relative; top: -15px; /* 폰으로 볼때 간격이 넓어서 처리함 */
+
+    #etc_info_call { width: 100%; height: 120px;
+        position: relative; top: 21px; /* 폰으로 볼때 간격이 넓어서 처리함 */
     }
+    #etc_info_call > div { padding: 12px 20px; }
+    #etc_info_call > div > div:nth-child(1) { font-size: 20px; padding-bottom: 10px; }
+
+    #etc_info_account { width: 100%; height: 140px; }
+    #etc_info_account > div { padding: 12px 20px; }
+    #etc_info_account > div > div:nth-child(1) { font-size: 20px; padding-bottom: 10px; }
 }
 
 /* Tiny Tiny Mobile 화면 */
