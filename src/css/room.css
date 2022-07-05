@@ -274,11 +274,11 @@
         width: 98%;
         margin: 0 auto;
         position: relative;
-        top:-30px;
+        top:-27px;
     }
     #room_tab td {
         font-size: 15px;
-        padding: 10px 0 ;
+        padding: 13px 0 ;
     }
 }
 
@@ -360,10 +360,10 @@
         width: 98%;
         margin: 0 auto;
         position: relative;
-        top:-30px;
+        top:-27px;
     }
     #room_tab td {
         font-size: 15px;
-        padding: 6px 0;
+        padding: 10px 0;
     }
 }
