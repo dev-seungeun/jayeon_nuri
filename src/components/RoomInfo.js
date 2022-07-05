@@ -11,7 +11,7 @@ function RoomInfo(props) {
 
         let stuffTemp = "";
         getEtcInfoJson().stuff.forEach((st, index) => {
-            stuffTemp += st + (getEtcInfoJson().stuff.length-1 != index ? "," : "");
+            stuffTemp += st + (getEtcInfoJson().stuff.length-1 != index ? ", " : "");
         });
         setStuff(stuffTemp);
 
