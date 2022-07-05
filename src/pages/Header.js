@@ -6,7 +6,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { VscChevronDown, VscChevronUp } from "react-icons/vsc";
 import { TbLeaf } from "react-icons/tb";
 
-// import "../css/common.css"; 
+// import "../css/common.css";
 import "../css/fonts.css";
 import "../css/header.css";
 
@@ -202,7 +202,7 @@ function Header() {
                 setTimeout(function () {
                     setShowSubMenu(true);
                 },200)
-                document.getElementById("submenu_background").style.height = "250px";
+                document.getElementById("submenu_background").style.height = "190px";
             }
         }
     }, [mouseLeaveMenu, mouseLeaveSubMenu]);

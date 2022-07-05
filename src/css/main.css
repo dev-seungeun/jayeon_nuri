@@ -154,14 +154,14 @@ a {
 
     #etc_info_call { width: 25%; height: 100px; padding: 5px 5px 5px 10px; }
     #etc_info_call > div { height: 100%; text-align: left;  padding: 20px 20px; }
-    #etc_info_call > div > div:nth-child(1) { font-size: 20px; padding-bottom: 15px; }
-    #etc_info_call > div > div:nth-child(2) { font-size: 18px; }
+    #etc_info_call > div > div:nth-child(1) { font-size: 25px; padding-bottom: 15px; }
+    #etc_info_call > div > div:nth-child(2) { font-size: 22px; }
 
     #etc_info_account { width: 25%; height: 100px; padding: 5px 5px 5px 10px; }
     #etc_info_account > div { height: 100%; text-align: left; padding: 20px 20px; }
-    #etc_info_account > div > div:nth-child(1) { font-size: 20px; padding-bottom: 15px; }
-    #etc_info_account > div > div:nth-child(2) { font-size: 18px; }
-    #etc_info_account > div > div:nth-child(3) { font-size: 18px; }
+    #etc_info_account > div > div:nth-child(1) { font-size: 25px; padding-bottom: 15px; }
+    #etc_info_account > div > div:nth-child(2) { font-size: 22px; }
+    #etc_info_account > div > div:nth-child(3) { font-size: 22px; }
 
 }
 
