@@ -288,8 +288,8 @@ function Header() {
                                 <div>
                                     {!isMobile && <span id="around_child_ul_title">AROUND</span>}
                                     <ul id="around_child_ul" className="inner_ul" style={{ariaExpanded:"true"}}>
-                                        <li id="around" className="child_ul_li"><div onClick={(e)=>handleLinkMove(e, "/around/AROUND")}>주변 여행지</div></li>
                                         <li id="mountain" className="child_ul_li"><div onClick={(e)=>handleLinkMove(e, "/mountain/AROUND")}>소백산 등산로</div></li>
+                                            <li id="around" className="child_ul_li"><div onClick={(e)=>handleLinkMove(e, "/around/AROUND")}>주변 여행지</div></li>
                                     </ul>
                                 </div>}
                             </li>

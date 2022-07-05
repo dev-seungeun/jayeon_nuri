@@ -1,15 +1,15 @@
 @font-face {
-    font-family: "lefthand";
+    font-family: "NanumSquareRoundL";
     font-display: fallback;
 
-    src: url("/public/fonts/lefthand.ttf") format("truetype");
+    src: url("/public/fonts/NanumSquareRoundL.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "amsterdam";
+    font-family: "NanumSquareRoundR";
     font-display: fallback;
 
-    src: url("/public/fonts/amsterdam.ttf") format("truetype");
+    src: url("/public/fonts/NanumSquareRoundR.ttf") format("truetype");
 }
 
 
@@ -30,36 +30,15 @@
 
 
 @font-face {
-    font-family: "MaruBuri-ExtraLight";
+    font-family: "NanumSquareL";
     font-display: fallback;
 
-    src: url("/public/fonts/MaruBuri-Light.ttf") format("truetype");
+    src: url("/public/fonts/NanumSquareL.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "MaruBuri-Light";
+    font-family: "NanumSquareR";
     font-display: fallback;
 
-    src: url("/public/fonts/MaruBuri-Light.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "MaruBuri-Regular";
-    font-display: fallback;
-
-    src: url("/public/fonts/MaruBuri-Regular.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "MaruBuri-SemiBold";
-    font-display: fallback;
-
-    src: url("/public/fonts/MaruBuri-SemiBold.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "MaruBuri-Bold";
-    font-display: fallback;
-
-    src: url("/public/fonts/MaruBuri-Bold.ttf") format("truetype");
+    src: url("/public/fonts/NanumSquareR.ttf") format("truetype");
 }

@@ -20,8 +20,14 @@ a {
 
 .logo {
     height: 100px;
-    line-height: 87px;
+    line-height: 95px;
     font-size: 2.5rem;
+    position: relative;
+    z-index: 120;
+    float: left;
+    text-align: center;
+    padding: 0 0 0 35px;
+    cursor: pointer;
 }
 
 .header__menulist > li {
@@ -45,15 +51,6 @@ ul .inner_ul > li {
 
 /* PC 화면 */
 @media screen and (min-width: 1000px) {
-    .logo {
-        position: relative;
-        z-index: 120;
-        float: left;
-        text-align: center;
-        padding: 5px 17px 12px 25px;
-        cursor: pointer;
-    }
-
     .toggle {
         display: none;
     }
@@ -111,10 +108,10 @@ ul .inner_ul > li {
     #reservation_child_ul_title { left: 60px; }
     #community_child_ul_title { left: 100px; }
 
-    #about_child_ul { left: -110px; }
-    #room_child_ul { left: -60px; }
-    #around_child_ul { left: 0px; }
-    #reservation_child_ul { left: 77px; }
+    #about_child_ul { left: -115px; }
+    #room_child_ul { left: -65px; }
+    #around_child_ul { left: -7px; }
+    #reservation_child_ul { left: 76px; }
     #community_child_ul { left: 122px; }
 
     ul .inner_ul {
