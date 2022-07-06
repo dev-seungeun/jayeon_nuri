@@ -26,8 +26,6 @@ function Room1(props) {
                 <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfODMg/MDAxNjU2ODM5NjUxMzc1.Bf77I8cMLxmrjY95b7_t0NhUu-C3Qf_roEiwC3E-a2cg.xYKrDWXlh3To30H-yhnyXH9lS45BJcVp4OVFFnJk4Z4g.JPEG.bse14/flower1.jpg?type=w966" />
             </div>
 
-            {/*<div id="room_title"><FcLike />&nbsp;객실 1,2,3 호&nbsp;<FcLike /></div>*/}
-
             <table id="room_tab">
                 <tbody>
                     <tr>
@@ -42,7 +40,7 @@ function Room1(props) {
             </table>
 
             <div id="room_title">
-                {priceJson && priceJson.title}
+                <b>{priceJson && priceJson.title}</b>
                 <p>여유로운 Healing을 위한 독채 Room</p>
             </div>
 

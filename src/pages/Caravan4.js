@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 
-import { getPriceJson, getImageJson } from "../components/FetchData";
+import { getPriceCaravanJson, getImageJson } from "../components/FetchData";
 import RoomPhotos from "../components/RoomPhotos";
 import RoomPriceTable from "../components/RoomPriceTable";
 import RoomInfo from "../components/RoomInfo";
@@ -17,7 +17,7 @@ function Caravan4(props) {
 
     useEffect(() => {
 
-        setPriceJson(getPriceJson().caravan4);
+        setPriceJson(getPriceCaravanJson().caravan4);
         setImageJson(getImageJson().caravan4);
 
     }, []);
@@ -31,8 +31,6 @@ function Caravan4(props) {
             <table id="room_tab">
                 <tbody>
                 <tr>
-                    <td id="tab_room1" onClick={(e)=>navigate("/room1/ROOM")}>객실 1,2,3호</td>
-                    <td id="tab_room5" onClick={(e)=>navigate("/room5/ROOM")}>객실 5,6호</td>
                     <td id="tab_caravan1" onClick={(e)=>navigate("/caravan1/ROOM")}>카라반 1호</td>
                     <td id="tab_caravan2" onClick={(e)=>navigate("/caravan2/ROOM")}>카라반 2호</td>
                     <td id="tab_caravan3" onClick={(e)=>navigate("/caravan3/ROOM")}>카라반 3호</td>
@@ -43,7 +41,7 @@ function Caravan4(props) {
 
             {/*<div id="room_title"><FcLikePlaceholder />&nbsp;카라반 4호&nbsp;<FcLikePlaceholder /></div>*/}
             <div id="room_title">
-                {priceJson && priceJson.title}
+                <b>{priceJson && priceJson.title}</b>
                 <p>낭만있는 Camping을 위한 카라반</p>
             </div>
 

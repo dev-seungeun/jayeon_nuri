@@ -44,7 +44,7 @@ function UsePrice(props) {
                         · 입실일 기준 7 일전 <br/>
                         &nbsp;&nbsp;&nbsp;&nbsp; - 취소 위약금 : <span className="orangered">10%</span>, 환불금액 : <span className="orangered">90%</span>
                         <br/><br/>
-                        · 이용일 당일 예약 후 <span className="orangered">당일 취소시 환불이 불가</span> 합니다.
+                        · 이용일 당일 예약 후 당일 취소하여도 <span className="orangered">환불이 불가</span> 합니다.
                     </div>
                 </div>
 
@@ -71,7 +71,7 @@ function UsePrice(props) {
                     <div className="info_cont">
                         · 예약 후 전액 입금 하셔야 예약이 완료됩니다. 24시간이 지나면 취소될 수 있습니다.
                         <br/>
-                        · 입금은 꼭 예약자명으로 해주세요~ 만약 입금자명이 다를 경우 꼭 전화주세요
+                        · 입금은 꼭 예약자명으로 해주세요. 만약 입금자명이 다를 경우 꼭 전화주세요~
                         <br/>
                         · 예약전화 - <b>010-4382-0056</b>
                         <br/>

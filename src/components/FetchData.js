@@ -1,11 +1,15 @@
 import React, {useEffect, useState} from 'react';
 
 let priceJson = null;
+let priceCaravnJson = null;
 let imageJson = null;
 let etcInfoJson = null;
 
 export function getPriceJson() {
     return priceJson;
+}
+export function getPriceCaravanJson() {
+    return priceCaravnJson;
 }
 export function getImageJson() {
     return imageJson;
@@ -23,6 +27,11 @@ export async function getJsonData(callback) {
                 priceJson = data;
                 result[0] = true;
                 if(result[0] && result[1] && result[2]) callback(true);
+            });
+        await fetch("/data/prices_caravan.json")
+            .then((res) => res.json())
+            .then((data) => {
+                priceCaravnJson = data;
             });
         await fetch("/data/room_detail_images.json")
             .then((res) => res.json())

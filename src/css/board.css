@@ -30,9 +30,6 @@
  #board_list .list_author {
      min-width: 70px;
  }
- #board_list .list_time {
-     min-width: 90px;
- }
 
 
 
@@ -112,7 +109,13 @@
     #board_list table td {
         padding: 4px 0;
     }
-
+    #board_list .notice_cont_title {
+      padding-left: 4px;
+    }
+    #board_list .list_time {
+        width: 90px;
+        min-width: 90px;
+    }
 
     /* Review Detail */
     #board_detail table td,

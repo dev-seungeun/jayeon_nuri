@@ -3,6 +3,7 @@
     text-align: center;
 }
 #map {
+    width: 100%;
     margin: 0 auto;
 }
 .text_center {
@@ -27,11 +28,16 @@
     padding: 10px 3px;
     text-align: center;
 }
+#way_wrap #map_link img {
+    width: auto;
+    height:35px;
+    padding-right: 10px;
+    cursor: pointer;
+}
 
 /* PC 화면 */
 @media screen and (min-width: 1200px) {
     #map {
-        width: 60%;
         height: 600px;
         text-align: center;
     }
@@ -50,7 +56,6 @@
 /* Tablet 화면 */
 @media screen and (max-width: 1200px) and (min-width: 1000px) {
     #map {
-        width: 60%;
         height: 600px;
         text-align: center;
     }
@@ -76,7 +81,6 @@
 /* Mobile 화면 */
 @media screen and (max-width: 1000px) {
     #map {
-        width: 90%;
         height: 500px;
         text-align: center;
     }
@@ -101,12 +105,11 @@
 /* Tiny Mobile 화면 */
 @media screen and (max-width: 550px) {
     #map {
-        width: 95%;
         height: 300px;
         text-align: center;
     }
     #way_wrap img {
-      width: 95%;
+      width: 100%;
     }
     .time_title {
         font-weight: 800;

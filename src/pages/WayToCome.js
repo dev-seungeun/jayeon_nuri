@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react';
+import { openImageModal } from "../App";
 import KakaoMapScript from "../components/KakaoMapScript";
 import "../css/way_to_come.css";
 import "../css/common.css";
@@ -26,8 +27,14 @@ function WayToCome(props) {
                             <div className="hrr"/><br/>
                             <div id='map'></div>
                         </div>
+
+                        <br/>
+                        <div id="map_link">
+                          <img src="https://postfiles.pstatic.net/MjAyMjA3MDZfMjYz/MDA…crMvqaVqoIsvR0g.PNG.bse14/map_naver.png?type=w966" onClick={(e) => {window.open("http://naver.me/xaP53lnu","","");}} />
+                          <img src="https://postfiles.pstatic.net/MjAyMjA3MDZfMjYz/MDA…crMvqaVqoIsvR0g.PNG.bse14/map_naver.png?type=w966" onClick={(e) => {window.open("http://kko.to/GmFbGJxml","","");}} />
+                        </div>
                     </div>
-                </div>
+                </div>https://map.kakao.com/
 
                 <div className="add_wrap">
                     <div className="info_title">기차 <span className="orangered">&nbsp;KTX-이음(중앙선) 개통</span></div>
@@ -90,14 +97,14 @@ function WayToCome(props) {
                         </table>
                         <br/><br/>
 
-                        <div className="text_center">
+                        <div className="text_center tz-gallery">
                           <div style={{fontWeight: "800"}}>승차 정류소 (풍기역) 위치</div>
                           <br/>
-                          <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMTI1/MDAxNjU2ODQxMDc0NzE3.HR91OF6_8BZMZ_H0xf2ttO6qPky3rS4-xoxZCsdxAqYg.k9fwoJ6hJ4x0eoHNXtXbd0O4QDScoYqYjypXii3Z0AAg.PNG.bse14/station_bus_stop_map.png?type=w966" />
+                          <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMTI1/MDAxNjU2ODQxMDc0NzE3.HR91OF6_8BZMZ_H0xf2ttO6qPky3rS4-xoxZCsdxAqYg.k9fwoJ6hJ4x0eoHNXtXbd0O4QDScoYqYjypXii3Z0AAg.PNG.bse14/station_bus_stop_map.png?type=w966" onClick={openImageModal} />
                           <br/><br/><br/>
                           <div style={{fontWeight: "800"}}>하차 정류소 (삼가리-삼가교 입구 방면) 위치</div>
                           <br/>
-                          <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjIz/MDAxNjU2ODQxMDc0Njk3.R1yQs2F_raPIbjpJsVD22X3B3jr92FR6ggGhN6_5L-og.tlSdNyGhM5wg6Nrh6nkTNtB55J5iHLRtgzAIzU6DeTYg.PNG.bse14/bus_stop_map.png?type=w966" />
+                          <img src="https://postfiles.pstatic.net/MjAyMjA3MDNfMjIz/MDAxNjU2ODQxMDc0Njk3.R1yQs2F_raPIbjpJsVD22X3B3jr92FR6ggGhN6_5L-og.tlSdNyGhM5wg6Nrh6nkTNtB55J5iHLRtgzAIzU6DeTYg.PNG.bse14/bus_stop_map.png?type=w966" onClick={openImageModal} />
                         </div>
                     </div>
                 </div>

@@ -28,20 +28,20 @@ function Room5(props) {
 
             <table id="room_tab">
                 <tbody>
-                <tr>
-                    <td id="tab_room1" onClick={(e)=>navigate("/room1/ROOM")}>객실 1,2,3호</td>
-                    <td id="tab_room5" style={{backgroundColor: "black", color:"white"}}>객실 5,6호</td>
-                    {/*<td id="tab_caravan1" onClick={(e)=>navigate("/caravan1/ROOM")}>카라반 1호</td>*/}
-                    {/*<td id="tab_caravan2" onClick={(e)=>navigate("/caravan2/ROOM")}>카라반 2호</td>*/}
-                    {/*<td id="tab_caravan3" onClick={(e)=>navigate("/caravan3/ROOM")}>카라반 3호</td>*/}
-                    {/*<td id="tab_caravan4" onClick={(e)=>navigate("/caravan4/ROOM")}>카라반 4호</td>*/}
-                </tr>
+                  <tr>
+                      <td id="tab_room1" onClick={(e)=>navigate("/room1/ROOM")}>객실 1,2,3호</td>
+                      <td id="tab_room5" style={{backgroundColor: "black", color:"white"}}>객실 5,6호</td>
+                      {/*<td id="tab_caravan1" onClick={(e)=>navigate("/caravan1/ROOM")}>카라반 1호</td>*/}
+                      {/*<td id="tab_caravan2" onClick={(e)=>navigate("/caravan2/ROOM")}>카라반 2호</td>*/}
+                      {/*<td id="tab_caravan3" onClick={(e)=>navigate("/caravan3/ROOM")}>카라반 3호</td>*/}
+                      {/*<td id="tab_caravan4" onClick={(e)=>navigate("/caravan4/ROOM")}>카라반 4호</td>*/}
+                  </tr>
                 </tbody>
             </table>
 
             {/*<div id="room_title"><FcLike />&nbsp;객실 5,6 호&nbsp;<FcLike /></div>*/}
             <div id="room_title">
-                {priceJson && priceJson.title}
+                <b>{priceJson && priceJson.title}</b>
                 <p>여유로운 Healing을 위한 독채 Room</p>
             </div>
 
@@ -58,7 +58,7 @@ function Room5(props) {
                 }
 
                 <div className="hrr" />
-                
+
                 {RoomInfo()}
             </div>
         </>

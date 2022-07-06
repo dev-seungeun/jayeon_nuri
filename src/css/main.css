@@ -50,7 +50,7 @@ a {
     /* 메인이미지 Carousel */
     .main_carousel_wrap {
         width: 100%;
-        height: 800px;
+        height: 1000px;
         position: relative;
         top: -99px;
     }
@@ -60,7 +60,7 @@ a {
     }
     .main_title {
         position: relative;
-        top: -420px;
+        top: -550px;
         color: white;
         text-align: center;
         font-weight: 700;
@@ -337,6 +337,9 @@ a {
 
 
     #etc_info_intro > div > div:nth-child(3) { font-size: 13px; }
+
+    #etc_info_notice .notice_cont_title { padding-left: 4px; }
+    #etc_info_notice .list_time { width: 90px; }
 
     #etc_info_call { width: 100%; height: 120px;
         position: relative; top: 21px; /* 폰으로 볼때 간격이 넓어서 처리함 */
