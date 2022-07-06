@@ -30,11 +30,11 @@ function WayToCome(props) {
 
                         <br/>
                         <div id="map_link">
-                          <img src="https://postfiles.pstatic.net/MjAyMjA3MDZfMjYz/MDA…crMvqaVqoIsvR0g.PNG.bse14/map_naver.png?type=w966" onClick={(e) => {window.open("http://naver.me/xaP53lnu","","");}} />
-                          <img src="https://postfiles.pstatic.net/MjAyMjA3MDZfMjYz/MDA…crMvqaVqoIsvR0g.PNG.bse14/map_naver.png?type=w966" onClick={(e) => {window.open("http://kko.to/GmFbGJxml","","");}} />
+                          <img src="https://postfiles.pstatic.net/MjAyMjA3MDZfMjYz/MDAxNjU3MDg4OTkzOTMw.wOa0OWxrCGSP0h3x3-5GcDoRwxNJPfTqs1FiSTItfNEg.soBzn5YVpz3zgn5SKDY-6XBzNgMFPcrMvqaVqoIsvR0g.PNG.bse14/map_naver.png?type=w966" onClick={(e) => {window.open("http://naver.me/xaP53lnu","","");}} />
+                          <img src="https://postfiles.pstatic.net/MjAyMjA3MDZfNTIg/MDAxNjU3MDg4OTkzOTI3.i6gMEjeuUvdV1u2xD4ZQUofzWwYmt56ALYmCFwYJ_34g.iHPkGoZWM_OtN2DJ0Ml2P4suKAVT4m8aHnPLB499KcQg.PNG.bse14/map_kakao.png?type=w966" onClick={(e) => {window.open("http://kko.to/GmFbGJxml","","");}} />
                         </div>
                     </div>
-                </div>https://map.kakao.com/
+                </div>
 
                 <div className="add_wrap">
                     <div className="info_title">기차 <span className="orangered">&nbsp;KTX-이음(중앙선) 개통</span></div>

@@ -1,5 +1,5 @@
 
-/* Notice List */
+/* Board List */
 #board_list .menu_title {
      font-size: 18px;
      font-weight: 800;
@@ -33,7 +33,7 @@
 
 
 
-/* Notice Detail */
+/* Board Detail */
 #board_detail table {
     width: 100%;
 }
@@ -99,7 +99,7 @@
 /* Tiny Mobile 화면 */
 @media screen and (max-width: 620px) {
 
-    /* Notice List */
+    /* Board List */
     #board_list table {
         width: 100%;
     }
@@ -109,7 +109,7 @@
     #board_list table td {
         padding: 4px 0;
     }
-    #board_list .notice_cont_title {
+    #board_list .list_title {
       padding-left: 4px;
     }
     #board_list .list_time {
@@ -117,7 +117,7 @@
         min-width: 90px;
     }
 
-    /* Review Detail */
+    /* Board Detail */
     #board_detail table td,
     #board_detail table th {
         padding: 5px 5px;

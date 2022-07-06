@@ -94,6 +94,7 @@ const Main = (props) => {
     }
 
     const handleLinkMove = (e, link) => {
+        window.scrollTo(0, 0);
         changeToggleColor(link.split("/")[2]);
         navigate(link);
     }
